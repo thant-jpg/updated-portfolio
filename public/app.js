@@ -1,4 +1,4 @@
-import { initFlowerMotion } from './floral-scene.js';
+import { initFlowerMotion } from './flower-3d.js';
 import { initAmbientParticles } from './ambient-particles.js';
 initFlowerMotion();
 initAmbientParticles();

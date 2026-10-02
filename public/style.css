@@ -33,3 +33,6 @@ body::after{content:"";position:fixed;inset:0;background-image:url("/grain.svg")
 .about-tools{border-top:1px solid var(--line);padding:25px 0 15px;margin-top:30px;max-width:720px}.about-tools h3{font:14px "Courier New",monospace;text-transform:uppercase;letter-spacing:.04em;margin-bottom:15px;color:#d4e3eb}.about-tools p{font:14px/2 "Courier New",monospace;color:#c0cbd2}
 
 .brand,.hero h1,.hero h1 em,.hero-bottom p{font-family:"Courier New",Courier,monospace}.brand{font-weight:400;font-size:22px;letter-spacing:0}.hero h1{font-size:clamp(32px,3.5vw,50px);letter-spacing:-.055em}.hero h1 em{font-style:normal;font-weight:400}.hero-bottom p{font-size:14px;line-height:1.8}.intro-fade{opacity:0;transform:translateY(14px);transition:opacity 1.2s ease,transform 1.2s ease}.intro-fade.is-visible{opacity:1;transform:none}.has-flower-motion{cursor:default}@media(max-width:600px){.hero h1{font-size:30px}.brand{font-size:20px}}@media(prefers-reduced-motion:reduce){.intro-fade{opacity:1;transform:none;transition:none}}
+
+/* Horizontal drag rotates the restored original 3D botanical sculpture. */
+.has-flower-motion{cursor:grab}.has-flower-motion.is-turning{cursor:grabbing}
