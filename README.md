@@ -43,3 +43,10 @@ No external 3D library is required. Rendering pauses while hidden; reduced-motio
 
 The supplied résumé is available as the original Word document at public/resume.docx, linked on About and Contact. The introduction explicitly uses Courier New.
 
+
+## Current floral scene
+
+The current hero uses the supplied blue-tulip photo, isolated onto a transparent background with the built-in image-generation tool (prompt: remove only the pale background and preserve the two blue flowers, stems, leaves and photographic detail). The asset is public/images/blue-tulips.png. public/floral-scene.js animates this photograph with gentle displacement and cursor influence, then samples its pixels into a drifting point cloud during scroll. This is a photo-based animation, not an AI-generated motion video or full 3D model. A short WebM export is provided beside the portfolio folder. Introductory text fades in, with reduced-motion support. Hero typography is Courier New and side callouts have been removed.
+
+EasyConvo now includes the supplied student/teacher, usability-testing and Figma descriptions. The resume page uses the updated Word content, with previous Additional Information retained by request. About lists software and has no portrait. Confirmed email: waithantthiri101@gmail.com.
+

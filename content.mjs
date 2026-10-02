@@ -1,10 +1,135 @@
 // Replace image: null with '/images/your-file.jpg'. Put files in public/images.
 // Draft descriptions describe scope only; replace with your process and evidence.
 export const profile = { name: 'Thant', location: 'Singapore', title: 'Architecture & interactive design', email: '', resume: '/resume.docx', interlude: ['I’m drawn to the space between what is', 'and what could be.'], intro: 'I study architecture and work across spaces, digital products and interactive experiences. I’m interested in how we move, connect and find our place — in physical worlds and virtual ones.' };
-export const projects = [
- { slug:'linked-hybrid', title:'Linked Hybrid', category:'Architecture', disciplines:'Architecture / Computational design', number:'01', note:'Spatial systems', image:null, accent:'blue', summary:'An architectural and computational study of connected spaces, collective living and the relationships between built form and circulation.', role:'Architecture student', sections:[['The architectural question','Exploring how individual volumes become a connected spatial system. This project brings architectural thinking and computational exploration into the same conversation.'],['Form, connection, movement','A space for the drawings, computational iterations and models that explain the study. Add the actual brief, design decisions and tools alongside your images.'],['Drawings & models','The final selection will bring together plans, sections, spatial studies and architectural visualisations.']] },
- { slug:'virtual-singapore',title:'Somewhere', category:'Interactive',disciplines:'Product design / UX/UI / 3D',number:'02',note:'Virtual worlds, real connections',image:null,accent:'green',summary:'A gamified dating and social experience where people explore a virtual Singapore and meet through shared interactions.',role:'Product & 3D designer',sections:[['A city as a social interface','Instead of treating connection as a sequence of profiles, the concept places people inside a navigable virtual Singapore. The environment becomes part of the experience of meeting someone.'],['From app flow to shared space','My work covered the general concept and app flow, connecting the product experience with the 3D environment. Add your flow diagrams and key screens here.'],['Environment & self-expression','I created 3D environments and character assets, including clothing and hairstyles. This section will show how the virtual city and customisable characters support exploration and identity.']] },
- {slug:'easyconvo',title:'EasyConvo',category:'Product',disciplines:'Product design / UX/UI / Learning',number:'03',note:'Small steps into language',image:null,accent:'orange',summary:'A phonics product-design project exploring how a digital learning experience can support language practice.',role:'Product designer',sections:[['Designing for learning','A phonics-focused product experience. Add the intended learner group, research context and problem statement to make the brief specific.'],['Structure & interaction','A space for the learning structure, user journeys, interface iterations and prototype. Replace this draft with the decisions you made and why.'],['Learning from the process','Add usability findings and the changes they informed. No research results or impact figures have been assumed in this draft.']]},
- {slug:'personal-explorations',title:'An open-ended study',category:'Personal',disciplines:'Personal project / Experiments',number:'04',note:'A space for curiosity',image:null,accent:'blue',summary:'A reserved place for a personal project: an independent question, a material experiment or a new way of seeing.',role:'Independent exploration',sections:[['A question of my own','Personal-project placeholder. Replace this with the idea that started the work.'],['Experiments & observations','Add process images, sketches and observations.'],['Where it led','Describe what you learned and what you want to explore next.']]},
- {slug:'architecture-archive',title:'Spatial fragments',category:'Architecture',disciplines:'Architecture / Models / Drawing',number:'05',note:'Selected architectural work',image:null,accent:'neutral',summary:'A collection of architectural drawings, model studies and spatial experiments from my studies.',role:'Architecture student',sections:[['Thinking through making','A place for additional architecture work, from first sketches to model-making and resolved drawings.'],['Selected studies','Add each study’s title, course context and your individual contribution.'],['An evolving archive','This collection can grow as new work develops.']]}
+export const projects=[
+  {
+    "slug": "linked-hybrid",
+    "title": "Linked Hybrid",
+    "category": "Architecture",
+    "disciplines": "Architecture / Computational design",
+    "number": "01",
+    "note": "Spatial systems",
+    "image": null,
+    "accent": "blue",
+    "summary": "An architectural and computational study of connected spaces, collective living and the relationships between built form and circulation.",
+    "role": "Architecture student",
+    "sections": [
+      [
+        "The architectural question",
+        "Exploring how individual volumes become a connected spatial system. This project brings architectural thinking and computational exploration into the same conversation."
+      ],
+      [
+        "Form, connection, movement",
+        "A space for the drawings, computational iterations and models that explain the study. Add the actual brief, design decisions and tools alongside your images."
+      ],
+      [
+        "Drawings & models",
+        "The final selection will bring together plans, sections, spatial studies and architectural visualisations."
+      ]
+    ]
+  },
+  {
+    "slug": "virtual-singapore",
+    "title": "Somewhere",
+    "category": "Interactive",
+    "disciplines": "Product design / UX/UI / 3D",
+    "number": "02",
+    "note": "Virtual worlds, real connections",
+    "image": null,
+    "accent": "green",
+    "summary": "A gamified dating and social experience where people explore a virtual Singapore and meet through shared interactions.",
+    "role": "Product & 3D designer",
+    "sections": [
+      [
+        "A city as a social interface",
+        "Instead of treating connection as a sequence of profiles, the concept places people inside a navigable virtual Singapore. The environment becomes part of the experience of meeting someone."
+      ],
+      [
+        "From app flow to shared space",
+        "My work covered the general concept and app flow, connecting the product experience with the 3D environment. Add your flow diagrams and key screens here."
+      ],
+      [
+        "Environment & self-expression",
+        "I created 3D environments and character assets, including clothing and hairstyles. This section will show how the virtual city and customisable characters support exploration and identity."
+      ]
+    ]
+  },
+  {
+    "slug": "easyconvo",
+    "title": "EasyConvo",
+    "category": "Product",
+    "disciplines": "Product design / UX/UI / Learning",
+    "number": "03",
+    "note": "Small steps into language",
+    "image": null,
+    "accent": "orange",
+    "summary": "A phonics learning platform supporting early literacy development, with experiences for both students and teachers.",
+    "role": "Product designer",
+    "sections": [
+      [
+        "Designing for early literacy",
+        "Designed student and teacher experiences for a phonics learning platform supporting early literacy development."
+      ],
+      [
+        "Testing and improving the experience",
+        "Conducted usability testing and translated user feedback into improvements across learning activities, feedback flows, and teacher dashboards."
+      ],
+      [
+        "From flow to prototype",
+        "Developed user flows, storyboards, and prototypes using Figma to make phonics practice engaging and age-appropriate for young learners."
+      ]
+    ]
+  },
+  {
+    "slug": "personal-explorations",
+    "title": "An open-ended study",
+    "category": "Personal",
+    "disciplines": "Personal project / Experiments",
+    "number": "04",
+    "note": "A space for curiosity",
+    "image": null,
+    "accent": "blue",
+    "summary": "A reserved place for a personal project: an independent question, a material experiment or a new way of seeing.",
+    "role": "Independent exploration",
+    "sections": [
+      [
+        "A question of my own",
+        "Personal-project placeholder. Replace this with the idea that started the work."
+      ],
+      [
+        "Experiments & observations",
+        "Add process images, sketches and observations."
+      ],
+      [
+        "Where it led",
+        "Describe what you learned and what you want to explore next."
+      ]
+    ]
+  },
+  {
+    "slug": "architecture-archive",
+    "title": "Spatial fragments",
+    "category": "Architecture",
+    "disciplines": "Architecture / Models / Drawing",
+    "number": "05",
+    "note": "Selected architectural work",
+    "image": null,
+    "accent": "neutral",
+    "summary": "A collection of architectural drawings, model studies and spatial experiments from my studies.",
+    "role": "Architecture student",
+    "sections": [
+      [
+        "Thinking through making",
+        "A place for additional architecture work, from first sketches to model-making and resolved drawings."
+      ],
+      [
+        "Selected studies",
+        "Add each study’s title, course context and your individual contribution."
+      ],
+      [
+        "An evolving archive",
+        "This collection can grow as new work develops."
+      ]
+    ]
+  }
 ];

@@ -1,4 +1,3 @@
-// Updated supplied résumé, with previous Additional Information retained by request.
 export const resumeContent={
   "name": "Thant Thiri Wai",
   "email": "waithantthiri101@gmail.com",
@@ -40,7 +39,7 @@ export const resumeContent={
           "bullets": [
             "Designed student and teacher experiences for a phonics learning platform supporting early literacy development.",
             "Conducted usability testing and translated user feedback into improvements across learning activities, feedback flows, and teacher dashboards",
-            "Developed user flows, storyboards, and prototypes to make phonics practice engaging and age-appropriate for young learners."
+            "Developed user flows, storyboards, and prototypes using Figma to make phonics practice engaging and age-appropriate for young learners."
           ]
         }
       ]
@@ -129,5 +128,3 @@ export const resumeContent={
     }
   ]
 };
-
-
