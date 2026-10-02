@@ -1,5 +1,5 @@
 export function initAmbientParticles(){
- if(!document.querySelector('.hero'))return;
+ if(document.querySelector('.ambient-particles'))return;
  const preference=matchMedia('(prefers-reduced-motion: reduce)');let cleanup;
  function sync(){cleanup?.();cleanup=undefined;if(preference.matches)return;
   const canvas=document.createElement('canvas');canvas.className='ambient-particles';canvas.setAttribute('aria-hidden','true');document.body.prepend(canvas);const ctx=canvas.getContext('2d');if(!ctx){canvas.remove();return;}

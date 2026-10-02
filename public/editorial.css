@@ -10,6 +10,9 @@ em{font-style:normal}
 .tool-list{list-style:none;margin:0;padding:0;color:#aaa;font-size:14px;line-height:1.8}
 .tools-branches .tool-list li{padding:0;border:0;text-align:inherit;margin:0 0 5px}
 .tools-branches .tool-list li:before{content:none}
+.tools-branches .tool-list li{white-space:nowrap}
+.tools-root{color:var(--red)}
+@media(min-width:701px){.tools-branches>li{padding-left:8px;padding-right:8px}}
 /* Project index follows one continuous spine, with visuals left and notes right. */
 .project-grid{display:flex;flex-direction:column;gap:70px;position:relative;border-left:1px solid var(--red);padding-left:30px}
 .project-grid .project{margin:0!important;padding:0!important;position:relative;width:100%}
