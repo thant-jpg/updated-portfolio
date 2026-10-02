@@ -16,3 +16,7 @@
 
 .hero-art{mix-blend-mode:screen;animation:flower-drift 12s ease-in-out infinite alternate;transform-origin:65% 50%}.hero-note{padding:10px;background:#050505a6;backdrop-filter:blur(6px)}.hero-note:after{left:10px;width:115px}.note-b:after{left:auto;right:10px}.hero-coordinate,.hero-caption{background:#050505a6;padding:5px 8px}@keyframes flower-drift{from{transform:translateY(0) scale(1)}to{transform:translateY(-8px) scale(1.015)}}@media(max-width:600px){.hero-note{padding:7px}.hero-note:after{width:45px}.hero-coordinate,.hero-caption{padding:3px;font-size:8px}}
 .hero-board .flower-motion{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:screen;pointer-events:none}.has-flower-motion .hero-art{visibility:hidden}.hero-board{overflow:hidden}@media(prefers-reduced-motion:reduce){.hero-art{animation:none!important;transform:none!important}}
+
+/* A quiet, full-screen introduction between flowers and work. */
+.quiet-interlude{min-height:100svh;display:grid;place-items:center;background:#050505;padding:80px 24px;text-align:center}.quiet-interlude p{font-family:Georgia,serif;font-size:16px;line-height:1.75;letter-spacing:0;color:#e7e6e4;max-width:440px}.quiet-interlude span{display:block}.hero-bottom{border-bottom:0}@media(max-width:600px){.quiet-interlude p{font-size:15px;max-width:300px}.quiet-interlude{padding:60px 24px}}
+.has-flower-motion{cursor:grab;touch-action:pan-y}.has-flower-motion.is-turning{cursor:grabbing}.has-flower-motion:focus-visible{outline:1px solid #b5dce8;outline-offset:-6px}

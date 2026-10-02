@@ -37,3 +37,8 @@ The black gallery direction uses original AI-generated translucent floral artwor
 
 The homepage uses a lightweight WebGL texture effect in public/flower-motion.js: slow rotation, cursor/tap ripple trails, local swirl, and a scroll-driven turn, scale and fade. It animates the floral image rather than a 3D model. Rendering pauses off-screen and when the tab is hidden. Reduced-motion settings and unavailable WebGL keep the still image. No additional dependencies are required.
 
+
+The full-screen black introduction between the floral hero and selected work is editable through `profile.interlude` in `content.mjs`. Each array item is a line of the introduction.
+
+Flower turning now uses vertical-axis perspective and luminance-based depth parallax. Move the cursor horizontally, drag, or focus the artwork and press left/right arrows. The previous flat spinning motion is removed; idle motion is a gentle side-to-side turn. Full backside views still require a 3D model.
+
