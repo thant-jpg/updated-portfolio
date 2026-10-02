@@ -7,6 +7,10 @@ em{font-style:normal}
 .point-sculpture{position:fixed;inset:0;pointer-events:none;z-index:1}
 .morph-quote{transition:none!important;transform:none!important}
 .hero h1{will-change:opacity}
+.spine-connector{position:absolute;top:0;left:0;pointer-events:none;overflow:visible;z-index:1}
+.spine-connector path{stroke:var(--red);stroke-width:1;fill:none}
+#selected>.text-link{margin-left:50px;position:relative;z-index:2}
+@media(max-width:700px){#selected>.text-link{margin-left:30px}}
 .tool-list{list-style:none;margin:0;padding:0;color:#aaa;font-size:14px;line-height:1.8}
 .tools-branches .tool-list li{padding:0;border:0;text-align:inherit;margin:0 0 5px}
 .tools-branches .tool-list li:before{content:none}

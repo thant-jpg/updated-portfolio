@@ -4,6 +4,8 @@ import { initPointSculpture } from './point-sculpture.js';
 
 initAmbientParticles();
 initPointSculpture();
+const projectSpine=document.querySelector('#selected .project-grid'),closingSpine=document.querySelector('.closing-rule');
+if(projectSpine&&closingSpine){const main=document.querySelector('main'),svg=document.createElementNS('http://www.w3.org/2000/svg','svg'),path=document.createElementNS(svg.namespaceURI,'path');svg.classList.add('spine-connector');svg.setAttribute('aria-hidden','true');svg.append(path);main.append(svg);function connect(){const m=main.getBoundingClientRect(),a=projectSpine.getBoundingClientRect(),b=closingSpine.getBoundingClientRect(),x=a.left-m.left,y=a.bottom-m.top,X=b.left-m.left,Y=b.top-m.top,mid=y+(Y-y)*.62;svg.setAttribute('width',main.clientWidth);svg.setAttribute('height',main.offsetHeight);path.setAttribute('d',`M ${x} ${y} V ${mid} H ${X} V ${Y}`)}new ResizeObserver(connect).observe(main);addEventListener('resize',connect);document.fonts.ready.then(connect);connect()}
 // Abstract particle diagrams are placeholders, not project renders.
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(!reduced){const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('reveal-visible');observer.unobserve(entry.target)}},{threshold:.08,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('#selected .section-heading,#selected .project,#selected>.text-link').forEach((e,i)=>{e.classList.add('scroll-reveal');e.style.setProperty('--reveal-delay',`${i%2*90}ms`);observer.observe(e)})}
