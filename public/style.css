@@ -48,3 +48,5 @@ body::after{content:"";position:fixed;inset:0;background-image:url("/grain.svg")
 
 /* Monochrome artwork without changing the fixed scene placement. */
 canvas,img,video{filter:grayscale(1)}
+
+.flower-motion{filter:none}
