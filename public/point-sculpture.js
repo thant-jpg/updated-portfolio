@@ -27,12 +27,12 @@ export function initPointSculpture(){
   if(!drag){yaw+=vy*dt;pitch+=vp*dt;vy*=Math.pow(.92,dt);vp*=Math.pow(.92,dt)}
   const morph=smooth((progress-.42)/.52),scatter=Math.sin(Math.PI*progress),fade=1-smooth((progress-.96)/.04),takeover=smooth(progress/.1);
   heading.style.opacity=reduced?'1':String(1-takeover);quote.style.opacity=reduced?'1':String(smooth((progress-.94)/.06));quote.style.transform='none';
-  const centerX=box.left+box.width*(width>700?.39:.5),centerY=box.top+box.height*.49,scale=Math.min(box.width*(width>700?1.1:1.7),box.height*.95);
+  const centerX=box.left+box.width*.5,centerY=box.top+box.height*.5,scale=Math.min(box.width/ (flower.naturalWidth/flower.naturalHeight || .46)*.84,box.height*.92);
   const targetX=q.left+q.width/2,targetY=q.top+q.height/2;
   for(const p of bitmap){const X=p.x*Math.cos(yaw),Z=-p.x*Math.sin(yaw),Y=p.y*Math.cos(pitch)-Z*Math.sin(pitch),depth=p.y*Math.sin(pitch)+Z*Math.cos(pitch),perspective=3/(3+depth);
-   const x=centerX+X*scale*perspective,y=centerY+Y*scale*perspective,px=x+p.dx-pointer.x,py=y+p.dy-pointer.y,distance=Math.hypot(px,py),radius=width>700?90:65;
-   if(!reduced&&distance<radius&&distance>0){const force=(1-distance/radius)*2;p.vx+=px/distance*force*dt;p.vy+=py/distance*force*dt}
-   p.vx=(p.vx-p.dx*.045*dt)*Math.pow(.8,dt);p.vy=(p.vy-p.dy*.045*dt)*Math.pow(.8,dt);p.dx+=p.vx*dt;p.dy+=p.vy*dt;
+   const x=centerX+X*scale*perspective,y=centerY+Y*scale*perspective,px=x+p.dx-pointer.x,py=y+p.dy-pointer.y,distance=Math.hypot(px,py),radius=width>700?115:75;
+   if(!reduced&&distance<radius&&distance>0){const force=(1-distance/radius)*5;p.vx+=(px-py*.35)/distance*force*dt;p.vy+=(py+px*.35)/distance*force*dt}
+   p.vx=(p.vx-p.dx*.028*dt)*Math.pow(.85,dt);p.vy=(p.vy-p.dy*.028*dt)*Math.pow(.85,dt);p.dx+=p.vx*dt;p.dy+=p.vy*dt;
    ctx.globalAlpha=(.55+p.ink*.4)*(1-smooth(progress/.5));ctx.fillStyle='#eee';const size=Math.max(.8,scale/flower.naturalHeight*2.1);ctx.fillRect(x+p.dx,y+p.dy,size,size);
   }
   if(!reduced&&takeover>.001&&fade>.001){const h=heading.getBoundingClientRect(),originX=h.left+h.width/2,originY=h.top+scrollY+h.height/2-scrollY*.25;
@@ -45,8 +45,9 @@ export function initPointSculpture(){
  }
  board.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY};board.setPointerCapture(e.pointerId);board.classList.add('is-turning')});
  board.addEventListener('pointermove',e=>{if(!drag)return;const dx=(e.clientX-drag.x)*.008,dy=(e.clientY-drag.y)*.006;yaw+=dx;pitch=Math.max(-1,Math.min(1,pitch+dy));vy=dx*.4;vp=dy*.4;drag={x:e.clientX,y:e.clientY}});
- board.addEventListener('pointermove',e=>{pointer={x:e.clientX,y:e.clientY}});
- board.addEventListener('pointerleave',()=>{pointer={x:-10000,y:-10000}});
+ window.addEventListener('pointermove',e=>{pointer={x:e.clientX,y:e.clientY}});
+ document.documentElement.addEventListener('pointerleave',()=>{pointer={x:-10000,y:-10000}});
+ window.addEventListener('blur',()=>{pointer={x:-10000,y:-10000}});
  const release=()=>{drag=null;board.classList.remove('is-turning')};board.addEventListener('pointerup',release);board.addEventListener('pointercancel',release);
  board.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();yaw+=e.key==='ArrowLeft'?-.15:e.key==='ArrowRight'?.15:0;pitch+=e.key==='ArrowUp'?-.1:e.key==='ArrowDown'?.1:0}});
  addEventListener('resize',resize);document.fonts.ready.then(resize);resize();requestAnimationFrame(render);
