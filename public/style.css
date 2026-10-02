@@ -39,3 +39,6 @@ body::after{content:"";position:fixed;inset:0;background-image:url("/grain.svg")
 /* Introduction sits beside the sculpture on wider screens. */
 @media(min-width:701px){.hero-bottom{justify-content:flex-end}.hero-bottom p{position:absolute;left:4%;top:46%;width:23%;max-width:300px;z-index:2;font-size:13px;line-height:1.85}}
 @media(min-width:701px){.hero-bottom{position:static}.hero-bottom .pill{position:relative;z-index:2}}
+#selected>.section-heading{grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,1fr)}
+#selected>.section-heading h2{text-align:center}
+@media(max-width:700px){#selected>.section-heading{grid-template-columns:1fr}#selected>.section-heading h2{width:100%;text-align:center}}
