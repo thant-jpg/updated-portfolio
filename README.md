@@ -32,3 +32,8 @@ Replace the placeholder visuals and draft project copy. Add your full name if de
 ## Floral art direction
 
 The black gallery direction uses original AI-generated translucent floral artwork at `public/images/ghost-flowers.png`, made with the built-in image-generation tool. This is visual identity artwork, not a project render. Prompt: three airy translucent X-ray-like glass flowers with flowing tendrils, icy silver and pale cyan with violet iridescence, on pure black with generous negative space; no text, UI or logos. The homepage has gentle motion with reduced-motion support.
+
+## Interactive flowers
+
+The homepage uses a lightweight WebGL texture effect in public/flower-motion.js: slow rotation, cursor/tap ripple trails, local swirl, and a scroll-driven turn, scale and fade. It animates the floral image rather than a 3D model. Rendering pauses off-screen and when the tab is hidden. Reduced-motion settings and unavailable WebGL keep the still image. No additional dependencies are required.
+
