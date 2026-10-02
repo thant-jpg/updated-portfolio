@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+ <defs><filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="34"/></filter></defs>
+ <g fill="none" stroke="#fff" filter="url(#soft)" stroke-linecap="round">
+  <path d="M 690 -140 C 770 160 480 210 180 265 S -100 425 240 440" stroke-width="75" opacity=".32"/>
+  <path d="M 1170 180 C 890 220 790 430 1030 620" stroke-width="65" opacity=".22"/>
+  <path d="M -180 710 C 30 880 490 720 550 1100" stroke-width="70" opacity=".3"/>
+ </g>
+</svg>

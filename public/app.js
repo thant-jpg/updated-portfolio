@@ -1,6 +1,6 @@
-import { initFlowerMotion } from './network-scene.js';
+
 import { initAmbientParticles } from './ambient-particles.js';
-initFlowerMotion();
+
 initAmbientParticles();
 // Abstract particle diagrams are placeholders, not project renders.
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
