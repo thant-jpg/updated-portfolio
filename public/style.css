@@ -36,3 +36,5 @@ body::after{content:"";position:fixed;inset:0;background-image:url("/grain.svg")
 
 /* Horizontal drag rotates the restored original 3D botanical sculpture. */
 .has-flower-motion{cursor:grab}.has-flower-motion.is-turning{cursor:grabbing}
+/* Introduction sits beside the sculpture on wider screens. */
+@media(min-width:701px){.hero-bottom{justify-content:flex-end}.hero-bottom p{position:absolute;left:4%;top:46%;width:23%;max-width:300px;z-index:2;font-size:13px;line-height:1.85}}
