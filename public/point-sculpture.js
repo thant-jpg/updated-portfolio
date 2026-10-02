@@ -10,12 +10,13 @@ export function initPointSculpture(){
  const flower=new Image();flower.src='/images/bitmap-flower.png';flower.onload=()=>{const off=document.createElement('canvas');off.width=flower.naturalWidth;off.height=flower.naturalHeight;const c=off.getContext('2d');c.drawImage(flower,0,0);const data=c.getImageData(0,0,off.width,off.height).data;for(let y=0;y<off.height;y+=3)for(let x=0;x<off.width;x+=3){const i=(y*off.width+x)*4,lum=(data[i]+data[i+1]+data[i+2])/3;if(lum<160&&data[i+3]>128)bitmap.push({x:(x-off.width/2)/off.height,y:(y-off.height/2)/off.height,dx:0,dy:0,vx:0,vy:0,ink:1-lum/255})}board.dataset.bitmapPoints=bitmap.length};
  const count=6000,points=[];let seed=47;
  const random=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646};
+ const gaussian=()=>Math.sqrt(-2*Math.log(Math.max(.001,random())))*Math.cos(random()*Math.PI*2);
  for(let i=0;i<count;i++){
   // Three rings of curved petals form a volumetric point-cloud bloom.
   const layer=Math.floor(random()*3),petal=Math.floor(random()*7),u=random(),v=(random()-.5)*2;
   const angle=petal*Math.PI*2/7+layer*.35,spread=Math.sin(Math.PI*u)*(.48-layer*.09)*v;
   const radius=.12+u*(1.35-layer*.27),curl=-.3+Math.pow(u,1.6)*(.65+layer*.16)+.13*v*v;
-  points.push({x:radius*Math.cos(angle)-spread*Math.sin(angle),y:curl-.13*layer,z:radius*Math.sin(angle)+spread*Math.cos(angle),sx:(random()-.5)*2,sy:(random()-.5)*2,sz:random(),size:.5+random()*.6});
+  points.push({x:radius*Math.cos(angle)-spread*Math.sin(angle),y:curl-.13*layer,z:radius*Math.sin(angle)+spread*Math.cos(angle),sx:gaussian(),sy:gaussian(),sz:random(),size:.5+random()*.6});
  }
  function sampleText(element){const box=element.getBoundingClientRect(),off=document.createElement('canvas');off.width=Math.ceil(box.width);off.height=Math.ceil(box.height);const c=off.getContext('2d'),walker=document.createTreeWalker(element,NodeFilter.SHOW_TEXT);c.fillStyle='#fff';c.textBaseline='middle';let node;while(node=walker.nextNode()){const style=getComputedStyle(node.parentElement);c.font=`${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;for(let i=0;i<node.length;i++){if(/\s/.test(node.textContent[i]))continue;const range=document.createRange();range.setStart(node,i);range.setEnd(node,i+1);const r=range.getBoundingClientRect();c.fillText(node.textContent[i],r.left-box.left,r.top-box.top+r.height/2)}}const data=c.getImageData(0,0,off.width,off.height).data,result=[];for(let y=0;y<off.height;y+=1.5)for(let x=0;x<off.width;x+=1.5)if(data[(Math.floor(y)*off.width+Math.floor(x))*4+3]>90)result.push({x:x-box.width/2,y:y-box.height/2});return result}
  function resize(){width=innerWidth;height=innerHeight;dpr=Math.min(devicePixelRatio,2);canvas.width=width*dpr;canvas.height=height*dpr;canvas.style.width=width+'px';canvas.style.height=height+'px';ctx.setTransform(dpr,0,0,dpr,0,0);sources=sampleText(heading);targets=sampleText(quote)}
@@ -36,8 +37,9 @@ export function initPointSculpture(){
   }
   if(!reduced&&takeover>.001&&fade>.001){const h=heading.getBoundingClientRect(),originX=h.left+h.width/2,originY=h.top+scrollY+h.height/2-scrollY*.25;
    for(let i=0;i<count;i++){const p=points[i],s=sources[(i*31)%Math.max(1,sources.length)]||{x:0,y:0},t=targets[(i*37)%Math.max(1,targets.length)]||{x:0,y:0};
-    const x=(originX+s.x)*(1-morph)+(targetX+t.x)*morph+p.sx*width*.42*scatter,y=(originY+s.y)*(1-morph)+(targetY+t.y)*morph+p.sy*height*.4*scatter;
-    ctx.globalAlpha=.75*takeover*fade;ctx.fillRect(x,y,.9,.9);
+    const swirl=progress*1.9+p.sz*.6,flowX=p.sx*Math.cos(swirl)-p.sy*Math.sin(swirl),flowY=p.sx*Math.sin(swirl)+p.sy*Math.cos(swirl);
+    const x=(originX+s.x)*(1-morph)+(targetX+t.x)*morph+flowX*width*.18*scatter+Math.sin(time*.00045+p.sz*20)*scatter*9,y=(originY+s.y)*(1-morph)+(targetY+t.y)*morph+flowY*height*.24*scatter+Math.cos(time*.0004+p.sz*20)*scatter*9;
+    ctx.globalAlpha=(.45+.3*p.sz)*takeover*fade;ctx.fillRect(x,y,.9,.9);
    }
   }ctx.globalAlpha=1;requestAnimationFrame(render);
  }

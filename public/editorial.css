@@ -18,6 +18,12 @@ em{font-style:normal}
 .tools-root{color:var(--red)}
 .brand:hover,.brand:active,.brand[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
 .brand:hover span,.brand:active span,.brand[aria-current="page"] span{font-weight:700}
+nav a:hover{font-weight:700;text-decoration:underline;text-decoration-thickness:2px}
+.project-grid .visual{transition:border-color .25s ease}
+.project-grid .project>a:hover .visual,.project-grid .project>a:focus-visible .visual{border-color:var(--red)!important}
+.project-grid .project>a:hover h3{color:var(--red);transition:color .25s ease}
+.spine-connector path{stroke-linejoin:round;stroke-linecap:round}
+@media(max-width:700px){nav{gap:20px}.timeline-card h3{font-size:19px}.tools-diagram{margin-top:12px}}
 @media(min-width:701px){.tools-branches>li{padding-left:8px;padding-right:8px}}
 /* Project index follows one continuous spine, with visuals left and notes right. */
 .project-grid{display:flex;flex-direction:column;gap:70px;position:relative;border-left:1px solid var(--red);padding-left:30px}
