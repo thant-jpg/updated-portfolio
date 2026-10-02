@@ -12,6 +12,8 @@ em{font-style:normal}
 .tools-branches .tool-list li:before{content:none}
 .tools-branches .tool-list li{white-space:nowrap}
 .tools-root{color:var(--red)}
+.brand:hover,.brand:active,.brand[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.brand:hover span,.brand:active span,.brand[aria-current="page"] span{font-weight:700}
 @media(min-width:701px){.tools-branches>li{padding-left:8px;padding-right:8px}}
 /* Project index follows one continuous spine, with visuals left and notes right. */
 .project-grid{display:flex;flex-direction:column;gap:70px;position:relative;border-left:1px solid var(--red);padding-left:30px}
