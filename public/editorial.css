@@ -1,0 +1,60 @@
+:root{--red:#e3483f;--accent:var(--red)}
+body::before{opacity:.09!important}
+.closing-study{background:radial-gradient(ellipse at 105% 60%,#ffffff1c,transparent 52%),#050505!important}
+.timeline-page{background:radial-gradient(ellipse at 0% 8%,#ffffff0a,transparent 35%),#050505}
+.closing-cell{position:relative;z-index:1}
+.closing-study:after{content:"";position:absolute;inset:0;background:url('/grain.svg');opacity:.15;mix-blend-mode:screen;pointer-events:none}
+.closing-a>.eyebrow,.timeline-index{color:var(--red)!important}
+.network-scene{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;pointer-events:none;filter:none}
+.has-network{cursor:crosshair;overflow:visible}
+.closing-study{position:relative;z-index:2;margin:80px 4% 0;padding:0 6% 110px;min-height:900px;background:#050505;color:#e9e8e3;font-family:"Courier New",Courier,monospace}
+.closing-rule{width:1px;height:280px;background:var(--red);margin:0 auto 80px}
+.closing-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:65px 25px;max-width:950px;margin:auto;font-size:12px;line-height:1.75;letter-spacing:.035em}
+.closing-cell{display:flex;flex-direction:column;gap:25px}
+.closing-cell .eyebrow{font-size:10px;color:#8d8d8d}
+.closing-cell h2{font:14px/1.65 "Courier New",Courier,monospace;text-transform:uppercase;letter-spacing:.03em}
+.closing-cell p{font-size:12px;line-height:1.8}
+.closing-cell a{font-size:11px;text-decoration:underline;text-underline-offset:7px;text-decoration-color:var(--red);transition:color .2s}
+.closing-cell a:hover{color:var(--red)}
+.closing-a{grid-column:1/4;text-align:right;padding-right:35px}
+.closing-b{grid-column:4/7;padding-left:15px}
+.closing-c{grid-column:2/4;text-align:right}
+.closing-d{grid-column:5/7;padding-top:45px}
+.closing-e{grid-column:1/4;text-align:right;padding-right:40px}
+.closing-end{display:grid;justify-items:center;gap:70px;margin-top:70px}
+.closing-end i{width:1px;height:70px;background:var(--red)}
+.closing-end b{width:9px;height:9px;background:#e9e8e3}
+footer{font-family:"Courier New",Courier,monospace;font-size:11px}
+.timeline-page{max-width:1200px;padding-top:70px}
+.timeline-page .resume-heading{border-bottom:0;text-align:center;padding-bottom:75px}
+.timeline-page .resume-heading h1{font:clamp(30px,4.5vw,58px)/1.2 "Courier New",Courier,monospace;letter-spacing:-.04em}
+.timeline-page .resume-contact{justify-content:center;font:12px/1.7 "Courier New",Courier,monospace}
+.timeline-page .resume-contact a{border-color:var(--red)}
+.timeline-key{display:flex;justify-content:space-between;gap:20px;font:10px/1.6 "Courier New",Courier,monospace;color:#999;padding-bottom:45px}
+.resume-timeline{list-style:none;margin:0;padding:50px 0 0;position:relative}
+.resume-timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--red)}
+.timeline-event{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:95px;padding:0 0 95px}
+.timeline-node{position:absolute;top:8px;left:50%;width:7px;height:7px;background:var(--red);transform:translateX(-3px)}
+.timeline-date{grid-column:1;text-align:right;display:flex;flex-direction:column;gap:15px;font:12px/1.6 "Courier New",Courier,monospace;padding-top:3px;position:relative}
+.timeline-date:after{content:"";position:absolute;top:11px;right:-44px;width:25px;height:1px;background:var(--red)}
+.timeline-index{font-size:10px;text-transform:uppercase;color:#777}
+.timeline-card{grid-column:2;min-width:0}
+.timeline-card>.eyebrow{font-size:10px;color:#999;text-transform:uppercase}
+.timeline-card h2{font:20px/1.35 "Courier New",Courier,monospace;letter-spacing:-.035em;margin:12px 0 15px;color:#f3f2ef}
+.timeline-card .resume-role{font:12px/1.75 "Courier New",Courier,monospace;color:#aaa;margin:0}
+.timeline-card ul{padding-left:16px;margin:22px 0 0;font:14px/1.8 Arial,sans-serif;color:#c7c7c7}
+.timeline-card li{margin-bottom:10px;padding-left:3px}
+.timeline-card li::marker{color:var(--red)}
+.timeline-event:nth-child(even) .timeline-date{grid-column:2;grid-row:1;text-align:left}
+.timeline-event:nth-child(even) .timeline-date:after{left:-44px;right:auto}
+.timeline-event:nth-child(even) .timeline-card{grid-column:1;grid-row:1;text-align:right}
+.timeline-event:nth-child(even) .timeline-card ul{text-align:left}
+.resume-extra{position:relative;border-top:1px solid #333;margin-top:50px;padding:60px 0 35px;display:grid;grid-template-columns:1fr 1fr;gap:35px 70px}
+.resume-extra>h2{grid-column:1/-1;font:16px "Courier New",Courier,monospace;text-transform:uppercase}
+.resume-extra h3{font:12px "Courier New",Courier,monospace;color:#aaa;margin-bottom:15px}
+.resume-extra p{font:14px/1.8 "Courier New",Courier,monospace;color:#ddd}
+.timeline-return{font:11px "Courier New",Courier,monospace;border-color:var(--red)}
+a:focus-visible,button:focus-visible{outline-color:var(--red)}
+@media(max-width:700px){.closing-study{padding:0 3% 80px;min-height:800px;margin-top:40px}.closing-rule{height:180px;margin-bottom:60px}.closing-grid{grid-template-columns:1fr 1fr;gap:50px 25px}.closing-a{grid-column:1;text-align:right;padding:0}.closing-b{grid-column:2;padding:0}.closing-c{grid-column:1;text-align:right}.closing-d{grid-column:2;padding:20px 0 0}.closing-e{grid-column:1/-1;padding:0;text-align:center}.closing-cell h2{font-size:12px}.closing-cell p{font-size:11px}.timeline-key{flex-direction:column;gap:8px}.timeline-page .resume-heading{padding-bottom:50px;text-align:left}.timeline-page .resume-contact{justify-content:flex-start}.resume-timeline:before{left:6px}.timeline-event{display:block;padding:0 0 65px 36px}.timeline-node{left:6px}.timeline-date,.timeline-event:nth-child(even) .timeline-date{text-align:left;font-size:11px;margin-bottom:25px;gap:7px}.timeline-date:after,.timeline-event:nth-child(even) .timeline-date:after{left:-29px;right:auto;width:15px;top:10px}.timeline-card,.timeline-event:nth-child(even) .timeline-card{text-align:left}.timeline-card h2{font-size:19px}.timeline-card ul{font-size:14px}.resume-extra{grid-template-columns:1fr;gap:30px}.resume-extra>h2{grid-column:1}}
+
+body::after{opacity:.12!important}

@@ -1,0 +1,9 @@
+export function renderResume(r,esc){
+ const month={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+ const dated=r.sections.flatMap(s=>s.entries.filter(e=>e.date).map(e=>({...e,category:s.title})));
+ const start=e=>{const [m,y]=e.date.split(' — ')[0].split(' ');return Number(y)*12+month[m]};
+ dated.sort((a,b)=>start(b)-start(a));
+ const contacts=`<div class="resume-contact"><a href="mailto:${esc(r.email)}">${esc(r.email)}</a><a href="tel:${esc(r.phone)}">${esc(r.phone)}</a><a href="${esc(r.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="${esc(r.portfolio)}" target="_blank" rel="noopener noreferrer">Architecture portfolio ↗</a></div>`;
+ return `<article class="resume-page timeline-page"><div class="resume-heading"><span class="eyebrow">RÉSUMÉ / SELECTED EXPERIENCE</span><h1>${esc(r.name)}</h1>${contacts}</div><div class="timeline-key"><span>01 / EXPERIENCE, PROJECTS & EDUCATION</span><span>NEWEST → OLDEST · BY START DATE</span></div><ol class="resume-timeline">${dated.map((e,i)=>`<li class="timeline-event"><span class="timeline-node" aria-hidden="true"></span><div class="timeline-date"><span>${esc(e.date)}</span><span class="timeline-index">${String(i+1).padStart(2,'0')} / ${esc(e.category)}</span></div><article class="timeline-card"><span class="eyebrow">${esc(e.category)}</span><h2>${esc(e.title)}</h2>${e.subtitle?`<p class="resume-role">${esc(e.subtitle)}</p>`:''}<ul>${e.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></article></li>`).join('')}</ol><section class="resume-extra"><h2>Additional information</h2>${r.sections.filter(s=>s.title==='Additional information').flatMap(s=>s.entries).map(e=>`<div><h3>${esc(e.title)}</h3>${e.bullets.map(b=>`<p>${esc(b)}</p>`).join('')}</div>`).join('')}</section><a class="timeline-return text-link" href="/about/">More about my practice ↗</a></article>`;
+}
+
