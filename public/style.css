@@ -38,3 +38,4 @@ body::after{content:"";position:fixed;inset:0;background-image:url("/grain.svg")
 .has-flower-motion{cursor:grab}.has-flower-motion.is-turning{cursor:grabbing}
 /* Introduction sits beside the sculpture on wider screens. */
 @media(min-width:701px){.hero-bottom{justify-content:flex-end}.hero-bottom p{position:absolute;left:4%;top:46%;width:23%;max-width:300px;z-index:2;font-size:13px;line-height:1.85}}
+@media(min-width:701px){.hero-bottom{position:static}.hero-bottom .pill{position:relative;z-index:2}}
