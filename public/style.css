@@ -42,3 +42,4 @@ body::after{content:"";position:fixed;inset:0;background-image:url("/grain.svg")
 #selected>.section-heading{grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,1fr)}
 #selected>.section-heading h2{text-align:center}
 @media(max-width:700px){#selected>.section-heading{grid-template-columns:1fr}#selected>.section-heading h2{width:100%;text-align:center}}
+@media(min-width:701px){.hero-bottom{transform:none!important;animation:none!important}}
