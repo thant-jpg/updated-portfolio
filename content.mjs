@@ -1,6 +1,6 @@
 // Replace image: null with '/images/your-file.jpg'. Put files in public/images.
 // Draft descriptions describe scope only; replace with your process and evidence.
-export const profile = { name: 'Thant', location: 'Singapore', title: 'Architecture & interactive design', email: '', resume: '/resume.docx', interlude: ['I’m drawn to the space between what is', 'and what could be.'], intro: 'I study architecture and work across spaces, digital products and interactive experiences. I’m interested in how we move, connect and find our place — in physical worlds and virtual ones.' };
+export const profile = { name: 'Thant', location: 'Singapore', title: 'Architecture & interactive design', email: 'waithantthiri101@gmail.com', resume: '/resume.docx', interlude: ['I’m drawn to the space between what is', 'and what could be.'], intro: 'I study architecture and work across spatial design, digital products and interactive experiences. I’m interested in how people move, connect and find a sense of place in physical and virtual environments.' };
 export const projects=[
   {
     "slug": "linked-hybrid",
@@ -11,20 +11,20 @@ export const projects=[
     "note": "Spatial systems",
     "image": null,
     "accent": "blue",
-    "summary": "An architectural and computational study of connected spaces, collective living and the relationships between built form and circulation.",
+    "summary": "A study of connected buildings, shared living spaces and how people move between them.",
     "role": "Architecture student",
     "sections": [
       [
         "The architectural question",
-        "Exploring how individual volumes become a connected spatial system. This project brings architectural thinking and computational exploration into the same conversation."
+        "I explored how separate buildings can connect as one place, using architectural design and digital models."
       ],
       [
         "Form, connection, movement",
-        "A space for the drawings, computational iterations and models that explain the study. Add the actual brief, design decisions and tools alongside your images."
+        "Drawings and models will show how the design developed."
       ],
       [
         "Drawings & models",
-        "The final selection will bring together plans, sections, spatial studies and architectural visualisations."
+        "Plans, sections and models will show the final design."
       ]
     ]
   },
@@ -37,20 +37,20 @@ export const projects=[
     "note": "Virtual worlds, real connections",
     "image": null,
     "accent": "green",
-    "summary": "A gamified dating and social experience where people explore a virtual Singapore and meet through shared interactions.",
+    "summary": "A dating and social app where people explore a 3D Singapore and meet through games and shared activities.",
     "role": "Product & 3D designer",
     "sections": [
       [
         "A city as a social interface",
-        "Instead of treating connection as a sequence of profiles, the concept places people inside a navigable virtual Singapore. The environment becomes part of the experience of meeting someone."
+        "People can explore a 3D Singapore and meet others through shared activities."
       ],
       [
         "From app flow to shared space",
-        "My work covered the general concept and app flow, connecting the product experience with the 3D environment. Add your flow diagrams and key screens here."
+        "I developed the concept and app flow, and connected the screens to the 3D world."
       ],
       [
         "Environment & self-expression",
-        "I created 3D environments and character assets, including clothing and hairstyles. This section will show how the virtual city and customisable characters support exploration and identity."
+        "I designed 3D environments and customisable characters, including clothing and hairstyles."
       ]
     ]
   },
@@ -63,20 +63,20 @@ export const projects=[
     "note": "Small steps into language",
     "image": null,
     "accent": "orange",
-    "summary": "A phonics learning platform supporting early literacy development, with experiences for both students and teachers.",
+    "summary": "A phonics app that helps young children learn to read, with tools for students and teachers.",
     "role": "Product designer",
     "sections": [
       [
         "Designing for early literacy",
-        "Designed student and teacher experiences for a phonics learning platform supporting early literacy development."
+        "I designed student and teacher experiences for a phonics learning platform."
       ],
       [
         "Testing and improving the experience",
-        "Conducted usability testing and translated user feedback into improvements across learning activities, feedback flows, and teacher dashboards."
+        "I conducted user testing and used feedback to refine learning activities and teacher dashboards."
       ],
       [
         "From flow to prototype",
-        "Developed user flows, storyboards, and prototypes using Figma to make phonics practice engaging and age-appropriate for young learners."
+        "I developed app flows and Figma prototypes suited to young learners."
       ]
     ]
   },
@@ -89,7 +89,7 @@ export const projects=[
     "note": "A space for curiosity",
     "image": null,
     "accent": "blue",
-    "summary": "A reserved place for a personal project: an independent question, a material experiment or a new way of seeing.",
+    "summary": "A space for personal projects and experiments.",
     "role": "Independent exploration",
     "sections": [
       [
@@ -115,12 +115,12 @@ export const projects=[
     "note": "Selected architectural work",
     "image": null,
     "accent": "neutral",
-    "summary": "A collection of architectural drawings, model studies and spatial experiments from my studies.",
+    "summary": "Drawings, models and experiments from my architecture studies.",
     "role": "Architecture student",
     "sections": [
       [
         "Thinking through making",
-        "A place for additional architecture work, from first sketches to model-making and resolved drawings."
+        "Architecture work, from early sketches to finished models and drawings."
       ],
       [
         "Selected studies",

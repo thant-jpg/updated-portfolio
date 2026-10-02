@@ -1,9 +1,21 @@
 :root{--red:#e3483f;--accent:var(--red)}
+body,body *{font-family:"Courier New",Courier,monospace!important}
+em{font-style:normal}
+.scroll-reveal{opacity:0;transform:translateY(18px);animation:none!important;transition:opacity 1s ease var(--reveal-delay,0ms),transform 1s ease var(--reveal-delay,0ms)}
+.scroll-reveal.reveal-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;transform:none;transition:none}}
+.point-sculpture{position:fixed;inset:0;pointer-events:none;z-index:1}
+.morph-quote{transition:none!important;transform:none!important}
+.sculpture-control{cursor:grab;touch-action:pan-y;z-index:1}
+.sculpture-control.is-turning{cursor:grabbing}
+.sculpture-control:focus-visible{outline:1px solid var(--red);outline-offset:-8px}
+.sculpture-hint{position:absolute;bottom:15px;left:26%;font:11px "Courier New",monospace;color:var(--red);letter-spacing:.06em;pointer-events:none}
+@media(max-width:700px){.sculpture-hint{left:0;width:100%;text-align:center}}
 body::before{opacity:.09!important}
-.closing-study{background:radial-gradient(ellipse at 105% 60%,#ffffff1c,transparent 52%),#050505!important}
-.timeline-page{background:radial-gradient(ellipse at 0% 8%,#ffffff0a,transparent 35%),#050505}
+ .closing-study{background:transparent!important}
+.timeline-page{background:transparent}
 .closing-cell{position:relative;z-index:1}
-.closing-study:after{content:"";position:absolute;inset:0;background:url('/grain.svg');opacity:.15;mix-blend-mode:screen;pointer-events:none}
+.closing-study:after{content:none}
 .closing-a>.eyebrow,.timeline-index{color:var(--red)!important}
 .network-scene{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;pointer-events:none;filter:none}
 .has-network{cursor:crosshair;overflow:visible}
@@ -45,7 +57,7 @@ footer{font-family:"Courier New",Courier,monospace;font-size:11px}
 .timeline-group{margin-top:40px}
 .timeline-group+.timeline-group{border-top:1px solid #333;padding-top:65px;margin-top:0}
 .timeline-key h2{font:13px/1.6 "Courier New",Courier,monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--red)}
-.timeline-page{background-image:url('/grain.svg'),radial-gradient(ellipse at 0% 8%,#ffffff0a,transparent 35%);background-size:230px 230px,100% 100%;background-blend-mode:soft-light,normal}
+.timeline-page{background:transparent}
 .timeline-card .resume-role{font:12px/1.75 "Courier New",Courier,monospace;color:#aaa;margin:0}
 .timeline-card ul{padding-left:16px;margin:22px 0 0;font:14px/1.8 Arial,sans-serif;color:#c7c7c7}
 .timeline-card li{margin-bottom:10px;padding-left:3px}
@@ -89,3 +101,27 @@ footer:not(.poster-footer){border-top-color:var(--red);color:#aaa}
 .poster-footer a{color:var(--red)}
 .poster-footer a:hover{text-decoration:underline;text-underline-offset:5px}
 @media(max-width:700px){.poster-footer{min-height:690px;padding:25px 5%;margin:0 4%;font-size:8px}.poster-top,.poster-bottom{gap:12px;grid-template-columns:1fr 1fr}.poster-top> :nth-child(2){grid-column:2;text-align:right}.poster-top> :last-child{grid-column:1/-1;text-align:left;margin-top:12px}.poster-bottom> :nth-child(2){grid-column:1/-1;grid-row:2;margin-top:15px}.poster-bottom> :last-child{grid-column:2;grid-row:1}.poster-message{padding:130px 0}.poster-message h2{font-size:19px}.poster-message p{font-size:9px}}
+
+/* Continuous paper and clear navigation. */
+footer{background:transparent}
+nav a[aria-current="page"]{color:var(--red);font-weight:700;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.contact-page h1,.contact-page h1 em,.contact-page>p,.contact-page .text-link,.contact-bottom p{font-family:"Courier New",Courier,monospace;font-style:normal;letter-spacing:0}
+.contact-page h1{font-size:clamp(36px,5.6vw,78px);line-height:1.15;letter-spacing:-.04em}
+.contact-page>a{max-width:100%;overflow-wrap:anywhere}
+.about-tools{max-width:none;padding-bottom:40px}
+.tools-diagram{margin-top:30px;font-family:"Courier New",Courier,monospace}
+.tools-root{width:max-content;margin:0 auto;padding:12px 20px;border:1px solid var(--red);color:#eee;font-size:14px;position:relative}
+.tools-root:after{content:"";position:absolute;width:1px;height:30px;background:var(--red);top:100%;left:50%}
+.tools-branches{list-style:none;padding:30px 0 0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.tools-branches li{position:relative;padding:30px 14px 0;border-top:1px solid var(--red);text-align:center;min-width:0}
+.tools-branches li:before{content:"";position:absolute;top:0;left:50%;height:18px;width:1px;background:var(--red)}
+.tool-number{color:var(--red);font-size:12px}
+.tools-branches h4{font-size:14px;font-weight:400;margin:12px 0;color:#eee}
+.tools-branches p{font:14px/1.8 "Courier New",Courier,monospace;color:#aaa;margin:0}
+@media(max-width:700px){.tools-root{margin:0}.tools-root:after{left:12px}.tools-branches{display:block;border-left:1px solid var(--red);margin-left:12px;padding-top:10px}.tools-branches li{border:0;text-align:left;padding:22px 0 12px 28px}.tools-branches li:before{left:0;top:32px;width:16px;height:1px}.tools-branches h4{margin:8px 0}.contact-bottom{gap:40px;flex-wrap:wrap}}
+
+.timeline-key{flex-direction:column;align-items:center;text-align:center;gap:10px}
+body:has(.about-layout) .page-intro h1,body:has(.about-layout) .page-intro em,.about-copy,.about-copy h2,.about-copy p,.about-copy a{font-family:"Courier New",Courier,monospace;font-style:normal}
+body:has(.about-layout) .page-intro h1{font-size:clamp(36px,5.6vw,78px);line-height:1.15;letter-spacing:-.04em}
+.about-copy h2{font-size:clamp(26px,3vw,42px);letter-spacing:-.03em}
+.about-copy>p{font-size:16px;line-height:1.8}

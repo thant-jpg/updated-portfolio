@@ -10,10 +10,10 @@ export const resumeContent={
       "entries": [
         {
           "title": "Singapore University of Technology and Design",
-          "date": "Sep 2023 — May 2027",
+          "date": "Sep 2023 to May 2027",
           "subtitle": "Bachelor of Science in Architecture and Sustainable Design (ASD) · Singapore",
           "bullets": [
-            "ASEAN Undergraduate Scholarship Holder"
+            "ASEAN Undergraduate Scholarship"
           ]
         }
       ]
@@ -22,24 +22,24 @@ export const resumeContent={
       "title": "Personal projects",
       "entries": [
         {
-          "title": "Somewhere — Gamified Dating App",
-          "date": "Aug 2026 — Present",
+          "title": "Somewhere to Gamified Dating App",
+          "date": "Aug 2026 to Present",
           "subtitle": "Product Designer (UI/UX)",
           "bullets": [
-            "Conceptualised a gamified dating experience where users explore a virtual Singapore, meet other players, and form connections through shared interactions.",
-            "Designed the end-to-end app flow and core interaction concepts, integrating traditional dating features with a navigable 3D social environment.",
-            "Designed and modelled stylised 3D environments inspired by Singapore, establishing the visual world and spatial experience of the platform.",
-            "Created customisable 3D characters, clothing, hairstyles, and accessories to support self-expression and social interaction."
+            "Developed a dating app concept where people explore a 3D Singapore and meet through shared activities.",
+            "Designed the full app flow, connecting dating features with a 3D social world.",
+            "Designed and modelled 3D spaces inspired by Singapore.",
+            "Created customisable 3D characters, clothing, hairstyles and accessories."
           ]
         },
         {
-          "title": "Easyconvo — Phonic Learning App for Kindergarten",
-          "date": "Sep 2026 — Present",
+          "title": "Easyconvo to Phonic Learning App for Kindergarten",
+          "date": "Sep 2026 to Present",
           "subtitle": "Product Designer (UI/UX)",
           "bullets": [
-            "Designed student and teacher experiences for a phonics learning platform supporting early literacy development.",
-            "Conducted usability testing and translated user feedback into improvements across learning activities, feedback flows, and teacher dashboards",
-            "Developed user flows, storyboards, and prototypes using Figma to make phonics practice engaging and age-appropriate for young learners."
+            "Designed student and teacher experiences for a phonics learning platform.",
+            "Conducted user testing and refined learning activities, feedback and teacher dashboards.",
+            "Used Figma to create app flows, storyboards and prototypes suited to young learners."
           ]
         }
       ]
@@ -49,37 +49,37 @@ export const resumeContent={
       "entries": [
         {
           "title": "WAVE Design Consultants",
-          "date": "May 2026 — Sep 2026",
+          "date": "May 2026 to Sep 2026",
           "subtitle": "Architectural Intern",
           "bullets": [
-            "Produced precise AutoCAD construction documentation for international residential projects",
-            "Produced high-fidelity physical scaled models for international residential projects"
+            "Prepared AutoCAD construction drawings for overseas residential projects.",
+            "Built detailed scale models for overseas residential projects."
           ]
         },
         {
           "title": "a+pgrp",
-          "date": "Sep 2025 — Dec 2025",
+          "date": "Sep 2025 to Dec 2025",
           "subtitle": "Architectural Intern",
           "bullets": [
-            "Produced precise AutoCAD construction documentation and SketchUp 3D models for international hotel and local projects",
-            "Produced high-fidelity SketchUp models and renders for an A&A hotel pool project",
-            "Digitized manual legacy drawings into editable CAD formats while maintaining original drafting conventions"
+            "Prepared AutoCAD construction drawings and SketchUp models for overseas hotel and local projects.",
+            "Produced detailed SketchUp models and renders for a hotel pool renovation.",
+            "Converted old hand-drawn plans into editable CAD drawings, keeping the original drawing style."
           ]
         },
         {
           "title": "Singapore University of Technology and Design",
-          "date": "Jan 2025 — May 2025",
+          "date": "Jan 2025 to May 2025",
           "subtitle": "Urban Sketching Workshop · Teaching Assistant",
           "bullets": [
-            "Coordinated classes and streamlined communication between 100 participants and instructors."
+            "Helped organise classes and communication between 100 participants and instructors."
           ]
         },
         {
           "title": "Singapore University of Technology and Design",
-          "date": "Sep 2024 — May 2025",
+          "date": "Sep 2024 to May 2025",
           "subtitle": "Undergraduate Teaching Opportunities Program · Teaching Assistant",
           "bullets": [
-            "Volunteered as peer tutor for 50 students, helping in class with activities and assignments, ensuring student comprehension."
+            "Tutored 50 students and helped them understand class activities and assignments."
           ]
         }
       ]
@@ -89,22 +89,22 @@ export const resumeContent={
       "entries": [
         {
           "title": "Stacked Streets | The Future of Shophouses",
-          "date": "Jan 2026 — May 2026",
+          "date": "Jan 2026 to May 2026",
           "subtitle": "Term 6 Design Studio Project | Individual",
           "bullets": [
-            "Conducted demographic research to map distinct user personas (freelancers, solo-preneurs, families) and define their spatial needs.",
-            "Conceptualized a vertical co-living/working neighbourhood along the Bishan Riverfront to address e-commerce shifts and rising commercial rents",
-            "Designed vertical and horizontal circulation systems to streamline physical user workflows and interaction"
+            "Studied the space needs of freelancers, small business owners and families.",
+            "Designed a vertical neighbourhood for shared living and working along the Bishan Riverfront, responding to online shopping and rising rents.",
+            "Designed routes between floors and spaces to help people move and meet."
           ]
         },
         {
           "title": "The Wandering Archive | Speculative Library Project",
-          "date": "Jun 2025 — Aug 2025",
+          "date": "Jun 2025 to Aug 2025",
           "subtitle": "Term 5 Design Studio Project | Individual",
           "bullets": [
-            "Conducted extensive user and cultural research to develop comprehensive information architecture and world-building narrative for a nomadic user demographic",
-            "Engineered high-fidelity visualizations, including photos and videos, using Unreal Engine 5, Blender, and Adobe Premiere to communicate design intent",
-            "Translated abstract storytelling concepts into a detailed 3D environment and 2D architectural drawings/diagrams"
+            "Researched users and cultures to develop a library concept for people who move from place to place.",
+            "Produced images and videos with Unreal Engine 5, Blender and Adobe Premiere to communicate the design.",
+            "Developed the concept into a detailed 3D environment, architectural drawings and diagrams."
           ]
         }
       ]
@@ -121,7 +121,7 @@ export const resumeContent={
         {
           "title": "Languages",
           "bullets": [
-            "Fluent in English and Burmese (spoken & written)"
+            "Fluent in spoken and written English and Burmese"
           ]
         }
       ]
