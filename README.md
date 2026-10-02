@@ -33,12 +33,13 @@ Replace the placeholder visuals and draft project copy. Add your full name if de
 
 The black gallery direction uses original AI-generated translucent floral artwork at `public/images/ghost-flowers.png`, made with the built-in image-generation tool. This is visual identity artwork, not a project render. Prompt: three airy translucent X-ray-like glass flowers with flowing tendrils, icy silver and pale cyan with violet iridescence, on pure black with generous negative space; no text, UI or logos. The homepage has gentle motion with reduced-motion support.
 
-## Interactive flowers
+## Interactive 3D flowers
 
-The homepage uses a lightweight WebGL texture effect in public/flower-motion.js: slow rotation, cursor/tap ripple trails, local swirl, and a scroll-driven turn, scale and fade. It animates the floral image rather than a 3D model. Rendering pauses off-screen and when the tab is hidden. Reduced-motion settings and unavailable WebGL keep the still image. No additional dependencies are required.
+The current homepage uses actual procedural 3D geometry from `public/flower-geometry.js`, rendered in `public/flower-3d.js`. Three flowers have petal surfaces, curved tubular stems and fine stamens. Drag horizontally for a full 360-degree turn; hover and arrow keys also adjust the view. The original generated image is the static fallback for reduced motion or unavailable WebGL.
 
+A scroll-driven grain dissolve carries the flowers into the full-screen black introduction. Edit its two lines in `profile.interlude` in `content.mjs`. Independent floating and sparkling background particles continue through the introduction and work section. Cursor rings and waves in the petals create a stronger water interaction. Fine grain and subtle scan lines support the retro-future direction.
 
-The full-screen black introduction between the floral hero and selected work is editable through `profile.interlude` in `content.mjs`. Each array item is a line of the introduction.
+No external 3D library is required. Rendering pauses while hidden; reduced-motion settings disable animated effects. An OBJ export of the geometry is provided alongside the portfolio folder as `flowers.obj`.
 
-Flower turning now uses vertical-axis perspective and luminance-based depth parallax. Move the cursor horizontally, drag, or focus the artwork and press left/right arrows. The previous flat spinning motion is removed; idle motion is a gentle side-to-side turn. Full backside views still require a 3D model.
+The supplied résumé is available as the original Word document at public/resume.docx, linked on About and Contact. The introduction explicitly uses Courier New.
 
