@@ -14,6 +14,7 @@ em{font-style:normal}
 @media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;transform:none;transition:none}}
 .point-sculpture{position:fixed;inset:0;pointer-events:none;z-index:1}
 .morph-quote{transition:none!important;transform:none!important}
+.morph-section{transform:none!important;animation:none!important}
 .hero h1{will-change:opacity}
 .spine-connector{position:absolute;top:0;left:0;pointer-events:none;overflow:visible;z-index:1}
 .spine-connector path{stroke:var(--red);stroke-width:1;fill:none}
