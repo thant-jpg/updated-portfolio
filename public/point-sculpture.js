@@ -19,7 +19,7 @@ export function initPointSculpture(){
  function resize(){width=innerWidth;height=innerHeight;dpr=Math.min(devicePixelRatio,2);canvas.width=width*dpr;canvas.height=height*dpr;canvas.style.width=width+'px';canvas.style.height=height+'px';ctx.setTransform(dpr,0,0,dpr,0,0);targets=sampleText(quote);workTargets=sampleText(workHeading)}
  const clamp=x=>Math.max(0,Math.min(1,x)),smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
  // Exponential easing approaches zero forever; snap endpoints so stages reset.
- const easeProgress=(current,goal,dt)=>{const next=current+(goal-current)*Math.min(1,.13*dt);return Math.abs(goal-next)<.001?goal:next};
+ const easeProgress=(current,goal,dt)=>{if(goal===0)return 0;const next=current+(goal-current)*Math.min(1,.13*dt);return Math.abs(goal-next)<.001?goal:next};
  function render(time){const dt=Math.min((time-last)/16.7,2)||1;last=time;const box=board.getBoundingClientRect(),q=quote.getBoundingClientRect(),w=workHeading.getBoundingClientRect();
   const interlude=quote.parentElement,anchor=interlude.getBoundingClientRect().top+scrollY+parseFloat(getComputedStyle(interlude).paddingTop)+q.height/2;
   const end=anchor-height*.5,goal=reduced?0:clamp(scrollY/Math.max(1,end));progress=easeProgress(progress,goal,dt);
