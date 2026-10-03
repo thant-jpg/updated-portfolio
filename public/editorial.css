@@ -233,3 +233,18 @@ body::before{opacity:.65!important;background:radial-gradient(ellipse at center,
 @media(prefers-reduced-motion:reduce){.hero{height:100svh}}
 @media(max-width:700px),(hover:none) and (pointer:coarse){.hero{height:auto;min-height:0}.hero-scene{position:relative;height:auto;min-height:0;padding:28px 6% 55px}.hero-scene h1{max-width:100%;font-size:30px}.hero-line-art{position:relative;inset:auto;flex:none;height:230px;width:100%;margin:24px 0}.hero-scene .hero-bottom{position:relative;inset:auto}.hero-scene .hero-bottom p{position:static;width:100%;max-width:none;transform:none}#selected{padding-top:65px}}
 
+
+/* About and contact share one left-aligned timeline. */
+.about-page-track{position:relative;margin:55px 4% 65px;border-left:1px solid var(--red);padding-left:30px}
+.about-page-track .page-intro{padding:15px 0 40px}
+.about-page-track .about-layout{display:block;max-width:none;margin:0;padding:25px 0 65px;text-align:left}
+.about-page-track .about-copy{max-width:1000px}
+.about-page-track .combined-contact{margin:0;padding:65px 0 70px;text-align:left}
+.about-page-track .tools-root{margin:0;padding:0;border:0;color:var(--red)}
+.about-page-track .tools-root:after,.about-page-track .tools-branches li:before{content:none}
+.about-page-track .tools-branches{padding-top:25px;border:0;margin:0;gap:25px}
+.about-page-track .tools-branches>li{border:0;padding:0;text-align:left}
+.about-page-track .tool-list li{text-align:left}
+@media(max-width:900px){.about-page-track .tools-branches{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:35px}}
+@media(max-width:700px){.about-page-track{margin-top:30px;padding-left:20px;margin-bottom:40px}.about-page-track .page-intro{padding-top:5px}.about-page-track .tools-branches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}.about-page-track .tools-branches h4{margin:8px 0}.about-page-track .combined-contact{padding:45px 0}.about-page-track .about-layout{padding-bottom:45px}.about-page-track .tool-list{font-size:12px}.about-page-track .tools-branches h4{font-size:13px}}
+@media(max-width:360px){.about-page-track .tools-branches{grid-template-columns:1fr}}
