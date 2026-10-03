@@ -180,3 +180,5 @@ body::before{opacity:.65!important;background:radial-gradient(ellipse at center,
 
 .timeline-traveller{fill:var(--red);filter:drop-shadow(0 0 5px #e3483f);pointer-events:none}
 .closing-transition .closing-grid{opacity:var(--closing-reveal,1);transform:translateY(calc((1 - var(--closing-reveal,1))*22px));will-change:opacity,transform}
+
+.vertical-line-ball{position:absolute;width:16px;height:16px;border-radius:50%;background:var(--red);transform:translate(-50%,-50%);filter:drop-shadow(0 0 5px #e3483f);pointer-events:none;z-index:3}
