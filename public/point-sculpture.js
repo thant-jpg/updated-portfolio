@@ -18,10 +18,12 @@ export function initPointSculpture(){
  function sampleText(element){const box=element.getBoundingClientRect(),off=document.createElement('canvas');off.width=Math.ceil(box.width);off.height=Math.ceil(box.height);const c=off.getContext('2d'),walker=document.createTreeWalker(element,NodeFilter.SHOW_TEXT);c.fillStyle='#fff';c.textBaseline='middle';let node;while(node=walker.nextNode()){const style=getComputedStyle(node.parentElement);c.font=`${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;for(let i=0;i<node.length;i++){if(/\s/.test(node.textContent[i]))continue;const range=document.createRange();range.setStart(node,i);range.setEnd(node,i+1);const r=range.getBoundingClientRect();c.fillText(node.textContent[i],r.left-box.left,r.top-box.top+r.height/2)}}const data=c.getImageData(0,0,off.width,off.height).data,result=[];for(let y=0;y<off.height;y+=1.5)for(let x=0;x<off.width;x+=1.5)if(data[(Math.floor(y)*off.width+Math.floor(x))*4+3]>90)result.push({x:x-box.width/2,y:y-box.height/2});return result}
  function resize(){width=innerWidth;height=innerHeight;dpr=Math.min(devicePixelRatio,2);canvas.width=width*dpr;canvas.height=height*dpr;canvas.style.width=width+'px';canvas.style.height=height+'px';ctx.setTransform(dpr,0,0,dpr,0,0);targets=sampleText(quote);workTargets=sampleText(workHeading)}
  const clamp=x=>Math.max(0,Math.min(1,x)),smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
+ // Exponential easing approaches zero forever; snap endpoints so stages reset.
+ const easeProgress=(current,goal,dt)=>{const next=current+(goal-current)*Math.min(1,.13*dt);return Math.abs(goal-next)<.001?goal:next};
  function render(time){const dt=Math.min((time-last)/16.7,2)||1;last=time;const box=board.getBoundingClientRect(),q=quote.getBoundingClientRect(),w=workHeading.getBoundingClientRect();
   const interlude=quote.parentElement,anchor=interlude.getBoundingClientRect().top+scrollY+parseFloat(getComputedStyle(interlude).paddingTop)+q.height/2;
-  const end=anchor-height*.5,goal=reduced?0:clamp(scrollY/Math.max(1,end));progress+=(goal-progress)*Math.min(1,.13*dt);
-  const workStart=end+height*.65,workEnd=w.top+scrollY+w.height/2-height*.5,workGoal=reduced?0:clamp((scrollY-workStart)/Math.max(1,workEnd-workStart));workProgress+=(workGoal-workProgress)*Math.min(1,.13*dt);
+  const end=anchor-height*.5,goal=reduced?0:clamp(scrollY/Math.max(1,end));progress=easeProgress(progress,goal,dt);
+  const workStart=end+height*.65,workEnd=w.top+scrollY+w.height/2-height*.5,workGoal=reduced?0:clamp((scrollY-workStart)/Math.max(1,workEnd-workStart));workProgress=easeProgress(workProgress,workGoal,dt);
   const workTakeover=smooth(workProgress/.09),workFade=1-smooth((workProgress-.96)/.04);
   ctx.clearRect(0,0,width,height);
   if(!drag){yaw+=vy*dt;pitch+=vp*dt;vy*=Math.pow(.92,dt);vp*=Math.pow(.92,dt)}
@@ -42,7 +44,7 @@ export function initPointSculpture(){
    let drawX=(x+p.dx)*(1-morph)+(targetX+t.x)*morph+flowX*width*.24*scatter;
    let drawY=(y+p.dy+scrollY*.65*departure)*(1-morph)+(targetY+t.y)*morph+flowY*height*.3*scatter;
    let alpha=reduced?1:fade,size=Math.max(.8,scale/flower.naturalHeight*2.1)*(1-morph)+.9*morph;
-   if(workProgress>0&&!reduced){
+   if(workTakeover>.001&&!reduced){
     const next=workTargets[(i*41)%Math.max(1,workTargets.length)]||{x:0,y:0},gather=smooth((workProgress-.38)/.56),burst=Math.sin(Math.PI*smooth(workProgress/.84))*(1-gather),angle=workProgress*2.5;
     const fx=flow.sx*Math.cos(angle)-flow.sy*Math.sin(angle),fy=flow.sx*Math.sin(angle)+flow.sy*Math.cos(angle);
     drawX=(targetX+t.x)*(1-gather)+(w.left+w.width/2+next.x)*gather+fx*width*.23*burst;
