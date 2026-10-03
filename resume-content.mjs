@@ -22,7 +22,7 @@ export const resumeContent={
       "title": "Personal projects",
       "entries": [
         {
-          "title": "Somewhere to Gamified Dating App",
+          "title": "somewhere | gamified dating app",
           "date": "Aug 2026 to Present",
           "subtitle": "Product Designer (UI/UX)",
           "bullets": [
@@ -33,7 +33,7 @@ export const resumeContent={
           ]
         },
         {
-          "title": "Easyconvo to Phonic Learning App for Kindergarten",
+          "title": "easyconvo | phonic learning app for kindergarten",
           "date": "Sep 2026 to Present",
           "subtitle": "Product Designer (UI/UX)",
           "bullets": [
