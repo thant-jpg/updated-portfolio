@@ -1,1 +1,1 @@
-{"name":"thant-portfolio","private":true,"version":"1.0.0","type":"module","scripts":{"build":"node build.mjs","dev":"node server.mjs","start":"node server.mjs"},"engines":{"node":">=20"}}
+{"name":"thant-portfolio","private":true,"version":"1.0.0","type":"module","scripts":{"build":"node build.mjs","dev":"node --watch-preserve-output --watch-path=server.mjs --watch-path=build.mjs --watch-path=content.mjs --watch-path=resume-content.mjs --watch-path=resume-timeline.mjs --watch-path=public server.mjs --live-reload","start":"node server.mjs"},"engines":{"node":">=20"}}
