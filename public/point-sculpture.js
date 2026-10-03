@@ -19,8 +19,9 @@ export function initPointSculpture(){
  function resize(){width=innerWidth;height=innerHeight;dpr=Math.min(devicePixelRatio,2);canvas.width=width*dpr;canvas.height=height*dpr;canvas.style.width=width+'px';canvas.style.height=height+'px';ctx.setTransform(dpr,0,0,dpr,0,0);targets=sampleText(quote);workTargets=sampleText(workHeading)}
  const clamp=x=>Math.max(0,Math.min(1,x)),smooth=x=>{x=clamp(x);return x*x*(3-2*x)};
  function render(time){const dt=Math.min((time-last)/16.7,2)||1;last=time;const box=board.getBoundingClientRect(),q=quote.getBoundingClientRect(),w=workHeading.getBoundingClientRect();
-  const end=q.top+scrollY+q.height/2-height*.5,goal=reduced?0:clamp(scrollY/Math.max(1,end));progress+=(goal-progress)*Math.min(1,.13*dt);
-  const workStart=end+height*.16,workEnd=w.top+scrollY+w.height/2-height*.5,workGoal=reduced?0:clamp((scrollY-workStart)/Math.max(1,workEnd-workStart));workProgress+=(workGoal-workProgress)*Math.min(1,.13*dt);
+  const interlude=quote.parentElement,anchor=interlude.getBoundingClientRect().top+scrollY+parseFloat(getComputedStyle(interlude).paddingTop)+q.height/2;
+  const end=anchor-height*.5,goal=reduced?0:clamp(scrollY/Math.max(1,end));progress+=(goal-progress)*Math.min(1,.13*dt);
+  const workStart=end+height*.65,workEnd=w.top+scrollY+w.height/2-height*.5,workGoal=reduced?0:clamp((scrollY-workStart)/Math.max(1,workEnd-workStart));workProgress+=(workGoal-workProgress)*Math.min(1,.13*dt);
   const workTakeover=smooth(workProgress/.09),workFade=1-smooth((workProgress-.96)/.04);
   ctx.clearRect(0,0,width,height);
   if(!drag){yaw+=vy*dt;pitch+=vp*dt;vy*=Math.pow(.92,dt);vp*=Math.pow(.92,dt)}
