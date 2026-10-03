@@ -251,10 +251,10 @@ body::before{opacity:.65!important;background:radial-gradient(ellipse at center,
 
 
 /* Shaded filament spheres, retaining the existing routes and physics. */
-.vertical-line-ball,.closing-end b{width:28px;height:28px;background:transparent url('/filament-orb.svg') center/contain no-repeat;filter:drop-shadow(0 1px 3px #000) drop-shadow(0 0 3px #e4ebe240)}
+.vertical-line-ball,.closing-end b{width:28px;height:28px;background:transparent url('/point-cloud-orb.svg') center/contain no-repeat;filter:drop-shadow(0 1px 3px #000) drop-shadow(0 0 3px #e4ebe240)}
 .hero-ball-core,.timeline-traveller-core{filter:drop-shadow(0 1px 3px #000) drop-shadow(0 0 3px #e4ebe240);transform-origin:0 0}
 .hero-ball-orbit,.timeline-traveller-orbit{display:none}
 .hero-ball-spinning .hero-ball-core{animation:hero-ball-spin 7s linear infinite}
-.hero-jump-core{left:-2px;top:-2px;width:40px;height:40px;background:transparent url('/filament-orb.svg') center/contain no-repeat;filter:drop-shadow(0 0 3px #e4ebe240)}
+.hero-jump-core{left:-2px;top:-2px;width:40px;height:40px;background:transparent url('/point-cloud-orb.svg') center/contain no-repeat;filter:drop-shadow(0 0 3px #e4ebe240)}
 .hero-jump-ring,.hero-jump-satellite{display:none}
 @media(max-width:700px),(hover:none) and (pointer:coarse),(prefers-reduced-motion:reduce){.hero-ball-core{animation:none!important}}
