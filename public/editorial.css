@@ -166,3 +166,9 @@ body:has(.about-layout) .page-intro h1,body:has(.about-layout) .page-intro em,.a
 body:has(.about-layout) .page-intro h1{font-size:clamp(36px,5.6vw,78px);line-height:1.15;letter-spacing:-.04em}
 .about-copy h2{font-size:clamp(26px,3vw,42px);letter-spacing:-.03em}
 .about-copy>p{font-size:16px;line-height:1.8}
+.about-layout{padding-bottom:70px}
+.combined-contact{margin:0 4%;padding:65px 0 100px;border-top:1px solid var(--red);scroll-margin-top:40px}
+.combined-contact h2{font-size:clamp(30px,4.5vw,58px);line-height:1.2;margin:25px 0 30px;max-width:850px}
+.combined-contact>p{max-width:680px}
+.combined-contact .contact-bottom{margin-top:55px}
+@media(max-width:700px){.combined-contact{padding:45px 0 65px}.about-layout{padding-bottom:45px}nav{gap:14px}}
