@@ -9,7 +9,7 @@ export const projects=[
     "disciplines": "Architecture / Computational design",
     "number": "01",
     "note": "Spatial systems",
-    "image": null,
+    "image": "/images/linked-hybrid.jpg",
     "accent": "blue",
     "summary": "A study of connected buildings, shared living spaces and how people move between them.",
     "role": "Architecture student",

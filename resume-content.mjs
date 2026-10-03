@@ -22,7 +22,7 @@ export const resumeContent={
       "title": "Personal projects",
       "entries": [
         {
-          "title": "somewhere | gamified dating app",
+          "title": "Somewhere | Gamified Dating App",
           "date": "Aug 2026 to Present",
           "subtitle": "Product Designer (UI/UX)",
           "bullets": [
@@ -33,7 +33,7 @@ export const resumeContent={
           ]
         },
         {
-          "title": "easyconvo | phonic learning app for kindergarten",
+          "title": "Easyconvo | Phonic Learning App for Kindergarten",
           "date": "Sep 2026 to Present",
           "subtitle": "Product Designer (UI/UX)",
           "bullets": [
@@ -53,7 +53,8 @@ export const resumeContent={
           "subtitle": "Architectural Intern",
           "bullets": [
             "Prepared AutoCAD construction drawings for overseas residential projects.",
-            "Built detailed scale models for overseas residential projects."
+            "Built detailed scale models for overseas residential projects.",
+            "Created diagrams to communicate design ideas for overseas residential projects."
           ]
         },
         {
@@ -63,7 +64,8 @@ export const resumeContent={
           "bullets": [
             "Prepared AutoCAD construction drawings and SketchUp models for overseas hotel and local projects.",
             "Produced detailed SketchUp models and renders for a hotel pool renovation.",
-            "Converted old hand-drawn plans into editable CAD drawings, keeping the original drawing style."
+            "Converted old hand-drawn plans into editable CAD drawings, keeping the original drawing style.",
+            "Created reports and diagrams to communicate design ideas for overseas hotel, local projects and tenders."
           ]
         },
         {
