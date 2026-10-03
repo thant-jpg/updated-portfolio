@@ -1,12 +1,20 @@
 import {renderResume} from './resume-timeline.mjs';
 import {resumeContent} from './resume-content.mjs';
-import {mkdir,writeFile,cp,rm} from 'node:fs/promises';
+import {mkdir,writeFile,readFile,cp,rm} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import {profile,projects} from './content.mjs';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 await rm('dist',{recursive:true,force:true}); await mkdir('dist',{recursive:true}); await cp('public','dist',{recursive:true});
+// Give every animation revision a new URL, including its imported modules.
+const assetNames={};
+const hash=text=>createHash('sha256').update(text).digest('hex').slice(0,12);
+for(const name of ['point-sculpture.js','ambient-particles.js','style.css','editorial.css']){const source=await readFile(`public/${name}`,'utf8'),versioned=name.replace(/\.(js|css)$/,`.${hash(source)}.$1`);assetNames[name]=versioned;await writeFile(`dist/${versioned}`,source)}
+let appSource=await readFile('public/app.js','utf8');
+for(const name of ['point-sculpture.js','ambient-particles.js'])appSource=appSource.replace(`'./${name}'`,`'./${assetNames[name]}'`);
+assetNames['app.js']=`app.${hash(appSource)}.js`;await writeFile(`dist/${assetNames['app.js']}`,appSource);
 const nav=(active='')=>`<header><a class="brand" ${active==='home'?'aria-current="page"':''} href="/">${esc(profile.name)}<span> / PORTFOLIO</span></a><nav aria-label="Main navigation"><a ${active==='work'?'aria-current="page"':''} href="/work/">Work</a><a ${active==='about'?'aria-current="page"':''} href="/about/">About</a><a ${active==='contact'?'aria-current="page"':''} href="/contact/">Contact</a><a ${active==='resume'?'aria-current="page"':''} href="/resume/">Résumé</a></nav><span class="header-meta">PORTFOLIO / 2026</span></header>`;
 const footer=()=>`<footer><span>${esc(profile.name)} / Architecture & interactive design</span><span>© ${new Date().getFullYear()} ${esc(profile.name)}</span></footer>`;
-const shell=(title,body,active='')=>`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${esc(profile.name)} | architecture student working across architecture, product design, UX/UI and 3D interactive experiences."><meta name="theme-color" content="#080808"><title>${esc(title)} | ${esc(profile.name)}</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/editorial.css"><script type="module" src="/app.js"></script></head><body><a class="skip" href="#main">Skip to content</a>${nav(body.includes('class="hero"')?'home':active)}<main id="main">${body}</main>${footer()}</body></html>`;
+const shell=(title,body,active='')=>`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${esc(profile.name)} | architecture student working across architecture, product design, UX/UI and 3D interactive experiences."><meta name="theme-color" content="#080808"><title>${esc(title)} | ${esc(profile.name)}</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/${assetNames['style.css']}"><link rel="stylesheet" href="/${assetNames['editorial.css']}"><script type="module" src="/${assetNames['app.js']}"></script></head><body><a class="skip" href="#main">Skip to content</a>${nav(body.includes('class="hero"')?'home':active)}<main id="main">${body}</main>${footer()}</body></html>`;
 const visual=(p,large=false)=>`<div class="visual ${p.accent} ${large?'large':''}">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.title)} project visual" loading="lazy">`:`<canvas data-drawing="${p.category}" aria-hidden="true"></canvas><span class="visual-label">FIG. ${p.number} / ${esc(p.note)}</span><span class="placeholder">${p.category==='Architecture'?'DRAWING':'IMAGE'} PLACEHOLDER</span><span class="crosshair">+</span>`}</div>`;
 const card=p=>`<article class="project" data-category="${p.category}"><a href="/work/${p.slug}/" aria-label="View ${esc(p.title)}">${visual(p)}<div class="card-info"><span class="index">${p.number}</span><div><h3>${esc(p.title)}</h3><p>${esc(p.disciplines)}</p></div><span class="project-type">${p.category}</span></div></a></article>`;
 const grid=()=>`<div class="project-grid">${projects.map(card).join('')}</div>`;
