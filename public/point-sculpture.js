@@ -1,5 +1,6 @@
 export function initPointSculpture(){
  const board=document.querySelector('.hero-board'),heading=document.querySelector('.hero h1'),workHeading=document.querySelector('#selected .section-heading h2');if(!board||!heading||!workHeading)return;
+ if(matchMedia('(max-width:700px), (hover:none) and (pointer:coarse)').matches){const image=document.createElement('img');image.src='/images/bitmap-flower.png';image.alt='Halftone botanical flower';image.className='static-flower';board.append(image);return}
  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  workHeading.classList.add('morph-quote');workHeading.closest('.section-heading').classList.add('morph-section');
  const canvas=document.createElement('canvas');canvas.className='point-sculpture';canvas.setAttribute('aria-hidden','true');document.body.append(canvas);
@@ -7,7 +8,7 @@ export function initPointSculpture(){
  const ctx=canvas.getContext('2d');if(!ctx)return;
  let width,height,dpr,targets=[],yaw=0,pitch=0,vy=0,vp=0,drag=null,progress=0,last=0;
  let bitmap=[],pointer={x:-10000,y:-10000};
- const flower=new Image();flower.src='/images/bitmap-flower.png';flower.onload=()=>{const off=document.createElement('canvas');off.width=flower.naturalWidth;off.height=flower.naturalHeight;const c=off.getContext('2d');c.drawImage(flower,0,0);const data=c.getImageData(0,0,off.width,off.height).data;for(let y=0;y<off.height;y+=3)for(let x=0;x<off.width;x+=3){const i=(y*off.width+x)*4,lum=(data[i]+data[i+1]+data[i+2])/3;if(lum<160&&data[i+3]>128)bitmap.push({x:(x-off.width/2)/off.height,y:(y-off.height/2)/off.height,dx:0,dy:0,vx:0,vy:0,ink:1-lum/255})}board.dataset.bitmapPoints=bitmap.length};
+ const flower=new Image();flower.src='/images/bitmap-flower.png';flower.onload=()=>{const off=document.createElement('canvas');off.width=flower.naturalWidth;off.height=flower.naturalHeight;const c=off.getContext('2d');c.drawImage(flower,0,0);const data=c.getImageData(0,0,off.width,off.height).data;for(let y=0;y<off.height;y+=3)for(let x=0;x<off.width;x+=3){const i=(y*off.width+x)*4,lum=(data[i]+data[i+1]+data[i+2])/3;if(lum<160&&data[i+3]>128)bitmap.push({x:(x-off.width/2)/off.height,y:(y-off.height/2)/off.height,z:Math.sin(x*.07+y*.03)*.012,dx:0,dy:0,vx:0,vy:0,ink:1-lum/255,weight:1})}const original=bitmap.slice();for(const arrangement of [{x:-.28,y:.09,scale:.7,tilt:-.2,angle:-.55},{x:.29,y:-.05,scale:.62,tilt:.23,angle:.6}]){for(let i=0;i<original.length;i+=3){const p=original[i],x=(p.x*Math.cos(arrangement.tilt)-p.y*Math.sin(arrangement.tilt))*arrangement.scale,y=(p.x*Math.sin(arrangement.tilt)+p.y*Math.cos(arrangement.tilt))*arrangement.scale;bitmap.push({...p,x:x*Math.cos(arrangement.angle)+arrangement.x,y:y+arrangement.y,z:x*Math.sin(arrangement.angle),weight:.72})}}board.dataset.bitmapPoints=bitmap.length};
  const count=6000,points=[];let seed=47;
  const random=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646};
  const gaussian=()=>Math.sqrt(-2*Math.log(Math.max(.001,random())))*Math.cos(random()*Math.PI*2);
@@ -22,14 +23,14 @@ export function initPointSculpture(){
  function render(time){const dt=Math.min((time-last)/16.7,2)||1;last=time;const box=board.getBoundingClientRect(),w=workHeading.getBoundingClientRect();
   const end=w.top+scrollY+w.height/2-height*.5,goal=reduced?0:clamp(scrollY/Math.max(1,end));progress=easeProgress(progress,goal,dt);
   ctx.clearRect(0,0,width,height);
-  if(!drag){yaw+=vy*dt;pitch+=vp*dt;vy*=Math.pow(.92,dt);vp*=Math.pow(.92,dt)}
+  if(!drag){yaw+=(vy+(!reduced?.0018*(1-progress):0))*dt;pitch+=vp*dt;vy*=Math.pow(.92,dt);vp*=Math.pow(.92,dt)}
   const fade=1-smooth((progress-.96)/.04);
   heading.style.opacity='1';
   workHeading.style.opacity=reduced?'1':String(smooth((progress-.94)/.06));
   if(box.bottom<-height&&w.bottom<0){requestAnimationFrame(render);return}
-  const centerX=box.left+box.width*.5,centerY=box.top+box.height*.5,scale=Math.min(box.width/ (flower.naturalWidth/flower.naturalHeight || .46)*.84,box.height*.92);
+  const centerX=box.left+box.width*.5,centerY=box.top+box.height*.5,scale=Math.min(box.width*.87/1.05,box.height*.92);
   const targetX=w.left+w.width/2,targetY=w.top+w.height/2;
-  for(let i=0;i<bitmap.length;i++){const p=bitmap[i],flow=points[i%count],X=p.x*Math.cos(yaw),Z=-p.x*Math.sin(yaw),Y=p.y*Math.cos(pitch)-Z*Math.sin(pitch),depth=p.y*Math.sin(pitch)+Z*Math.cos(pitch),perspective=3/(3+depth);
+  for(let i=0;i<bitmap.length;i++){const p=bitmap[i],flow=points[i%count],X=p.x*Math.cos(yaw)+p.z*Math.sin(yaw),Z=-p.x*Math.sin(yaw)+p.z*Math.cos(yaw),Y=p.y*Math.cos(pitch)-Z*Math.sin(pitch),depth=p.y*Math.sin(pitch)+Z*Math.cos(pitch),perspective=3/(3+depth);
    const x=centerX+X*scale*perspective,y=centerY+Y*scale*perspective,px=x+p.dx-pointer.x,py=y+p.dy-pointer.y,distance=Math.hypot(px,py),radius=width>700?115:75;
    if(!reduced&&distance<radius&&distance>0){const force=(1-distance/radius)*5;p.vx+=(px-py*.35)/distance*force*dt;p.vy+=(py+px*.35)/distance*force*dt}
    p.vx=(p.vx-p.dx*.028*dt)*Math.pow(.85,dt);p.vy=(p.vy-p.dy*.028*dt)*Math.pow(.85,dt);p.dx+=p.vx*dt;p.dy+=p.vy*dt;
@@ -40,7 +41,7 @@ export function initPointSculpture(){
    let drawX=(x+p.dx)*(1-morph)+(targetX+t.x)*morph+flowX*width*.24*scatter;
    let drawY=(y+p.dy+scrollY*.65*departure)*(1-morph)+(targetY+t.y)*morph+flowY*height*.3*scatter;
    let alpha=reduced?1:fade,size=Math.max(.8,scale/flower.naturalHeight*2.1)*(1-morph)+.9*morph;
-   ctx.globalAlpha=(.55+p.ink*.4)*alpha;ctx.fillStyle='#eee';ctx.fillRect(drawX,drawY,size,size);
+   ctx.globalAlpha=(.55+p.ink*.4)*alpha*(p.weight+(1-p.weight)*morph);ctx.fillStyle='#eee';ctx.fillRect(drawX,drawY,size,size);
   }ctx.globalAlpha=1;requestAnimationFrame(render);
  }
  board.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY};board.setPointerCapture(e.pointerId);board.classList.add('is-turning')});

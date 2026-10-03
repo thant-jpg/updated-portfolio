@@ -1,4 +1,5 @@
 export function initAmbientParticles(){
+ if(matchMedia('(max-width:700px), (hover:none) and (pointer:coarse)').matches)return;
  if(document.querySelector('.ambient-particles'))return;
  const preference=matchMedia('(prefers-reduced-motion: reduce)');let cleanup;
  function sync(){cleanup?.();cleanup=undefined;if(preference.matches)return;
