@@ -9,8 +9,13 @@ if(projectSpine&&closingSpine){const main=document.querySelector('main'),svg=doc
 // Follow the connected red timeline into the closing spread.
 const closing=document.querySelector('.closing-study');
 if(closing&&projectSpine&&!matchMedia('(prefers-reduced-motion:reduce), (max-width:700px), (hover:none) and (pointer:coarse)').matches){
- const svg=document.querySelector('.spine-connector'),path=svg.querySelector('path'),dot=document.createElementNS(svg.namespaceURI,'circle');dot.classList.add('timeline-traveller');dot.setAttribute('r','3');svg.append(dot);closing.classList.add('closing-transition');let pending=false;
- function update(){pending=false;const a=projectSpine.getBoundingClientRect(),grid=closing.querySelector('.closing-grid').getBoundingClientRect(),rule=closingSpine.getBoundingClientRect(),start=a.bottom+scrollY-innerHeight*.85,end=grid.top+scrollY-innerHeight*.55,t=Math.max(0,Math.min(1,(scrollY-start)/Math.max(1,end-start))),length=path.getTotalLength(),line=rule.height,total=length+line,travel=t*total;let p=path.getPointAtLength(Math.min(length,travel));if(travel>length)p.y+=travel-length;dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y);dot.style.opacity=String(Math.sin(Math.PI*t));closing.style.setProperty('--closing-reveal',String(Math.max(0,Math.min(1,(t-.6)/.4))))}
+ const svg=document.querySelector('.spine-connector'),path=svg.querySelector('path'),dot=document.createElementNS(svg.namespaceURI,'circle');dot.classList.add('timeline-traveller');dot.setAttribute('r','8');svg.append(dot);closing.classList.add('closing-transition');let pending=false;
+ function update(){pending=false;const main=document.querySelector('main').getBoundingClientRect(),a=projectSpine.getBoundingClientRect(),grid=closing.querySelector('.closing-grid').getBoundingClientRect(),rule=closingSpine.getBoundingClientRect(),anchor=innerHeight*.55,length=path.getTotalLength(),line=rule.height,total=length+line;let p;
+  if(a.bottom>=anchor){p={x:a.left-main.left,y:Math.max(a.top,Math.min(a.bottom,anchor))-main.top}}
+  else{const t=Math.max(0,Math.min(1,(anchor-a.bottom)/Math.max(1,rule.bottom-a.bottom))),travel=t*total;p=path.getPointAtLength(Math.min(length,travel));if(travel>length)p.y+=travel-length}
+  dot.setAttribute('cx',p.x);dot.setAttribute('cy',p.y);dot.style.opacity=a.top<innerHeight&&rule.bottom>0?'1':'0';
+  const start=a.bottom+scrollY-innerHeight*.85,end=grid.top+scrollY-innerHeight*.55,t=Math.max(0,Math.min(1,(scrollY-start)/Math.max(1,end-start)));closing.style.setProperty('--closing-reveal',String(Math.max(0,Math.min(1,(t-.6)/.4))))}
+
  const queue=()=>{if(!pending){pending=true;requestAnimationFrame(update)}};addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);document.fonts.ready.then(queue);queue();
 }
 // Abstract particle diagrams are placeholders, not project renders.
