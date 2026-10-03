@@ -1,9 +1,14 @@
 
 import { initAmbientParticles } from './ambient-particles.js';
-import { initPointSculpture } from './point-sculpture.js';
+
 
 initAmbientParticles();
-initPointSculpture();
+// Scroll-led hero route: right, left, down, left, then a spinning pause.
+const hero=document.querySelector('.hero'),heroArt=document.querySelector('.hero-line-art');
+if(hero&&heroArt){const scene=hero.querySelector('.hero-scene'),route=heroArt.querySelector('path'),ball=heroArt.querySelector('.hero-line-ball'),staticMotion=matchMedia('(prefers-reduced-motion:reduce), (max-width:700px), (hover:none) and (pointer:coarse)').matches;let pending=false;
+ function drawHero(){pending=false;const w=heroArt.clientWidth,h=heroArt.clientHeight,mobile=innerWidth<=700,x=w*(mobile?.57:.52),top=h*(mobile?.13:.23),bottom=h*.75,end=w*.28;heroArt.setAttribute('viewBox','0 0 '+w+' '+h);route.setAttribute('d','M '+w*.96+' '+top+' H '+x+' V '+bottom+' H '+end);const progress=staticMotion?0:Math.max(0,Math.min(1,scrollY/Math.max(1,hero.offsetHeight-innerHeight))),travel=Math.min(1,progress/.66),point=route.getPointAtLength(route.getTotalLength()*travel);ball.setAttribute('transform','translate('+point.x+' '+point.y+')');ball.style.opacity=String(1-Math.max(0,Math.min(1,(progress-.88)/.12)));ball.classList.toggle('hero-ball-spinning',!staticMotion&&progress>=.66&&progress<1);hero.dataset.routeProgress=progress.toFixed(3)}
+ const queue=()=>{if(!pending){pending=true;requestAnimationFrame(drawHero)}};if(!staticMotion)addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);new ResizeObserver(queue).observe(scene);document.fonts.ready.then(queue);drawHero();
+}
 const projectSpine=document.querySelector('#selected .project-grid'),closingSpine=document.querySelector('.closing-rule');
 if(projectSpine&&closingSpine){const main=document.querySelector('main'),svg=document.createElementNS('http://www.w3.org/2000/svg','svg'),path=document.createElementNS(svg.namespaceURI,'path');svg.classList.add('spine-connector');svg.setAttribute('aria-hidden','true');svg.append(path);main.append(svg);function connect(){const m=main.getBoundingClientRect(),a=projectSpine.getBoundingClientRect(),b=closingSpine.getBoundingClientRect(),x=a.left-m.left,y=a.bottom-m.top,X=b.left-m.left,Y=b.top-m.top,mid=y+(Y-y)*.62;svg.setAttribute('width',main.clientWidth);svg.setAttribute('height',main.offsetHeight);path.setAttribute('d',`M ${x} ${y} V ${mid} H ${X} V ${Y}`)}new ResizeObserver(connect).observe(main);addEventListener('resize',connect);document.fonts.ready.then(connect);connect()}
 // Follow the connected red timeline into the closing spread.
