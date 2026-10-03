@@ -1,6 +1,4 @@
 :root{--red:#e3483f;--accent:var(--red)}
-/* A faint cyanotype under the existing grain and floating particles. */
-html{background:#050505}
 /* Treat the flower and introduction as a composed spread. */
 .hero{min-height:max(760px,calc(100svh - 85px));padding-top:30px}
 .hero-top{margin-bottom:34px}
@@ -168,4 +166,3 @@ body:has(.about-layout) .page-intro h1,body:has(.about-layout) .page-intro em,.a
 body:has(.about-layout) .page-intro h1{font-size:clamp(36px,5.6vw,78px);line-height:1.15;letter-spacing:-.04em}
 .about-copy h2{font-size:clamp(26px,3vw,42px);letter-spacing:-.03em}
 .about-copy>p{font-size:16px;line-height:1.8}
-body{background-color:#050505;background-image:linear-gradient(rgba(5,5,5,.94),rgba(5,5,5,.94)),url("/images/botanical-texture.png");background-position:center;background-size:cover;background-attachment:fixed}
