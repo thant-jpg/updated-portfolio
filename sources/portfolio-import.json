@@ -1,0 +1,83 @@
+{
+  "source": "C:\\Users\\Lenovo\\Downloads\\JOB\\Thant Thiri Wai, Portfolio.pdf",
+  "groups": [
+    {
+      "slug": "stacked-streets",
+      "title": "Stacked Streets",
+      "start": 24,
+      "end": 29,
+      "cover": 24,
+      "disciplines": "Architecture / Housing / Urban design",
+      "note": "Shophouse future",
+      "summary": "A vertical neighbourhood along the Bishan River that reimagines the shophouse for 2070s Singapore, combining homes, small businesses and public sky streets.",
+      "role": "Architecture student"
+    },
+    {
+      "slug": "the-wandering-archive",
+      "title": "The Wandering Archive",
+      "start": 16,
+      "end": 23,
+      "cover": 23,
+      "disciplines": "Architecture / Speculative design / 3D environments",
+      "note": "A mobile library for 2100",
+      "summary": "A speculative mobile library for Mongolian nomads adapting to cave dwellings in 2100, exploring cultural memory, weather data and the relationship between mobility and shelter.",
+      "role": "Architecture student"
+    },
+    {
+      "slug": "a-bridge",
+      "title": "A Bridge",
+      "start": 30,
+      "end": 33,
+      "cover": 30,
+      "disciplines": "Architecture / Structures / Fabrication",
+      "note": "A 4.7 m full-scale bridge",
+      "summary": "A collaborative 4.7 m bridge project exploring tension, structural behaviour, physical fabrication and folded metal connections.",
+      "role": "Group project"
+    },
+    {
+      "slug": "spatial",
+      "title": "Spatial",
+      "start": 4,
+      "end": 7,
+      "cover": 5,
+      "disciplines": "Architecture / 3D modelling / Drawing",
+      "note": "Spaces and everyday objects",
+      "summary": "An introduction to Rhino modelling through a building, a lived-in room and an object, using isometric drawings and digital models to tell a personal spatial story.",
+      "role": "Architecture student"
+    },
+    {
+      "slug": "flow",
+      "title": "Flow",
+      "start": 8,
+      "end": 11,
+      "cover": 8,
+      "disciplines": "Architecture / Physical modelling / Form studies",
+      "note": "Structure meets landscape",
+      "summary": "A paper-model exploration of a structure that rises from the landscape, shaped by wave-like contours, walkable roof surfaces and sheltered spaces.",
+      "role": "Architecture student"
+    },
+    {
+      "slug": "ribbon",
+      "title": "Ribbon",
+      "start": 12,
+      "end": 15,
+      "cover": 12,
+      "disciplines": "Computational design / Grasshopper / BIM",
+      "note": "A parametric staircase",
+      "summary": "A collaborative staircase study developed from AI-generated imagery through parametric modelling in Grasshopper and a BIM model in Revit.",
+      "role": "Group project"
+    },
+    {
+      "slug": "previously",
+      "title": "Previously",
+      "start": 34,
+      "end": 41,
+      "cover": 38,
+      "disciplines": "Architecture / Drafting / Models / Visual studies",
+      "note": "Earlier work and studies",
+      "summary": "A collection of earlier work spanning architectural drafting, 3D modelling, visualisation, detail drawings, urban sketches and painting.",
+      "role": "Selected earlier work"
+    }
+  ],
+  "pageCount": 42
+}

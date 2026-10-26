@@ -1,7 +1,9 @@
+import {projectCopy} from './project-copy.mjs';
+import {portfolioProjects} from './portfolio-projects.mjs';
 // Replace image: null with '/images/your-file.jpg'. Put files in public/images.
 // Draft descriptions describe scope only; replace with your process and evidence.
 export const profile = { name: 'Thant', location: 'Singapore', title: 'Architecture & interactive design', email: 'waithantthiri101@gmail.com', resume: '/resume.docx', interlude: ['I’m drawn to the space between what is', 'and what could be.'], intro: 'I study architecture and work across spatial design, digital products and interactive experiences. I’m interested in how people move, connect and find a sense of place in physical and virtual environments.' };
-export const projects=[
+const originalProjects=[
   {
     "slug": "linked-hybrid",
     "title": "Linked Hybrid",
@@ -133,3 +135,16 @@ export const projects=[
     ]
   }
 ];
+
+// Keep earlier placeholder routes available without repeating them in the project gallery.
+export const draftProjects=originalProjects.filter(project=>!['virtual-singapore','easyconvo'].includes(project.slug));
+// Month-level dates from the supplied portfolio/resume; Previously confirmed by the user.
+const projectDates={
+ 'easyconvo':'2026-09','virtual-singapore':'2026-08','stacked-streets':'2026-03',
+ 'previously':'2025-09','ribbon':'2025-06','a-bridge':'2025-05',
+ 'the-wandering-archive':'2025-02','flow':'2025-01','spatial':'2024-11'
+};
+export const projects=[...portfolioProjects,...originalProjects.filter(project=>['virtual-singapore','easyconvo'].includes(project.slug))]
+ .map(project=>({...project,...(projectCopy[project.slug]?{summary:projectCopy[project.slug].summary,...(projectCopy[project.slug].presentationImage?{image:projectCopy[project.slug].presentationImage,presentationImage:projectCopy[project.slug].presentationImage}:{})}:{}),date:projectDates[project.slug],...(project.slug==='previously'?{role:'Architectural internship',note:'Internship work, September 2025',summary:'A collection of internship work from September 2025, including architectural drafting, 3D modelling, visualisation and detail drawings.'}:{})}))
+ .sort((a,b)=>b.date.localeCompare(a.date))
+ .map((project,index)=>({...project,number:String(index+1).padStart(2,'0')}));

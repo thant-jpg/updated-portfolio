@@ -71,7 +71,7 @@
 @media(max-width:520px){.workspace .about-page-track .page-intro h1{font-size:30px;line-height:36px}.workspace-sidebar nav a{font-size:10px;line-height:16px}}
 
 /* Explicit visitor choice overrides the operating-system media query. */
-:root[data-theme="light"]{color-scheme:light;--accent:var(--blue);--paper:#f2eedc;--ink:#0f0f0f;--muted:#454338;--line:#cec9b8;--surface:#e8e3cf;--on-blue:#f2eedc;--paper-grain-opacity:.24;--paper-grain-blend:multiply;--paper-bloom:rgba(116,96,50,.085);--paper-edge:rgba(79,63,30,.07)}
+:root[data-theme="light"]{color-scheme:light;--accent:var(--blue);--paper:#ffffff;--ink:#0f0f0f;--muted:#4b4b4b;--line:#d2d2d2;--surface:#e7e7e7;--on-blue:#ffffff;--paper-grain-opacity:.24;--paper-grain-blend:multiply;--paper-bloom:rgba(90,90,90,.06);--paper-edge:rgba(50,50,50,.05)}
 :root[data-theme="dark"]{color-scheme:dark;--accent:#ff3232;--on-blue:#0f0f0f;--paper:#0f0f0f;--ink:#f2eedc;--muted:#c5c1af;--line:#35342e;--surface:#171715;--paper-grain-opacity:.19;--paper-grain-blend:screen;--paper-bloom:rgba(242,238,220,.085);--paper-edge:rgba(0,0,0,.32)}
 :root[data-theme="light"] .static-flower{filter:grayscale(1)!important;mix-blend-mode:multiply}
 :root[data-theme="dark"] .static-flower{filter:invert(1) grayscale(1)!important;mix-blend-mode:screen}
@@ -137,3 +137,84 @@
 .workspace .timeline-event{padding-bottom:64px}.workspace .timeline-key{padding-bottom:32px}
 .resume-download{margin-top:24px;font-size:14px;line-height:20px}
 @media(max-width:520px){.theme-toggle{font-size:12px;line-height:20px}.document-tab{padding:0 12px;gap:8px}.document-bar-actions{padding-right:12px}.layout-figure figcaption{flex-direction:column;gap:0}.sheet-folio{font-size:12px;line-height:20px}.workspace .play-footer-bottom{font-size:12px;line-height:20px}}
+/* Imported portfolio: keep the original artwork, page proportions and colour. */
+.imported-project-intro{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:32px;margin:0;padding:0 0 32px;border:0;background:none;align-items:start}
+.imported-project-intro h1{font-size:36px;line-height:40px;letter-spacing:-.045em;margin:16px 0}.imported-project-intro p{font-size:14px;line-height:24px;max-width:65ch}
+.imported-project-intro dl{display:grid;gap:16px;margin:0;padding-top:32px}.imported-project-intro dt{font-size:12px;line-height:20px;font-weight:500;color:var(--accent);margin-bottom:4px}.imported-project-intro dd{font-size:12px;line-height:20px;margin:0;color:var(--muted)}
+.portfolio-page-index{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:16px;font-size:12px;line-height:20px}.portfolio-page-index>span{color:var(--muted);margin-right:8px}.portfolio-page-index a{display:grid;place-items:center;min-width:32px;min-height:32px;border:1px solid var(--line);padding:4px 8px;color:var(--accent)}.portfolio-page-index a:hover{background:var(--workspace-hover);border-color:var(--accent)}
+.imported-pasteboard{padding:32px 16px 24px 32px}.imported-pasteboard .page-ruler-top{left:32px;right:16px}.pdf-sheet{display:block;min-height:0;max-width:100%;padding:0;margin:0 0 32px;background:#fff;scroll-margin-top:24px}.pdf-sheet:before,.pdf-sheet:after{content:none}
+.pdf-sheet-image{display:block;cursor:zoom-in}.pdf-sheet-image img{display:block;width:100%;height:auto;filter:none!important;max-width:100%}
+.pdf-sheet-caption{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:12px 16px;background:var(--paper);border-top:1px solid var(--line);font-size:12px;line-height:20px;color:var(--muted)}.pdf-sheet-caption a{color:var(--accent)}
+.pdf-sheet-transcript{padding:0 16px 12px;background:var(--paper);font-size:12px;line-height:20px;color:var(--muted)}.pdf-sheet-transcript summary{cursor:pointer;display:list-item}.pdf-sheet-transcript p{white-space:pre-line;max-width:75ch;padding-top:16px;font-size:14px;line-height:24px}
+.workspace .project-grid .visual img{position:absolute;inset:0;width:100%;height:100%;filter:none!important;object-fit:cover;object-position:center;background:#fff}
+@media(max-width:800px){.imported-project-intro{grid-template-columns:1fr;gap:16px}.imported-project-intro dl{grid-template-columns:1fr 1fr;padding-top:0}.imported-project-intro h1{font-size:30px;line-height:36px}}
+@media(max-width:520px){.imported-pasteboard{padding:12px 8px}.pdf-sheet{margin-bottom:24px}.pdf-sheet-caption{padding:12px;font-size:12px}.pdf-sheet-transcript{padding:0 12px 12px}.imported-project-intro dl{grid-template-columns:1fr}.imported-project-intro h1{font-size:30px;line-height:36px}}
+/* Editable editorial sheets: source images and live text, independent of PDF layout. */
+.reflow-pasteboard{padding:24px;background:color-mix(in srgb,var(--ink) 5%,var(--paper))}
+.reflow-opening{grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr);grid-template-rows:1fr auto;gap:24px 32px;align-items:start}
+.reflow-cover{margin:0;min-width:0;height:100%;align-self:stretch;display:flex;align-items:center;justify-content:center;background:#fff}
+.reflow-cover a{display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:320px;cursor:zoom-in}
+.reflow-cover img{display:block;width:100%;height:auto;max-height:440px;object-fit:contain;filter:none!important}
+.reflow-art-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px;align-items:start}
+.reflow-art{margin:0;min-width:0}.reflow-art>a{display:grid;place-items:center;background:#fff;min-height:200px;cursor:zoom-in}.reflow-art img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;filter:none!important}.reflow-art figcaption{font-size:12px;line-height:20px;color:var(--muted);padding-top:12px}
+.reflow-process,.reflow-studies{grid-template-rows:auto 1fr auto;min-height:0}.reflow-process .sheet-section-heading p{font-size:14px;line-height:24px;color:var(--muted);max-width:65ch;margin-top:16px}.reflow-studies .sheet-section-heading{margin-bottom:8px}
+.reflow-document .portfolio-page-index a{padding:4px 12px}.reflow-document article{scroll-margin-top:24px}
+.original-sheets-archive{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-size:12px;line-height:20px;color:var(--muted)}.original-sheets-archive>summary{cursor:pointer;padding:8px 0}.original-sheets-archive[open]>.project-document{margin-top:24px}.original-sheets-archive .imported-project-intro h1{font-size:24px;line-height:32px}.original-sheets-archive .document-end-nav{display:none}
+@media(max-width:1100px){.reflow-opening{grid-template-columns:1fr}.reflow-cover a{min-height:240px}.reflow-cover img{max-height:360px}}
+@media(max-width:700px){.reflow-pasteboard{padding:12px}.reflow-art-grid{grid-template-columns:1fr;gap:24px}.reflow-art img{max-height:none}.reflow-cover a{min-height:0}.reflow-cover img{max-height:none}}
+/* No fixed sheet count or image-height cap: complete drawings set their own height. */
+.reflow-study{min-height:0;grid-template-rows:auto 1fr auto}.reflow-study .sheet-section-heading p{font-size:14px;line-height:24px;color:var(--muted);max-width:65ch;margin-top:16px}
+.reflow-full-art .reflow-art-grid{grid-template-columns:minmax(0,1fr)}
+.reflow-art>a{min-height:0;overflow:visible}.reflow-art img{width:100%;height:auto;max-height:none;object-fit:contain}
+/* One 4:3 presentation ratio throughout; drawings fit fully within the white canvas. */
+.reflow-cover{display:block;height:auto;align-self:start;background:#fff}
+.reflow-cover a,.reflow-art>a{display:block;position:relative;width:100%;height:auto;min-height:0;aspect-ratio:4/3;overflow:hidden;background:#fff}
+.reflow-cover img,.reflow-art img{position:absolute;inset:0;display:block;width:100%;height:100%;max-height:none;object-fit:contain;object-position:center}
+.workspace .project-grid [data-project="spatial"] .visual img,.workspace .project-grid [data-project="a-bridge"] .visual img{object-fit:contain}
+/* The frame edge makes the shared presentation size clear around white-margin drawings. */
+.reflow-cover a,.reflow-art>a{border:1px solid var(--line);box-sizing:border-box}
+/* Continuous document rulers keep a true pixel scale as the pasteboard grows. */
+.document-pasteboard{--ruler-inset:32px}
+.document-pasteboard .page-ruler-side{top:var(--ruler-inset);bottom:24px;left:0;width:32px;height:auto;border-right:1px solid var(--line)}
+.document-pasteboard .page-ruler-top{left:40px;right:16px}
+.reflow-pasteboard{padding:32px 24px 24px 40px}
+.document-pasteboard .page-ruler{opacity:.7}
+@media(min-width:701px) and (max-width:1100px){.document-pasteboard .page-ruler-top{left:40px;right:24px}.document-pasteboard{padding-left:40px}}
+@media(max-width:700px){.reflow-pasteboard{padding:12px}}
+/* One continuous sheet with quiet application guides. */
+.reflow-pasteboard{background:var(--paper);border-color:color-mix(in srgb,var(--ink) 8%,transparent);padding:40px 32px 32px 48px}
+.project-flow{min-width:0;max-width:1120px;margin-inline:auto}
+.project-flow-intro{padding:16px 0 48px}
+.project-flow-intro h1{font-size:36px;line-height:40px;letter-spacing:-.045em;margin:16px 0 24px;text-wrap:balance}
+.project-flow-intro>.sheet-intro{max-width:65ch;font-size:16px;line-height:24px}
+.project-flow-intro .sheet-meta{grid-template-columns:1fr 1fr;max-width:760px;margin:24px 0 32px;padding-top:16px;border-color:var(--line)}
+.project-flow-section{min-width:0;padding:48px 0;border-top:1px solid color-mix(in srgb,var(--ink) 9%,transparent)}
+.project-flow-section:last-child{padding-bottom:16px}
+.project-flow-heading{display:block;margin:0 0 24px;padding:0;border:0;background:none}
+.project-flow-heading h2{max-width:36ch;font-size:24px;line-height:32px;letter-spacing:-.035em;text-wrap:balance}
+.project-flow-heading p,.project-flow-heading ul{max-width:65ch;font-size:14px;line-height:24px;color:var(--muted);margin:16px 0 0}
+.project-flow-heading ul{padding-left:20px}.project-flow-heading li+li{margin-top:8px}
+.reflow-single-art{grid-template-columns:minmax(0,1fr)}
+.reflow-document .reflow-cover{max-width:880px}
+.document-pasteboard .page-ruler{opacity:.34}
+.document-pasteboard .page-ruler-side{border-color:color-mix(in srgb,var(--ink) 8%,transparent)}
+.document-pasteboard .page-ruler svg{stroke-width:.5}
+.document-pasteboard .page-ruler text{font-size:7px}
+@media(max-width:1100px) and (min-width:701px){.reflow-pasteboard{padding:32px 24px 24px 40px}}
+@media(max-width:700px){.reflow-pasteboard{padding:24px 16px}.project-flow-intro{padding:0 0 32px}.project-flow-intro h1{font-size:30px;line-height:36px}.project-flow-intro>.sheet-intro{font-size:14px}.project-flow-section{padding:32px 0}.project-flow-heading h2{font-size:20px;line-height:28px}.project-flow-intro .sheet-meta{grid-template-columns:1fr;gap:16px}}
+/* Full-width interactive footer, separated from the workspace by the accent rule. */
+.workspace .play-footer{margin:48px 0 0;padding:0;border-top:3px solid var(--accent)}
+.workspace .play-footer-bottom{padding:24px 32px}
+@media(max-width:800px){.workspace .play-footer{margin:32px 0 0}.workspace .play-footer-bottom{padding:24px}}
+@media(max-width:520px){.workspace .play-footer{margin:24px 0 0}.workspace .play-footer-bottom{padding:20px 16px}}
+/* Unfilled project routes use the same continuous document treatment. */
+.document-pasteboard:not(.reflow-pasteboard)>.portfolio-sheet{min-height:0;box-shadow:none;border:0;border-bottom:1px solid var(--line);margin:0;padding:32px 16px;background:transparent}
+.document-pasteboard:not(.reflow-pasteboard)>.portfolio-sheet:before,.document-pasteboard:not(.reflow-pasteboard)>.portfolio-sheet:after{display:none}
+/* Join the workspace edges to the footer divider without a floating gap. */
+.workspace main{padding-bottom:48px}
+.workspace .play-footer{margin-top:0;border-top-width:1px}
+@media(max-width:800px){.workspace main{padding-bottom:32px}.workspace .play-footer{margin-top:0}}
+@media(max-width:520px){.workspace main{padding-bottom:24px}.workspace .play-footer{margin-top:0}}
+/* More headroom for tossing pieces; their count remains based on width. */
+.workspace .footer-playground{height:clamp(480px,68svh,720px)}
+@media(max-width:520px){.workspace .footer-playground{height:clamp(400px,65svh,520px)}}

@@ -65,3 +65,22 @@ Place artwork in `public/images/<project-slug>/`. Set its site-relative paths in
 - `outcome`: final drawing, model, render, or screen
 
 A null or missing file leaves a labelled image space. Text remains in `content.mjs`; sheet markup is in `project-layout.mjs` and styles are in `public/workspace.css`. Run `npm run build` after changing content, or use `npm run dev` for automatic rebuilding.
+
+## Native portfolio project pages
+
+The seven imported architecture projects use a continuous webpage inside one subtle document frame. Headings, descriptions, lists and captions are selectable Geist Mono text. The original PDF is retained unchanged, but complete printed PDF pages are no longer embedded in the project pages.
+
+- `portfolio-editable.mjs`: continuous project layout, with no page count or section buttons.
+- `portfolio-artwork.mjs`: 104 individual illustrations, drawings, models and photos.
+- `portfolio-sections.mjs`: concise section headings and explanations adapted from the PDF.
+- `project-copy.mjs`: project introductions and presentation-cover overrides.
+- `portfolio-projects.mjs`: imported project metadata and source-page records, retained for provenance.
+- `public/document-rulers.js`: ResizeObserver updates ruler marks to the full document height at a constant pixel scale.
+- `public/workspace.css`: subtle rulers/document frame, consistent 4:3 image frames, full-width pile, and joined 1px accent footer divider.
+
+Drawings fit fully inside white 4:3 frames and open at full size when clicked. The Wandering Archive cover has one AI-expanded presentation variant; the original cover and technical artwork remain available in the source files. See `docs/ai-image-notes.md` for generation details.
+
+To regenerate the imported artwork from the source PDF, use the bundled Python/Poppler runtime with `scripts/extract-complete-artwork.py`, followed by `scripts/separate-portfolio-drawings.py`. The second step is required: it separates the nine composite PDF pages into 34 individual visuals and removes PDF text, which is rebuilt in the native section copy. Inspect extracted visuals before rebuilding. Temporary render files are not needed to serve the site.
+
+Project chronology is controlled by `projectDates` in `content.mjs`. Home and Work use newest-first order. Previously is September 2025 internship work, confirmed by the user. App projects remain labelled artwork placeholders until their images are provided.
+

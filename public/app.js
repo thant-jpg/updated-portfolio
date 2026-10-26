@@ -1,12 +1,14 @@
 import { initFooterPlayground } from './footer-playground.js';
+import { initDocumentRulers } from './document-rulers.js';
 initFooterPlayground();
+initDocumentRulers();
 
 // Text-only theme switch; default to the system until the visitor chooses.
 const themeButton=document.querySelector('.theme-toggle');
 if(themeButton){
  const systemTheme=matchMedia('(prefers-color-scheme:dark)');let chosen=false;
  try{chosen=['light','dark'].includes(localStorage.getItem('portfolio-theme'));}catch{}
- function updateTheme(mode){document.documentElement.dataset.theme=mode;const target=mode==='dark'?'Light':'Dark';themeButton.textContent=target+' mode';themeButton.setAttribute('aria-label','Switch to '+target.toLowerCase()+' mode');document.querySelectorAll('meta[name="theme-color"]').forEach(meta=>{meta.removeAttribute('media');meta.content=mode==='dark'?'#0f0f0f':'#f2eedc';});}
+ function updateTheme(mode){document.documentElement.dataset.theme=mode;const target=mode==='dark'?'Light':'Dark';themeButton.textContent=target+' mode';themeButton.setAttribute('aria-label','Switch to '+target.toLowerCase()+' mode');document.querySelectorAll('meta[name="theme-color"]').forEach(meta=>{meta.removeAttribute('media');meta.content=mode==='dark'?'#0f0f0f':'#ffffff';});}
  updateTheme(document.documentElement.dataset.theme|| (systemTheme.matches?'dark':'light'));
  themeButton.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';chosen=true;try{localStorage.setItem('portfolio-theme',next)}catch{}updateTheme(next);});
  systemTheme.addEventListener('change',event=>{if(!chosen)updateTheme(event.matches?'dark':'light');});
