@@ -48,3 +48,20 @@ The supplied résumé is available as the original Word document at public/resum
 The current hero uses the supplied blue-tulip photo, isolated onto a transparent background with the built-in image-generation tool (prompt: remove only the pale background and preserve the two blue flowers, stems, leaves and photographic detail). The asset is public/images/blue-tulips.png. public/floral-scene.js animates this photograph with gentle displacement and cursor influence, then samples its pixels into a drifting point cloud during scroll. This is a photo-based animation, not an AI-generated motion video or full 3D model. A short WebM export is provided beside the portfolio folder. Introductory text fades in, with reduced-motion support. Hero typography is Courier New and side callouts have been removed.
 
 EasyConvo now includes the supplied student/teacher, usability-testing and Figma descriptions. The resume page uses the updated Word content, with previous Additional Information retained by request. About lists software and has no portrait. Confirmed email: waithantthiri101@gmail.com.
+
+## Adding project artwork
+
+Project detail pages use three landscape sheets, adapted to one column on small screens:
+
+1. Opening: title, description, role, disciplines, and a large cover drawing or render.
+2. Process: existing project text with two slots for plans, sections, process images, or prototypes.
+3. Outcome: a large final image and the existing outcome description.
+
+Place artwork in `public/images/<project-slug>/`. Set its site-relative paths in `project-media.mjs`:
+
+- `cover`: opening drawing or render
+- `plan`: first process image (plan, sketch, or flow)
+- `section`: second process image (section, development, or prototype)
+- `outcome`: final drawing, model, render, or screen
+
+A null or missing file leaves a labelled image space. Text remains in `content.mjs`; sheet markup is in `project-layout.mjs` and styles are in `public/workspace.css`. Run `npm run build` after changing content, or use `npm run dev` for automatic rebuilding.
