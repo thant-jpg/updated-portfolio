@@ -6,7 +6,7 @@ import './build.mjs';
 const root=path.resolve('dist');
 const liveReload=process.argv.includes('--live-reload');
 const port=Number(process.env.PORT)||4173;
-const types={'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.pdf':'application/pdf','.docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document'};
+const types={'.ttf':'font/ttf','.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.pdf':'application/pdf','.docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document'};
 const reloadClient=`<script>(()=>{let interrupted=false;const events=new EventSource('/__live_reload');events.onerror=()=>{interrupted=true};events.onopen=()=>{if(interrupted)location.reload()}})()</script>`;
 
 http.createServer(async(req,res)=>{

@@ -1,56 +1,130 @@
+import { initFooterPlayground } from './footer-playground.js';
+initFooterPlayground();
 
-import { initAmbientParticles } from './ambient-particles.js';
+// Text-only theme switch; default to the system until the visitor chooses.
+const themeButton=document.querySelector('.theme-toggle');
+if(themeButton){
+ const systemTheme=matchMedia('(prefers-color-scheme:dark)');let chosen=false;
+ try{chosen=['light','dark'].includes(localStorage.getItem('portfolio-theme'));}catch{}
+ function updateTheme(mode){document.documentElement.dataset.theme=mode;const target=mode==='dark'?'Light':'Dark';themeButton.textContent=target+' mode';themeButton.setAttribute('aria-label','Switch to '+target.toLowerCase()+' mode');document.querySelectorAll('meta[name="theme-color"]').forEach(meta=>{meta.removeAttribute('media');meta.content=mode==='dark'?'#0f0f0f':'#f2eedc';});}
+ updateTheme(document.documentElement.dataset.theme|| (systemTheme.matches?'dark':'light'));
+ themeButton.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';chosen=true;try{localStorage.setItem('portfolio-theme',next)}catch{}updateTheme(next);});
+ systemTheme.addEventListener('change',event=>{if(!chosen)updateTheme(event.matches?'dark':'light');});
+}
 
+const reduced = window.matchMedia(
+  '(prefers-reduced-motion: reduce), (max-width:700px), (hover:none) and (pointer:coarse)'
+).matches;
+if (!reduced) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries)
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          observer.unobserve(entry.target);
+        }
+    },
+    { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+  );
+  document
+    .querySelectorAll(
+      '#selected .section-heading:not(.morph-section),#selected .project,#selected>.text-link'
+    )
+    .forEach((e, i) => {
+      e.classList.add('scroll-reveal');
+      e.style.setProperty('--reveal-delay', `${(i % 2) * 90}ms`);
+      observer.observe(e);
+    });
+}
+function drawing(canvas, hero = false) {
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  let width,
+    height,
+    angle = 0;
+  const type = canvas.dataset.drawing || 'Personal';
+  const colors =
+    type === 'Product'
+      ? ['#e7c6b4', '#d3adbc']
+      : type === 'Interactive'
+        ? ['#a8d8d4', '#bad8ec']
+        : ['#a8c9df', '#d5e1ff'];
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+    const scale = Math.min(width * 0.32, height * 0.4);
+    for (let i = 0; i < 100; i++) {
+      const u = (i / 99) * Math.PI * 2;
+      for (let j = 0; j < 45; j++) {
+        const v = (j / 44) * Math.PI * 2;
+        const r = 0.9 + 0.24 * Math.cos(v * 3 + u * 2);
+        let x = (r + 0.33 * Math.cos(v)) * Math.cos(u),
+          y = (r + 0.33 * Math.cos(v)) * Math.sin(u),
+          z = 0.5 * Math.sin(v) + 0.26 * Math.sin(u * 3);
+        const a = angle - 0.35;
+        let X = x * Math.cos(a) + z * Math.sin(a),
+          Z = -x * Math.sin(a) + z * Math.cos(a);
+        const px = width * 0.51 + X * scale,
+          py = height * 0.52 + (y * 0.53 + Z * 0.64) * scale;
+        ctx.globalAlpha = 0.26 + (Z + 1.5) / 4;
+        ctx.fillStyle = j % 3 ? colors[0] : colors[1];
+        ctx.beginPath();
+        ctx.arc(px, py, hero ? 0.85 : 0.65, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+  function resize() {
+    const box = canvas.getBoundingClientRect();
+    width = box.width;
+    height = box.height;
+    canvas.width = width * devicePixelRatio;
+    canvas.height = height * devicePixelRatio;
+    ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+    render();
+  }
+  resize();
+  new ResizeObserver(resize).observe(canvas);
+  if (hero && !reduced) {
+    canvas.addEventListener('pointermove', (e) => {
+      angle = (e.offsetX / width - 0.5) * 0.8;
+      render();
+    });
+    canvas.addEventListener('pointerleave', () => {
+      angle = 0;
+      render();
+    });
+  }
+}
+document
+  .querySelectorAll('canvas[data-drawing]')
+  .forEach((c) => drawing(c, c.id === 'hero-drawing'));
+document.querySelectorAll('[data-filter]').forEach((button) =>
+  button.addEventListener('click', () => {
+    const category = button.dataset.filter;
+    document
+      .querySelectorAll('[data-filter]')
+      .forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+    let count = 0;
+    document.querySelectorAll('[data-category]').forEach((p) => {
+      p.hidden = category !== 'All' && p.dataset.category !== category;
+      if (!p.hidden) count++;
+    });
+    document
+      .querySelector('.project-grid')
+      .classList.toggle('filtered', category !== 'All');
+    document.getElementById('filter-status').textContent =
+      `Showing ${count} project${count === 1 ? '' : 's'}`;
+  })
+);
 
-initAmbientParticles();
-// Scroll-led hero route: right, left, down, left, then a spinning pause.
-const hero=document.querySelector('.hero'),heroArt=document.querySelector('.hero-line-art');
-if(hero&&heroArt){const scene=hero.querySelector('.hero-scene'),route=heroArt.querySelector('path'),ball=heroArt.querySelector('.hero-line-ball'),staticMotion=matchMedia('(prefers-reduced-motion:reduce), (max-width:700px), (hover:none) and (pointer:coarse)').matches;let pending=false;
- function drawHero(){pending=false;const w=heroArt.clientWidth,h=heroArt.clientHeight,mobile=innerWidth<=700,x=w*(mobile?.57:.52),top=h*(mobile?.13:.23),bottom=h*.75,end=w*.22;heroArt.setAttribute('viewBox','0 0 '+w+' '+h);route.setAttribute('d','M '+w*.96+' '+top+' H '+x+' V '+bottom+' H '+end);const progress=staticMotion?0:Math.max(0,Math.min(1,scrollY/Math.max(1,hero.offsetHeight-innerHeight))),travel=Math.min(1,progress/.66),point=route.getPointAtLength(route.getTotalLength()*travel),growth=travel*travel*(3-2*travel),scale=.45+growth*1.2;ball.setAttribute('transform','translate('+point.x+' '+point.y+')');ball.style.setProperty('--hero-ball-scale',scale.toFixed(3));ball.style.opacity='1';ball.classList.toggle('hero-ball-spinning',!staticMotion&&progress>=.12&&progress<1);hero.dataset.routeProgress=progress.toFixed(3)}
- const queue=()=>{if(!pending){pending=true;requestAnimationFrame(drawHero)}};if(!staticMotion)addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);new ResizeObserver(queue).observe(scene);document.fonts.ready.then(queue);drawHero();
+const introText = document.querySelector('.quiet-interlude p');
+if (introText && !reduced) {
+  introText.classList.add('intro-fade');
+  new IntersectionObserver(
+    (entries) => {
+      introText.classList.toggle('is-visible', entries[0].isIntersecting);
+    },
+    { rootMargin: '-20% 0px', threshold: 0.3 }
+  ).observe(introText);
 }
-const projectSpine=document.querySelector('#selected .project-grid'),closingSpine=document.querySelector('.closing-rule');
-// Hand the hero orb to the Selected Work timeline with a scroll-led jump.
-if(hero&&heroArt&&projectSpine&&!matchMedia('(prefers-reduced-motion:reduce), (max-width:700px), (hover:none) and (pointer:coarse)').matches){
- const main=document.querySelector('main'),selected=document.querySelector('#selected'),heroBall=heroArt.querySelector('.hero-line-ball'),jumper=document.createElement('span');
- jumper.className='hero-jump-ball';jumper.setAttribute('aria-hidden','true');jumper.innerHTML='<span class="hero-jump-body"><i class="hero-jump-core"></i><i class="hero-jump-ring"></i><i class="hero-jump-satellite"></i></span>';document.body.append(jumper);let pending=false,state='idle',startedAt=0,startX=0,startY=0;
- function updateJump(now=performance.now()){pending=false;const selectedTop=selected.getBoundingClientRect().top,trigger=innerHeight*.52,reset=innerHeight*.68,art=heroArt.getBoundingClientRect();if(state==='idle'&&selectedTop<=trigger){state='jumping';startedAt=now;startX=art.left+art.width*.22;startY=art.top+art.height*.75}else if(state==='landed'&&selectedTop>reset)state='idle';let t=state==='jumping'?Math.min(1,(now-startedAt)/950):state==='landed'?1:0;if(state==='jumping'&&t>=1)state='landed';const active=state==='jumping',eased=t*t*(3-2*t),target=projectSpine.getBoundingClientRect(),targetX=target.left,targetY=target.top,arc=Math.sin(Math.PI*eased)*Math.min(175,innerHeight*.23),x=startX+(targetX-startX)*eased,y=startY+(targetY-startY)*eased-arc,scale=1.65-1.2*eased;
-  jumper.style.transform=`translate3d(${x}px,${y}px,0)`;jumper.style.setProperty('--jump-scale',scale.toFixed(3));jumper.style.opacity=active?'1':'0';heroBall.style.opacity=state==='idle'?'1':'0';main.classList.toggle('hero-jump-active',active);if(active)queue()}
- const queue=()=>{if(!pending){pending=true;requestAnimationFrame(updateJump)}};addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);new ResizeObserver(queue).observe(selected);document.fonts.ready.then(queue);queue();
-}
-if(projectSpine&&closingSpine){const main=document.querySelector('main'),svg=document.createElementNS('http://www.w3.org/2000/svg','svg'),path=document.createElementNS(svg.namespaceURI,'path');svg.classList.add('spine-connector');svg.setAttribute('aria-hidden','true');svg.append(path);main.append(svg);function connect(){const m=main.getBoundingClientRect(),a=projectSpine.getBoundingClientRect(),b=closingSpine.getBoundingClientRect(),x=a.left-m.left,y=a.bottom-m.top,X=b.left-m.left,Y=b.top-m.top,mid=y+(Y-y)*.62;svg.setAttribute('width',main.clientWidth);svg.setAttribute('height',main.offsetHeight);path.setAttribute('d',`M ${x} ${y} V ${mid} H ${X} V ${Y}`)}new ResizeObserver(connect).observe(main);addEventListener('resize',connect);document.fonts.ready.then(connect);connect()}
-// Follow the connected red timeline into the closing spread.
-const closing=document.querySelector('.closing-study');
-if(closing&&projectSpine&&!matchMedia('(prefers-reduced-motion:reduce), (max-width:700px), (hover:none) and (pointer:coarse)').matches){
- const svg=document.querySelector('.spine-connector'),path=svg.querySelector('path'),traveller=document.createElementNS(svg.namespaceURI,'g'),orbit=document.createElementNS(svg.namespaceURI,'g'),ring=document.createElementNS(svg.namespaceURI,'circle'),satellite=document.createElementNS(svg.namespaceURI,'circle'),dot=document.createElementNS(svg.namespaceURI,'circle');traveller.classList.add('timeline-traveller');orbit.classList.add('timeline-traveller-orbit');ring.classList.add('timeline-traveller-ring');ring.setAttribute('r','16');satellite.classList.add('timeline-traveller-satellite');satellite.setAttribute('cx','16');satellite.setAttribute('r','3');dot.classList.add('timeline-traveller-core');dot.setAttribute('r','8');orbit.append(ring,satellite);traveller.append(dot,orbit);svg.append(traveller);closing.classList.add('closing-transition');let pending=false;
- function update(){pending=false;const main=document.querySelector('main').getBoundingClientRect(),a=projectSpine.getBoundingClientRect(),grid=closing.querySelector('.closing-grid').getBoundingClientRect(),rule=closingSpine.getBoundingClientRect(),anchor=innerHeight*.55,length=path.getTotalLength(),line=rule.height,total=length+line;let p;
-  if(a.bottom>=anchor){p={x:a.left-main.left,y:Math.max(a.top,Math.min(a.bottom,anchor))-main.top}}
-  else{const t=Math.max(0,Math.min(1,(anchor-a.bottom)/Math.max(1,rule.bottom-a.bottom))),travel=t*total;p=path.getPointAtLength(Math.min(length,travel));if(travel>length)p.y+=travel-length}
-  const markerY=p.y+main.top,cards=[...projectSpine.querySelectorAll('.project')],nodes=cards.map((card,i)=>card.getBoundingClientRect().top+(i?35:0));let nodeIndex=-1;for(let i=0;i<nodes.length;i++)if(nodes[i]<=markerY+1)nodeIndex=i;const nodeY=nodeIndex<0?undefined:nodes[nodeIndex],nextNodeY=nodeIndex<0?undefined:(nodes[nodeIndex+1]??a.bottom),spinTravel=nodeY===undefined?0:Math.max(0,markerY-nodeY),spinDistance=nodeY===undefined?1:Math.max(1,nextNodeY-nodeY),spinProgress=Math.max(0,Math.min(1,spinTravel/spinDistance)),spinEase=1-Math.pow(1-spinProgress,3),spinAngle=spinEase*1440,spinning=nodeIndex>=0&&markerY<=a.bottom;
-  traveller.setAttribute('transform',`translate(${p.x} ${p.y})`);traveller.style.opacity=a.top<innerHeight&&rule.bottom>0?'1':'0';orbit.style.transform=`rotate(${spinAngle.toFixed(2)}deg)`;traveller.classList.toggle('is-spinning',spinning);
-  const start=a.bottom+scrollY-innerHeight*.85,end=grid.top+scrollY-innerHeight*.55,t=Math.max(0,Math.min(1,(scrollY-start)/Math.max(1,end-start)));closing.style.setProperty('--closing-reveal',String(Math.max(0,Math.min(1,(t-.6)/.4))))}
-
- const queue=()=>{if(!pending){pending=true;requestAnimationFrame(update)}};addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);document.fonts.ready.then(queue);queue();
-}
-// Scroll the final marker toward the footer, then bounce and roll it away.
-const closingEnd=document.querySelector('.closing-end'),footerFloor=document.querySelector('footer');
-if(closingEnd&&footerFloor&&!matchMedia('(prefers-reduced-motion:reduce), (max-width:700px), (hover:none) and (pointer:coarse)').matches){
- const endBall=closingEnd.querySelector('b'),documentY=element=>{let y=0;for(let node=element;node;node=node.offsetParent)y+=node.offsetTop;return y};let startScroll=0,endScroll=1,dropDistance=0,pending=false;
- function measureDrop(){const endTop=documentY(closingEnd),ballBottom=documentY(endBall)+endBall.offsetHeight,floorTop=documentY(footerFloor),maxScroll=Math.max(0,document.documentElement.scrollHeight-innerHeight),desiredEnd=floorTop-innerHeight*.92;dropDistance=Math.max(0,floorTop-ballBottom);endScroll=Math.min(maxScroll,Math.max(0,desiredEnd));startScroll=Math.min(endScroll-1,endTop-innerHeight*.9);closingEnd.style.setProperty('--drop-distance',dropDistance+'px')}
- function updateDrop(){pending=false;const progress=Math.max(0,Math.min(1,(scrollY-startScroll)/(endScroll-startScroll))),fall=progress*progress;endBall.style.transform=`translateY(${(dropDistance*fall).toFixed(2)}px)`;closingEnd.classList.toggle('has-landed',progress>=.999)}
- const queue=()=>{if(!pending){pending=true;requestAnimationFrame(updateDrop)}};addEventListener('scroll',queue,{passive:true});addEventListener('resize',()=>{measureDrop();queue()});document.fonts.ready.then(()=>{measureDrop();queue()});measureDrop();queue();
-}
-// Abstract particle diagrams are placeholders, not project renders.
-const reduced=window.matchMedia('(prefers-reduced-motion: reduce), (max-width:700px), (hover:none) and (pointer:coarse)').matches;
-// A scroll marker on each remaining vertical red line.
-if(!reduced){
- const tracks=[...document.querySelectorAll('.project-grid,.about-page-track')].filter(e=>e!==projectSpine).map(element=>{const ball=document.createElement('span'),workIndex=element.classList.contains('project-grid')||element.classList.contains('about-page-track');ball.className='vertical-line-ball'+(workIndex?' work-index-ball':'');ball.setAttribute('aria-hidden','true');element.append(ball);return {element,ball,workIndex}});let pending=false;
- function updateBalls(){pending=false;for(const {element,ball,workIndex} of tracks){const box=element.getBoundingClientRect(),root=element.classList.contains('tools-root'),branch=element.parentElement.classList.contains('tools-branches'),project=element.classList.contains('project-grid'),start=root?box.height:0,end=root?box.height+30:branch?18:box.height,x=project||element.classList.contains('about-page-track')?0:box.width*.5,y=Math.max(start,Math.min(end,innerHeight*.55-box.top));let displayY=y;ball.style.left=x+'px';if(workIndex){const floor=document.querySelector('footer').getBoundingClientRect(),drop=Math.max(0,floor.top-box.bottom),maxScroll=Math.max(0,document.documentElement.scrollHeight-innerHeight),landed=y>=end-.5||scrollY>=maxScroll-1;displayY=landed?end:y;ball.style.setProperty('--work-drop-distance',drop+'px');ball.classList.toggle('has-landed',landed)}ball.style.top=displayY+'px'}}
- const queue=()=>{if(!pending){pending=true;requestAnimationFrame(updateBalls)}};addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);const observer=new ResizeObserver(queue);tracks.forEach(t=>observer.observe(t.element));document.fonts.ready.then(queue);queue();
-}
-if(!reduced){const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('reveal-visible');observer.unobserve(entry.target)}},{threshold:.08,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('#selected .section-heading:not(.morph-section),#selected .project,#selected>.text-link').forEach((e,i)=>{e.classList.add('scroll-reveal');e.style.setProperty('--reveal-delay',`${i%2*90}ms`);observer.observe(e)})}
-function drawing(canvas,hero=false){const ctx=canvas.getContext('2d');if(!ctx)return;let width,height,angle=0;const type=canvas.dataset.drawing||'Personal';const colors=type==='Product'?['#e7c6b4','#d3adbc']:type==='Interactive'?['#a8d8d4','#bad8ec']:['#a8c9df','#d5e1ff'];function render(){ctx.clearRect(0,0,width,height);const scale=Math.min(width*.32,height*.40);for(let i=0;i<100;i++){const u=i/99*Math.PI*2;for(let j=0;j<45;j++){const v=j/44*Math.PI*2;const r=.9+.24*Math.cos(v*3+u*2);let x=(r+.33*Math.cos(v))*Math.cos(u),y=(r+.33*Math.cos(v))*Math.sin(u),z=.5*Math.sin(v)+.26*Math.sin(u*3);const a=angle-.35;let X=x*Math.cos(a)+z*Math.sin(a),Z=-x*Math.sin(a)+z*Math.cos(a);const px=width*.51+X*scale,py=height*.52+(y*.53+Z*.64)*scale;ctx.globalAlpha=.26+(Z+1.5)/4;ctx.fillStyle=j%3?colors[0]:colors[1];ctx.beginPath();ctx.arc(px,py,hero?.85:.65,0,Math.PI*2);ctx.fill();}}ctx.globalAlpha=1;}function resize(){const box=canvas.getBoundingClientRect();width=box.width;height=box.height;canvas.width=width*devicePixelRatio;canvas.height=height*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);render();}resize();new ResizeObserver(resize).observe(canvas);if(hero&&!reduced){canvas.addEventListener('pointermove',e=>{angle=(e.offsetX/width-.5)*.8;render()});canvas.addEventListener('pointerleave',()=>{angle=0;render()});}}
-document.querySelectorAll('canvas[data-drawing]').forEach(c=>drawing(c,c.id==='hero-drawing'));
-document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const category=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));let count=0;document.querySelectorAll('[data-category]').forEach(p=>{p.hidden=category!=='All'&&p.dataset.category!==category;if(!p.hidden)count++});document.querySelector('.project-grid').classList.toggle('filtered',category!=='All');document.getElementById('filter-status').textContent=`Showing ${count} projects`; }));
-
-const introText=document.querySelector('.quiet-interlude p');if(introText&&!reduced){introText.classList.add('intro-fade');new IntersectionObserver(entries=>{introText.classList.toggle('is-visible',entries[0].isIntersecting)},{rootMargin:'-20% 0px',threshold:.3}).observe(introText);}
