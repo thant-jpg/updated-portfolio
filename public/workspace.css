@@ -32,14 +32,15 @@
 .workspace .hero-scene .hero-bottom{position:static;display:flex;flex-direction:column;gap:16px;align-items:flex-start;margin:0;padding:0;pointer-events:auto}
 .workspace .hero-scene .hero-bottom p{position:static;inset:auto;width:100%;transform:none;max-width:65ch;font-size:14px;line-height:24px}
 .workspace .hero-cta{font-size:14px;line-height:20px;font-weight:500}.workspace .text-link{font-size:14px;line-height:20px}
-.workspace .work-section{padding:0;margin:0 0 48px}.workspace #selected{padding-top:0}
+/* Keep project hover handles and keyboard focus outlines visible at the grid edges. */
+.workspace .work-section{padding:0;margin:0 0 48px;overflow:visible}.workspace #selected{padding-top:0}
 .workspace .section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:16px}
 .workspace #selected .section-heading h2{font-size:14px;line-height:20px;font-weight:500;color:var(--ink);letter-spacing:0;text-align:left}
 .workspace .project-grid,.workspace .project-grid.filtered{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px;padding:0;border:0}
 .workspace .project-grid .project{width:100%;min-width:0;grid-column:auto;margin:0!important;padding:0!important}
 .workspace .project-grid .project:before{content:none}
 .workspace .project-grid .project>a{display:flex;flex-direction:column;align-items:stretch;gap:0;height:100%;border:1px solid var(--line);background:var(--workspace-panel);position:relative}
-.workspace .project-grid .project>a:hover,.workspace .project-grid .project>a:focus-visible{border-color:var(--accent)}
+.workspace .project-grid .project>a:hover,.workspace .project-grid .project>a:focus-visible{border-color:var(--accent);outline:2px solid var(--accent);outline-offset:3px;box-shadow:0 0 16px color-mix(in srgb,var(--accent) 18%,transparent)}
 .workspace .project-grid .project>a:after{content:'';position:absolute;width:6px;height:6px;right:-4px;bottom:-4px;border:1px solid var(--accent);background:var(--paper);opacity:0;pointer-events:none}
 .workspace .project-grid .project>a:hover:after,.workspace .project-grid .project>a:focus-visible:after{opacity:1}
 .workspace .project-grid .project .visual,.workspace .project-grid.filtered .project .visual{height:auto!important;aspect-ratio:4/3;width:100%;border:0!important;border-bottom:1px solid var(--line)!important;flex:none}
