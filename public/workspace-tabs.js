@@ -4,8 +4,8 @@ export function initWorkspaceTabs() {
   if (!bar) return;
   const catalog = new Map(JSON.parse(bar.dataset.tabCatalog));
   const current = location.pathname.replace(/\/?$/, '/');
-  const storageKey = 'portfolio-open-tabs-v1';
-  let paths = ['/', '/work/', '/about/', '/resume/'];
+  const storageKey = 'portfolio-open-tabs-v2';
+  let paths = ['/'];
   try {
     const saved = JSON.parse(sessionStorage.getItem(storageKey));
     if (Array.isArray(saved)) paths = saved;
