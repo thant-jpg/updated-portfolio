@@ -25,7 +25,8 @@ http.createServer(async(req,res)=>{
   let data=await readFile(file);
   const extension=path.extname(file);
   if(liveReload&&extension==='.html')data=Buffer.from(data.toString().replace('</body>',reloadClient+'</body>'));
-  res.writeHead(200,{'Content-Type':types[extension]||'application/octet-stream'});
+  const immutable=/\.[a-f0-9]{12}\.(?:css|js|ttf)$/.test(file);
+  res.writeHead(200,{'Content-Type':types[extension]||'application/octet-stream','Cache-Control':immutable?'public, max-age=31536000, immutable':'no-cache'});
   res.end(data);
  }catch{
   res.writeHead(404,{'Content-Type':'text/html'});

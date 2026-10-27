@@ -1,4 +1,4 @@
-// Draft import from the supplied portfolio PDF. Repeated top headers removed from web sheets.
+// Imported project metadata. Artwork and website copy remain separate.
 export const portfolioProjects=[
   {
     "slug": "stacked-streets",
@@ -261,7 +261,7 @@ export const portfolioProjects=[
     "role": "Architecture student",
     "category": "Architecture",
     "number": "05",
-    "image": "/images/portfolio/flow/thumbnail.webp",
+    "image": "/images/portfolio/flow/visualisations/selected-2026-10-27/thumbnail-fog.webp",
     "accent": "blue",
     "sections": [],
     "sourcePages": [
@@ -356,10 +356,10 @@ export const portfolioProjects=[
   },
   {
     "slug": "previously",
-    "title": "Previously",
-    "disciplines": "Architecture / Drafting / Models / Visual studies",
-    "note": "Earlier work and studies",
-    "summary": "A collection of earlier work spanning architectural drafting, 3D modelling, visualisation, detail drawings, urban sketches and painting.",
+    "title": "Internship work",
+    "disciplines": "Architecture / Drafting / Modelling / Visualisation",
+    "note": "Architectural internship",
+    "summary": "Architectural drafting, models, visualisations and detail drawings from my internship.",
     "role": "Selected earlier work",
     "category": "Architecture",
     "number": "07",
@@ -436,5 +436,90 @@ export const portfolioProjects=[
       34,
       41
     ]
+  },
+  {
+    "slug": "ascent",
+    "title": "Ascent",
+    "date": "2025-03",
+    "disciplines": "Architecture / Housing / Landscape",
+    "note": "A home shaped by a rising landscape",
+    "summary": "A hillside home for a gardener and plant researcher, with living spaces arranged along a gradual ascent.",
+    "role": "Architecture student",
+    "category": "Architecture",
+    "image": "/images/portfolio/ascent/thumbnail.webp",
+    "accent": "blue",
+    "sections": [],
+    "nativeArtwork": true
+  },
+  {
+    "slug": "venture",
+    "title": "Venture",
+    "date": "2025-02",
+    "disciplines": "Architecture / Spatial design / Light studies",
+    "note": "A sensory journey through a cliff",
+    "summary": "A cliff-space study that moves from daylight into darkness, then opens towards the landscape.",
+    "role": "Architecture student",
+    "category": "Architecture",
+    "image": "/images/portfolio/venture/thumbnail.webp",
+    "accent": "blue",
+    "sections": [],
+    "nativeArtwork": true
+  },
+  {
+    "slug": "pause",
+    "title": "Pause",
+    "date": "2025-09",
+    "disciplines": "Architecture / Public space / Competition",
+    "note": "A public pavilion around a living tree",
+    "summary": "A public-toilet competition proposal for TOTO, using a tree, filtered light and natural ventilation to create a moment of pause.",
+    "role": "Competition entry",
+    "category": "Architecture",
+    "image": "/images/portfolio/pause/thumbnail.webp",
+    "accent": "blue",
+    "sections": [],
+    "nativeArtwork": true
+  },
+  {
+    "slug": "weave",
+    "title": "Weave",
+    "date": "2025-05",
+    "category": "Architecture",
+    "disciplines": "Architecture / Museum / Circulation",
+    "note": "Woven routes and circular galleries",
+    "summary": "A MoMA satellite museum proposal in Singapore, shaped by circular galleries, woven circulation and light wells.",
+    "role": "Architecture student",
+    "nativeArtwork": true,
+    "sections": [],
+    "accent": "blue",
+    "image": "/images/portfolio/weave/thumbnail.webp"
+  },
+  {
+    "slug": "butterfly-effect",
+    "title": "Butterfly Effect",
+    "date": "2025",
+    "dateLabel": "Early 2025",
+    "category": "Product",
+    "disciplines": "Product design / Furniture / CNC milling",
+    "note": "A sculpted CNC chair",
+    "summary": "A group-designed chair combining a parametric, CNC-milled wooden seat with a minimal metal frame.",
+    "role": "Group project",
+    "nativeArtwork": true,
+    "sections": [],
+    "accent": "blue",
+    "image": "/images/portfolio/butterfly-effect/cover-upscaled.webp"
+  },
+  {
+    "slug": "art-studies",
+    "title": "Art studies",
+    "date": null,
+    "category": "Art",
+    "disciplines": "Painting / Drawing / Studies",
+    "note": "Paintings and observational studies",
+    "summary": "Paintings and drawings exploring people, places, light and colour.",
+    "role": "Personal work",
+    "nativeArtwork": true,
+    "sections": [],
+    "accent": "blue",
+    "image": "/images/portfolio/art-studies/thumbnail.webp"
   }
 ];

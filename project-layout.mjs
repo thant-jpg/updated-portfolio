@@ -1,8 +1,10 @@
 import {renderImportedPortfolio} from './portfolio-document.mjs';
+import {renderEditablePortfolio} from './portfolio-editable.mjs';
 import {projectMedia} from './project-media.mjs';
 
 // The sheet layout is shared by project pages; artwork and copy remain project-specific.
 export function renderProjectDocument(project, navigation, esc, imageExists) {
+  if(project.nativeArtwork)return renderEditablePortfolio(project,navigation,esc,'');
   if(project.sourcePages?.length)return renderImportedPortfolio(project,navigation,esc);
   const media=projectMedia[project.slug]||{};
   const architectural=project.category==='Architecture';

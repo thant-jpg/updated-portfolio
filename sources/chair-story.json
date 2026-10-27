@@ -1,0 +1,138 @@
+{
+  "source": "C:\\Users\\Lenovo\\Downloads\\chair.pdf",
+  "selection": "13 visuals across five story sections; original embedded artwork, no generated enhancement. Four surface studies combined into one comparison. Existing grass cover retained.",
+  "groupProject": true,
+  "images": [
+    {
+      "src": "/images/portfolio/butterfly-effect/cover-upscaled.webp",
+      "width": 901,
+      "height": 1745,
+      "caption": "Finished chair on the lawn",
+      "sectionKey": "outcome",
+      "retainedCover": true
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/wave-studies.webp",
+      "width": 1154,
+      "height": 1140,
+      "caption": "Four parametric surface studies",
+      "sectionKey": "form",
+      "sourcePage": 4,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": [
+        "Image55",
+        "Image54",
+        "Image56",
+        "Image51"
+      ]
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/seat-outlines.webp",
+      "width": 1289,
+      "height": 1439,
+      "caption": "Seat outlines explored against the surface contours",
+      "sectionKey": "form",
+      "sourcePage": 5,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image61"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/selected-seat.webp",
+      "width": 1536,
+      "height": 827,
+      "caption": "Selected seat: the edge follows the wave pattern",
+      "sectionKey": "form",
+      "sourcePage": 5,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image68"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/metal-frame.webp",
+      "width": 876,
+      "height": 1536,
+      "caption": "Tapered legs joined by a square connection",
+      "sectionKey": "structure",
+      "sourcePage": 6,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image77"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/exploded-drawing.webp",
+      "width": 2652,
+      "height": 2635,
+      "caption": "Exploded view of the seat, connection and legs",
+      "sectionKey": "structure",
+      "sourcePage": 7,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image80"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/bending-frame.webp",
+      "width": 696,
+      "height": 825,
+      "caption": "Adjusting the metal frame to its final angle",
+      "sectionKey": "making",
+      "sourcePage": 8,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image86"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/cnc-seat.webp",
+      "width": 698,
+      "height": 826,
+      "caption": "CNC milling the seat surface",
+      "sectionKey": "making",
+      "sourcePage": 8,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image88"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/welding-frame.webp",
+      "width": 701,
+      "height": 1055,
+      "caption": "Welding the metal frame",
+      "sectionKey": "making",
+      "sourcePage": 8,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image87"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/seat-detail.webp",
+      "width": 1102,
+      "height": 620,
+      "caption": "Lacquered surface and tactile contours",
+      "sectionKey": "details",
+      "sourcePage": 9,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image104"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/chair-in-use.webp",
+      "width": 1115,
+      "height": 1097,
+      "caption": "The finished chair in use",
+      "sectionKey": "details",
+      "sourcePage": 9,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image98"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/chair-story/finished-chair-deck.webp",
+      "width": 1115,
+      "height": 1743,
+      "caption": "Finished chair and metal frame",
+      "sectionKey": "details",
+      "sourcePage": 9,
+      "sourceDocument": "chair.pdf",
+      "sourceImage": "Image103"
+    },
+    {
+      "src": "/images/portfolio/butterfly-effect/artwork/02.webp",
+      "width": 821,
+      "height": 1280,
+      "caption": "Carved wooden seat: wave pattern and grain",
+      "sectionKey": "details",
+      "retainedArtwork": true
+    }
+  ]
+}

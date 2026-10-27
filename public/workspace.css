@@ -227,5 +227,130 @@
 @media(max-width:800px){.workspace main{padding-bottom:32px}.workspace .play-footer{margin-top:0}}
 @media(max-width:520px){.workspace main{padding-bottom:24px}.workspace .play-footer{margin-top:0}}
 /* More headroom for tossing pieces; their count remains based on width. */
-.workspace .footer-playground{height:clamp(480px,68svh,720px)}
-@media(max-width:520px){.workspace .footer-playground{height:clamp(400px,65svh,520px)}}
+.workspace .footer-playground{height:clamp(360px,52svh,560px)}
+@media(max-width:520px){.workspace .footer-playground{height:clamp(360px,56svh,440px)}}
+/* Same-page image viewer, using the workspace's type and theme. */
+html.image-viewer-open{overflow:hidden;scrollbar-gutter:stable}
+.image-viewer{width:min(1200px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);margin:auto;padding:20px 24px;border:1px solid var(--accent);background:var(--paper);color:var(--ink);overflow:auto}
+.image-viewer[open]{display:flex;flex-direction:column;gap:16px}
+.image-viewer::backdrop{background:rgb(0 0 0 / .8)}
+.image-viewer-bar,.image-viewer-navigation{display:flex;align-items:center;justify-content:space-between;gap:24px;flex:none}
+.image-viewer-caption{margin:0;font-size:12px;line-height:20px;overflow-wrap:anywhere}
+.image-viewer button{padding:8px 0;border:0;background:none;color:var(--accent);font-size:12px;line-height:20px;cursor:pointer;white-space:nowrap}
+.image-viewer button:hover{text-decoration:underline;text-underline-offset:4px}
+.image-viewer button:disabled{color:var(--muted);opacity:.45;cursor:default;text-decoration:none}
+.image-viewer-count{font-size:12px;line-height:20px;color:var(--muted)}
+.image-viewer-art{display:flex;align-items:center;justify-content:center;min-height:0;margin:0;background:#fff}
+.image-viewer-art img{display:block;width:100%;height:auto;max-height:calc(100dvh - 184px);object-fit:contain;filter:none!important;mix-blend-mode:normal}
+.layout-image-link{position:absolute;inset:0;display:block;cursor:zoom-in}
+@media(max-width:520px){.image-viewer{width:calc(100vw - 16px);max-height:calc(100dvh - 16px);padding:12px}.image-viewer[open]{gap:12px}.image-viewer-bar{gap:12px}.image-viewer-art img{max-height:calc(100dvh - 168px)}}
+/* Art and furniture covers keep the complete piece visible. */
+.workspace .project-grid [data-project="art-studies"] .visual img,.workspace .project-grid [data-project="butterfly-effect"] .visual img{object-fit:contain}
+.workspace .filters{flex-wrap:wrap}
+
+/* Layout view: a continuous paper document on a contrasting application pasteboard. */
+.document-file-extension{margin-left:-12px;color:var(--muted)}
+.project-workspace .document-content{padding:32px}
+.layout-view-controls{display:flex;align-items:center;gap:24px}
+.layout-view-label{font-size:12px;line-height:16px;color:var(--muted)}
+.guides-toggle{border:1px solid var(--line);background:var(--workspace-panel);padding:4px 12px;color:var(--accent);font-size:12px;line-height:20px;cursor:pointer}
+.guides-toggle:hover{background:var(--workspace-hover)}
+.guides-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.reflow-pasteboard{padding:40px 32px 32px 48px;background:color-mix(in srgb,var(--ink) 6%,var(--paper));border-color:var(--line)}
+.reflow-pasteboard .project-flow{position:relative;max-width:1120px;padding:48px;background:var(--paper);border:1px solid color-mix(in srgb,var(--ink) 18%,var(--paper));box-shadow:0 4px 12px color-mix(in srgb,var(--ink) 8%,transparent)}
+.reflow-pasteboard .project-flow:before{content:'';position:absolute;inset:32px;border:1px solid color-mix(in srgb,var(--accent) 22%,transparent);pointer-events:none;z-index:0}
+.reflow-pasteboard .project-flow>*{position:relative;z-index:1}
+.reflow-pasteboard .project-flow>.page-crop-marks{position:absolute;inset:-12px;pointer-events:none;z-index:0}
+.page-crop-marks i{position:absolute;width:8px;height:8px;border-color:var(--muted);border-style:solid;border-width:0}
+.page-crop-marks i:nth-child(1){left:0;top:0;border-right-width:1px;border-bottom-width:1px}
+.page-crop-marks i:nth-child(2){right:0;top:0;border-left-width:1px;border-bottom-width:1px}
+.page-crop-marks i:nth-child(3){right:0;bottom:0;border-left-width:1px;border-top-width:1px}
+.page-crop-marks i:nth-child(4){left:0;bottom:0;border-right-width:1px;border-top-width:1px}
+.reflow-pasteboard .page-ruler{opacity:.6}
+.project-flow-intro{padding:0 0 32px}
+.project-flow-intro h1{margin:16px 0 24px}
+.project-flow-section{padding:32px 0;border-top-color:color-mix(in srgb,var(--ink) 12%,transparent)}
+.project-flow-heading{position:relative;margin-bottom:24px}
+.layout-section-marker{position:absolute;right:0;top:4px;font-size:12px;line-height:20px;color:var(--accent)}
+.project-flow-heading h2{padding-right:40px}
+/* Masonry uses the source proportions; captions stay visible on pointer and touch devices. */
+.reflow-art-grid{display:block;columns:3 240px;column-gap:24px;column-fill:balance}
+.reflow-art-grid .reflow-art{display:flow-root;break-inside:avoid;width:100%;margin:0 0 24px}
+.reflow-art-grid .reflow-art>a{display:block;position:relative;aspect-ratio:auto;height:auto;overflow:visible;background:#fff;border:1px solid var(--line)}
+.reflow-art-grid .reflow-art img{position:static;inset:auto;display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.reflow-art-grid .reflow-art figcaption{display:flex;align-items:baseline;gap:12px;padding-top:8px;font-size:12px;line-height:20px;text-wrap:pretty}
+.figure-index{color:var(--accent);font-size:12px;flex:none}
+.reflow-art-grid .reflow-art-panorama{column-span:all}
+.reflow-single-art{columns:1}
+.reflow-paired-art{columns:2}
+.reflow-art-grid.flow-making-sequence{display:block;columns:auto}
+.flow-process-strip{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;isolation:isolate}
+.flow-process-strip:before{content:"";position:absolute;inset:0 0 auto;height:0;padding-top:calc((100% - 48px)/3);background:#161616;z-index:-1}
+.flow-process-strip .reflow-art>a{aspect-ratio:1;overflow:hidden;background:#161616;border:0}
+.flow-process-strip .reflow-art img{width:100%;height:100%;object-fit:cover;object-position:center}
+.flow-process-outcome{width:66.666%;max-width:800px;margin:32px auto 0}
+@media(max-width:700px){.flow-process-strip{grid-template-columns:1fr;gap:24px}.flow-process-strip:before{display:none}.flow-process-outcome{width:100%;margin-top:24px}}
+.reflow-single-art .reflow-art{max-width:800px;margin-inline:auto}
+.reflow-art>a:hover,.reflow-art>a:focus-visible{outline:1px solid var(--accent);outline-offset:0;border-color:var(--accent)}
+.frame-handles{position:absolute;inset:-1px;pointer-events:none;opacity:0;transition:opacity .3s cubic-bezier(.22,1,.36,1)}
+.reflow-art>a:hover .frame-handles,.reflow-art>a:focus-visible .frame-handles{opacity:1}
+.frame-handles i{position:absolute;width:4px;height:4px;border:1px solid var(--accent);background:var(--paper);transform:translate(-50%,-50%)}
+.frame-handles i:nth-child(1){left:0;top:0}.frame-handles i:nth-child(2){left:50%;top:0}.frame-handles i:nth-child(3){left:100%;top:0}.frame-handles i:nth-child(4){left:100%;top:50%}
+.frame-handles i:nth-child(5){left:100%;top:100%}.frame-handles i:nth-child(6){left:50%;top:100%}.frame-handles i:nth-child(7){left:0;top:100%}.frame-handles i:nth-child(8){left:0;top:50%}
+.layout-document-status{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:8px 12px;border:1px solid var(--line);border-top:0;background:var(--workspace-panel);color:var(--muted);font-size:12px;line-height:20px}
+.layout-document-status>span:first-child{display:flex;align-items:center;gap:8px}
+.layout-document-status i{width:4px;height:4px;background:var(--accent);border-radius:50%}
+.guides-hidden .project-flow:before,.guides-hidden .page-ruler,.guides-hidden .page-crop-marks,.guides-hidden .frame-handles{visibility:hidden}
+@media(max-width:1100px){.project-workspace .document-content{padding:24px}.reflow-pasteboard{padding:32px 24px 24px 40px}.reflow-pasteboard .project-flow{padding:32px}.reflow-pasteboard .project-flow:before{inset:24px}}
+@media(max-width:700px){.project-workspace .document-content{padding:16px}.reflow-pasteboard{padding:16px 12px}.reflow-pasteboard .project-flow{padding:24px 16px}.reflow-pasteboard .project-flow:before{inset:8px}.reflow-art-grid{columns:1}.project-flow-intro{padding-bottom:24px}.project-flow-section{padding-block:24px}.layout-view-controls{gap:12px}.layout-view-label{display:none}.page-crop-marks{display:none}.layout-document-status{font-size:12px;padding:8px}}
+@media(prefers-reduced-motion:reduce){.frame-handles{transition:none}}
+@media(max-width:700px){.reflow-paired-art{columns:1}}
+
+/* Match the chair structure drawings and keep captions on a shared baseline. */
+.reflow-art-grid.chair-structure-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));columns:auto;align-items:start}
+.chair-structure-pair .reflow-art>a{aspect-ratio:876/1536;overflow:hidden;background:#fff}
+.chair-structure-pair .reflow-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+@media(max-width:700px){.reflow-art-grid.chair-structure-pair{grid-template-columns:1fr}}
+/* Enlarge the square source within the tall structure panel. Its white side margins crop away. */
+.chair-structure-pair .reflow-art img[src$="/exploded-drawing.webp"]{object-fit:cover}
+/* Keep Butterfly Effect's opening photograph cropped closely around the chair. */
+.reflow-single-art .reflow-art:has(img[src="/images/portfolio/butterfly-effect/cover-upscaled.webp"]){max-width:400px;margin-inline:auto}
+.reflow-single-art .reflow-art>a:has(img[src="/images/portfolio/butterfly-effect/cover-upscaled.webp"]){aspect-ratio:901/1230;overflow:hidden}
+.reflow-single-art .reflow-art img[src="/images/portfolio/butterfly-effect/cover-upscaled.webp"]{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%}
+/* Give the selected seat more prominence than the exploratory studies. */
+.reflow-art-grid.chair-form-studies{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.35fr);columns:auto;align-items:start}
+@media(max-width:700px){.reflow-art-grid.chair-form-studies{grid-template-columns:repeat(2,minmax(0,1fr))}.chair-form-studies .reflow-art:last-child{grid-column:1/-1;width:80%;margin-inline:auto}}
+/* Match both structure panels to the compact cover dimensions. */
+.reflow-art-grid.chair-structure-pair{grid-template-columns:repeat(2,minmax(0,400px));justify-content:center}
+.chair-structure-pair .reflow-art>a{aspect-ratio:901/1230}
+@media(max-width:700px){.reflow-art-grid.chair-structure-pair{grid-template-columns:minmax(0,400px)}}
+/* Project Layers: useful section navigation in a compact application panel. */
+.project-layout-with-layers{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:16px;align-items:start}
+.project-layout-with-layers>.document-pasteboard{min-width:0}
+.project-layers{position:sticky;top:24px;min-width:0;border:1px solid var(--line);background:var(--workspace-panel);font-size:12px;line-height:20px}
+.project-layers summary{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;font-weight:500;list-style:none}
+.project-layers summary::-webkit-details-marker{display:none}
+.project-layer-notes{border-top:1px solid var(--line);max-height:calc(100dvh - 160px);overflow:auto;padding:4px 0;margin:0;list-style:none}
+.project-layer-notes li{display:flex;align-items:center;gap:8px;padding:8px 12px;color:var(--ink);border-bottom:1px solid var(--line);font-size:12px;line-height:20px}
+.project-layer-notes li:last-child{border-bottom:0}
+.project-layer-notes .layer-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.project-layers summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.layer-eye{width:16px;flex:none;display:flex}.layer-eye svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1}
+.layer-swatch{height:12px;width:4px;background:var(--accent);flex:none;opacity:.5}
+[aria-current]>.layer-swatch{opacity:1}.layer-title{flex:1;min-width:0}.layer-number{font-size:12px;opacity:.6;flex:none}
+.layers-footer{border-top:1px solid var(--line);padding:8px 16px;color:var(--muted)}
+.project-flow-section{scroll-margin-top:24px}
+/* One crisp selection frame with eight handles, independent of image size. */
+.reflow-art-grid .reflow-art>a:hover,.reflow-art-grid .reflow-art>a:focus-visible{outline:none;border-color:transparent}
+.reflow-art-grid .reflow-art>a:after{content:'';position:absolute;inset:0;border:1px solid var(--accent);pointer-events:none;opacity:0;transition:opacity .3s cubic-bezier(.22,1,.36,1)}
+.reflow-art-grid .reflow-art>a:hover:after,.reflow-art-grid .reflow-art>a:focus-visible:after{opacity:1}
+.reflow-art-grid .frame-handles{inset:0;z-index:2}
+.reflow-art-grid .frame-handles i{width:8px;height:8px}
+.flow-process-strip .reflow-art>a{overflow:visible}
+.guides-hidden .reflow-art-grid .reflow-art>a:after{visibility:hidden}
+@media(max-width:1100px){.project-layout-with-layers{grid-template-columns:minmax(0,1fr)}.project-layers{grid-row:1;position:relative;top:auto}.project-layer-notes{max-height:320px}.project-layers summary{padding:8px 16px}}
+@media(prefers-reduced-motion:reduce){.reflow-art-grid .reflow-art>a:after{transition:none}}
+/* Keep desktop workspace navigation available throughout long project pages. */
+@media(min-width:801px){
+ .workspace-sidebar{position:fixed;top:var(--workspace-topbar);max-height:calc(100dvh - var(--workspace-topbar));min-height:0;overflow-y:auto;overscroll-behavior:contain}
+}

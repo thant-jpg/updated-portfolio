@@ -1,0 +1,281 @@
+{
+  "sources": {
+    "one": "C:\\Users\\Lenovo\\Downloads\\Portfolio Thant Thiri Wai (1).pdf",
+    "two": "C:\\Users\\Lenovo\\Downloads\\Portfolio 2.pdf"
+  },
+  "projects": [
+    {
+      "slug": "ascent",
+      "title": "Ascent",
+      "date": "2025-03",
+      "source": "one",
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "disciplines": "Architecture / Housing / Landscape",
+      "note": "A home shaped by a rising landscape",
+      "summary": "A hillside home for a gardener and plant researcher, with living spaces arranged along a gradual ascent.",
+      "role": "Architecture student"
+    },
+    {
+      "slug": "venture",
+      "title": "Venture",
+      "date": "2025-02",
+      "source": "two",
+      "pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "disciplines": "Architecture / Spatial design / Light studies",
+      "note": "A sensory journey through a cliff",
+      "summary": "A cliff-space study that moves from daylight into darkness, then opens towards the landscape.",
+      "role": "Architecture student"
+    },
+    {
+      "slug": "pause",
+      "title": "Pause",
+      "date": "2025-09",
+      "source": "two",
+      "pages": [
+        32,
+        33
+      ],
+      "disciplines": "Architecture / Public space / Competition",
+      "note": "A public pavilion around a living tree",
+      "summary": "A public-toilet competition proposal for TOTO, using a tree, filtered light and natural ventilation to create a moment of pause.",
+      "role": "Competition entry"
+    }
+  ],
+  "assets": [
+    {
+      "slug": "ascent",
+      "index": 1,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 8,
+      "caption": "AI concept render",
+      "src": "/images/portfolio/ascent/artwork/01.webp",
+      "width": 575,
+      "height": 448
+    },
+    {
+      "slug": "ascent",
+      "index": 2,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 9,
+      "caption": "Section through the rising terrain",
+      "src": "/images/portfolio/ascent/artwork/02.webp",
+      "width": 510,
+      "height": 457
+    },
+    {
+      "slug": "ascent",
+      "index": 3,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 9,
+      "caption": "Section AA",
+      "src": "/images/portfolio/ascent/artwork/03.webp",
+      "width": 269,
+      "height": 152
+    },
+    {
+      "slug": "ascent",
+      "index": 4,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 9,
+      "caption": "Section BB",
+      "src": "/images/portfolio/ascent/artwork/04.webp",
+      "width": 379,
+      "height": 189
+    },
+    {
+      "slug": "ascent",
+      "index": 5,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 9,
+      "caption": "Section CC",
+      "src": "/images/portfolio/ascent/artwork/05.webp",
+      "width": 378,
+      "height": 194
+    },
+    {
+      "slug": "ascent",
+      "index": 6,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 9,
+      "caption": "Section DD",
+      "src": "/images/portfolio/ascent/artwork/06.webp",
+      "width": 311,
+      "height": 174
+    },
+    {
+      "slug": "ascent",
+      "index": 7,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 10,
+      "caption": "Interior AI render",
+      "src": "/images/portfolio/ascent/artwork/07.webp",
+      "width": 934,
+      "height": 1148
+    },
+    {
+      "slug": "ascent",
+      "index": 8,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 10,
+      "caption": "Digital interior model",
+      "src": "/images/portfolio/ascent/artwork/08.webp",
+      "width": 1746,
+      "height": 937
+    },
+    {
+      "slug": "ascent",
+      "index": 9,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 10,
+      "caption": "AI aerial study",
+      "src": "/images/portfolio/ascent/artwork/09.webp",
+      "width": 320,
+      "height": 299
+    },
+    {
+      "slug": "ascent",
+      "index": 10,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 11,
+      "caption": "Isometric digital model",
+      "src": "/images/portfolio/ascent/artwork/10.webp",
+      "width": 430,
+      "height": 417
+    },
+    {
+      "slug": "ascent",
+      "index": 11,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 11,
+      "caption": "Floor plan",
+      "src": "/images/portfolio/ascent/artwork/11.webp",
+      "width": 554,
+      "height": 586
+    },
+    {
+      "slug": "ascent",
+      "index": 12,
+      "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+      "sourcePage": 11,
+      "caption": "AI evening render",
+      "src": "/images/portfolio/ascent/artwork/12.webp",
+      "width": 575,
+      "height": 576
+    },
+    {
+      "slug": "venture",
+      "index": 1,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 8,
+      "caption": "Interior AI render",
+      "src": "/images/portfolio/venture/artwork/01.webp",
+      "width": 512,
+      "height": 399
+    },
+    {
+      "slug": "venture",
+      "index": 2,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 9,
+      "caption": "Form and subtraction studies",
+      "src": "/images/portfolio/venture/artwork/02.webp",
+      "width": 1059,
+      "height": 1872
+    },
+    {
+      "slug": "venture",
+      "index": 3,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 9,
+      "caption": "Isometric section",
+      "src": "/images/portfolio/venture/artwork/03.webp",
+      "width": 709,
+      "height": 709
+    },
+    {
+      "slug": "venture",
+      "index": 4,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 10,
+      "caption": "Interior AI light study",
+      "src": "/images/portfolio/venture/artwork/04.webp",
+      "width": 524,
+      "height": 400
+    },
+    {
+      "slug": "venture",
+      "index": 5,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 11,
+      "caption": "Exploded spatial model",
+      "src": "/images/portfolio/venture/artwork/05.webp",
+      "width": 386,
+      "height": 807
+    },
+    {
+      "slug": "venture",
+      "index": 6,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 11,
+      "caption": "Interior AI outlook study",
+      "src": "/images/portfolio/venture/artwork/06.webp",
+      "width": 454,
+      "height": 348
+    },
+    {
+      "slug": "pause",
+      "index": 1,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 32,
+      "caption": "Exterior render",
+      "src": "/images/portfolio/pause/artwork/01.webp",
+      "width": 1717,
+      "height": 1354
+    },
+    {
+      "slug": "pause",
+      "index": 2,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 33,
+      "caption": "Pavilion elevations",
+      "src": "/images/portfolio/pause/artwork/02.webp",
+      "width": 1329,
+      "height": 726
+    },
+    {
+      "slug": "pause",
+      "index": 3,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 33,
+      "caption": "Floor plan",
+      "src": "/images/portfolio/pause/artwork/03.webp",
+      "width": 1119,
+      "height": 1046
+    },
+    {
+      "slug": "pause",
+      "index": 4,
+      "sourceDocument": "Portfolio 2.pdf",
+      "sourcePage": 33,
+      "caption": "Exploded pavilion drawing",
+      "src": "/images/portfolio/pause/artwork/04.webp",
+      "width": 1457,
+      "height": 1616
+    }
+  ],
+  "dates": {
+    "pause": "September 2025, confirmed by the user",
+    "ascent": "March 2025, source PDF",
+    "venture": "February 2025, source PDF"
+  }
+}

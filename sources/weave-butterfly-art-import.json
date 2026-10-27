@@ -1,0 +1,278 @@
+{
+  "source": "C:\\Users\\Lenovo\\Downloads\\Portfolio Thant Thiri Wai (2).pdf",
+  "projects": [
+    {
+      "slug": "weave",
+      "title": "Weave",
+      "date": "2025-05",
+      "category": "Architecture",
+      "disciplines": "Architecture / Museum / Circulation",
+      "note": "Woven routes and circular galleries",
+      "summary": "A MoMA satellite museum proposal in Singapore, shaped by circular galleries, woven circulation and light wells.",
+      "role": "Architecture student",
+      "nativeArtwork": true,
+      "sections": [],
+      "accent": "blue",
+      "image": "/images/portfolio/weave/thumbnail.webp"
+    },
+    {
+      "slug": "butterfly-effect",
+      "title": "Butterfly Effect",
+      "date": "2025",
+      "dateLabel": "Early 2025",
+      "category": "Product",
+      "disciplines": "Product design / Furniture / CNC milling",
+      "note": "A sculpted CNC chair",
+      "summary": "A group-designed chair exploring the expressive possibilities of CNC milling.",
+      "role": "Group project",
+      "nativeArtwork": true,
+      "sections": [],
+      "accent": "blue",
+      "image": "/images/portfolio/butterfly-effect/thumbnail.webp"
+    },
+    {
+      "slug": "art-studies",
+      "title": "Art studies",
+      "date": null,
+      "category": "Art",
+      "disciplines": "Painting / Drawing / Colour studies",
+      "note": "Paintings and observational studies",
+      "summary": "A collection of paintings exploring architecture, light, colour and everyday subjects.",
+      "role": "Personal work",
+      "nativeArtwork": true,
+      "sections": [],
+      "accent": "blue",
+      "image": "/images/portfolio/art-studies/thumbnail.webp"
+    }
+  ],
+  "assets": [
+    {
+      "slug": "weave",
+      "index": 1,
+      "caption": "Isometric AI concept render",
+      "sourcePage": 3,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/01.webp",
+      "width": 845,
+      "height": 598
+    },
+    {
+      "slug": "weave",
+      "index": 2,
+      "caption": "Ground floor plan",
+      "sourcePage": 3,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/02.webp",
+      "width": 1745,
+      "height": 1413
+    },
+    {
+      "slug": "weave",
+      "index": 3,
+      "caption": "First floor plan",
+      "sourcePage": 3,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/03.webp",
+      "width": 983,
+      "height": 785
+    },
+    {
+      "slug": "weave",
+      "index": 4,
+      "caption": "Top-view digital model",
+      "sourcePage": 3,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/04.webp",
+      "width": 611,
+      "height": 472
+    },
+    {
+      "slug": "weave",
+      "index": 5,
+      "caption": "Sectional axonometric drawing",
+      "sourcePage": 4,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/05.webp",
+      "width": 1585,
+      "height": 1436
+    },
+    {
+      "slug": "weave",
+      "index": 6,
+      "caption": "Exterior digital model",
+      "sourcePage": 4,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/06.webp",
+      "width": 797,
+      "height": 619
+    },
+    {
+      "slug": "weave",
+      "index": 7,
+      "caption": "Building section",
+      "sourcePage": 4,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/07.webp",
+      "width": 1924,
+      "height": 1272
+    },
+    {
+      "slug": "weave",
+      "index": 8,
+      "caption": "Side-view digital model",
+      "sourcePage": 4,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/08.webp",
+      "width": 1244,
+      "height": 659
+    },
+    {
+      "slug": "weave",
+      "index": 9,
+      "caption": "Side-view digital model",
+      "sourcePage": 4,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/09.webp",
+      "width": 1028,
+      "height": 545
+    },
+    {
+      "slug": "weave",
+      "index": 10,
+      "caption": "Aerial AI concept render",
+      "sourcePage": 5,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/10.webp",
+      "width": 941,
+      "height": 592
+    },
+    {
+      "slug": "weave",
+      "index": 11,
+      "caption": "Isometric digital model",
+      "sourcePage": 5,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/11.webp",
+      "width": 1142,
+      "height": 886
+    },
+    {
+      "slug": "weave",
+      "index": 12,
+      "caption": "Exterior digital model",
+      "sourcePage": 5,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/12.webp",
+      "width": 831,
+      "height": 570
+    },
+    {
+      "slug": "weave",
+      "index": 13,
+      "caption": "Interior digital model",
+      "sourcePage": 5,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/13.webp",
+      "width": 831,
+      "height": 570
+    },
+    {
+      "slug": "weave",
+      "index": 14,
+      "caption": "Isometric digital model",
+      "sourcePage": 5,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/14.webp",
+      "width": 1196,
+      "height": 821
+    },
+    {
+      "slug": "weave",
+      "index": 15,
+      "caption": "Interior AI light study",
+      "sourcePage": 5,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/15.webp",
+      "width": 876,
+      "height": 938
+    },
+    {
+      "slug": "weave",
+      "index": 16,
+      "caption": "Interior AI light study",
+      "sourcePage": 5,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/weave/artwork/16.webp",
+      "width": 748,
+      "height": 799
+    },
+    {
+      "slug": "butterfly-effect",
+      "index": 1,
+      "caption": "Fabricated chair",
+      "sourcePage": 16,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/butterfly-effect/artwork/01.webp",
+      "width": 660,
+      "height": 1278
+    },
+    {
+      "slug": "butterfly-effect",
+      "index": 2,
+      "caption": "Sculpted seat surface",
+      "sourcePage": 16,
+      "sourceDocument": "Portfolio Thant Thiri Wai (2).pdf",
+      "src": "/images/portfolio/butterfly-effect/artwork/02.webp",
+      "width": 821,
+      "height": 1280
+    }
+  ],
+  "artworkMovedFrom": "previously",
+  "artImages": [
+    {
+      "src": "/images/portfolio/art-studies/artwork/waterfront-skyline.png",
+      "width": 2208,
+      "height": 1398,
+      "caption": "Waterfront skyline painting",
+      "sectionKey": "cityscapes",
+      "sourceAttachment": "codex-clipboard-6bcc8865-6688-4473-8572-81ca86cd9aba.png"
+    },
+    {
+      "sourcePage": 40,
+      "caption": "Architectural painting",
+      "completeSheet": false,
+      "src": "/images/portfolio/art-studies/artwork/01.webp",
+      "width": 1719,
+      "height": 2200,
+      "sectionKey": "cityscapes"
+    },
+    {
+      "sourcePage": 40,
+      "caption": "Light and colour study",
+      "completeSheet": false,
+      "src": "/images/portfolio/art-studies/artwork/02.webp",
+      "width": 1509,
+      "height": 2200,
+      "sectionKey": "light-colour"
+    },
+    {
+      "sourcePage": 41,
+      "caption": "Still-life painting",
+      "completeSheet": false,
+      "src": "/images/portfolio/art-studies/artwork/03.webp",
+      "width": 2200,
+      "height": 1546,
+      "sectionKey": "still-life"
+    }
+  ],
+  "excluded": [
+    "Miniature car",
+    "Python memory game",
+    "LuminaTrail"
+  ],
+  "dateNotes": {
+    "weave": "May 2025, PDF",
+    "butterfly-effect": "Early 2025, user; no month assigned",
+    "art-studies": "Undated, as requested"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "mode": "Built-in ChatGPT image generation, referenced-image edits",
+  "purpose": "User-approved AI enhancement previews published on the Flow project page",
+  "published": true,
+  "notes": [
+    "Original files remain unchanged.",
+    "These are clarity re-renders, not content-exact super-resolution. Fine geometry and drawing lines require review."
+  ],
+  "images": [
+    {
+      "id": "02",
+      "name": "Physical model",
+      "prompt": "Create a conservative AI-enhanced PREVIEW of the supplied existing image. This is a clarity/restoration pass, not a redesign or new composition. Preserve the exact original viewpoint, complete framing, aspect ratio and all subject positions. Improve soft/blurry edges, visible compression and distracting coarse noise; keep a natural photographic or drawn appearance as appropriate. Do not invent new design features, delete parts, change geometry, add text or labels, add objects, crop, stylise, colourise, add exaggerated texture, sharpen with halos or make it glossy. Preserve subtle existing imperfections. Deliver the highest available native resolution and clean fine detail. No added watermarks or borders. The subject is a real handmade white paper model photographed on grey-white board. Keep every separate ribbon, cut edge, slot, overlap, tiny construction mark and curled/raised tip in the same place and shape. The asymmetry and hand-made irregularities are important. Clean up grain and make paper edges easier to see, maintaining the exact original strong cast shadows and grey background tonal structure. Do not transform the paper into a building, concrete, a CAD render or a perfect digital sculpture.",
+      "source": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/public/images/portfolio/flow/complete-artwork/02.webp",
+      "output": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/previews/flow-enhancement/02-enhanced.png",
+      "generatedPath": "C:\\Users\\Lenovo\\.codex\\generated_images\\01a1772d-d365-7a90-af38-406dd918aef4\\exec-1199a3e2-117f-4c30-b567-9f5088de8f54.png"
+    },
+    {
+      "id": "03",
+      "name": "Cutting process",
+      "prompt": "Create a conservative AI-enhanced PREVIEW of the supplied existing image. This is a clarity/restoration pass, not a redesign or new composition. Preserve the exact original viewpoint, complete framing, aspect ratio and all subject positions. Improve soft/blurry edges, visible compression and distracting coarse noise; keep a natural photographic or drawn appearance as appropriate. Do not invent new design features, delete parts, change geometry, add text or labels, add objects, crop, stylise, colourise, add exaggerated texture, sharpen with halos or make it glossy. Preserve subtle existing imperfections. Deliver the highest available native resolution and clean fine detail. No added watermarks or borders. This is a monochrome documentary photo of a hand holding a craft knife against a fan of pencilled radial lines and partially cut strips on a sheet of paper on a black tabletop. Keep the exact fingers, grip, knife tip position, number/positions of cuts and pencil lines, all paper boundaries, black background and original perspective. Make the existing paper, fine lines and tool more legible without adding lines, rearranging cuts or changing the action.",
+      "source": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/public/images/portfolio/flow/complete-artwork/03.webp",
+      "output": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/previews/flow-enhancement/03-enhanced.png",
+      "generatedPath": "C:\\Users\\Lenovo\\.codex\\generated_images\\01a1772d-d365-7a90-af38-406dd918aef4\\exec-b74d8c0b-f9c0-4ffd-9cd3-f4a770e422d8.png"
+    },
+    {
+      "id": "04",
+      "name": "Drawing the curve",
+      "prompt": "Create a conservative AI-enhanced PREVIEW of the supplied existing image. This is a clarity/restoration pass, not a redesign or new composition. Preserve the exact original viewpoint, complete framing, aspect ratio and all subject positions. Improve soft/blurry edges, visible compression and distracting coarse noise; keep a natural photographic or drawn appearance as appropriate. Do not invent new design features, delete parts, change geometry, add text or labels, add objects, crop, stylise, colourise, add exaggerated texture, sharpen with halos or make it glossy. Preserve subtle existing imperfections. Deliver the highest available native resolution and clean fine detail. No added watermarks or borders. This is a monochrome documentary process photograph of a hand holding a mechanical pencil on a curved pencil line drawn on a square white paper sheet on a dark tabletop. Retain the hand's exact anatomy/grip, pencil type/orientation, single existing arc with its exact path, paper boundaries and original shadows. Reduce blur/grain and improve legibility of the existing arc and tool. Do not add radial lines, marks, new arcs or objects.",
+      "source": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/public/images/portfolio/flow/complete-artwork/04.webp",
+      "output": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/previews/flow-enhancement/04-enhanced.png",
+      "generatedPath": "C:\\Users\\Lenovo\\.codex\\generated_images\\01a1772d-d365-7a90-af38-406dd918aef4\\exec-b36fc2bc-7181-4a37-8170-982b844a04a6.png"
+    },
+    {
+      "id": "05",
+      "name": "Paper cutting layout",
+      "prompt": "Create a conservative AI-enhanced PREVIEW of the supplied existing image. This is a clarity/restoration pass, not a redesign or new composition. Preserve the exact original viewpoint, complete framing, aspect ratio and all subject positions. Improve soft/blurry edges, visible compression and distracting coarse noise; keep a natural photographic or drawn appearance as appropriate. Do not invent new design features, delete parts, change geometry, add text or labels, add objects, crop, stylise, colourise, add exaggerated texture, sharpen with halos or make it glossy. Preserve subtle existing imperfections. Deliver the highest available native resolution and clean fine detail. No added watermarks or borders. This is a monochrome documentary photograph of the original paper cutting template. Preserve the exact number, spacing, start/end points and paths of every radial pencil line and the crossing arc; retain the original perspective, paper edges, hand-drawn line quality and dark surrounding tabletop. Make the faint existing lines easier to read, with a clean neutral paper tone and no artificial textures. Do not regularise or redesign the pattern or introduce any lines.",
+      "source": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/public/images/portfolio/flow/complete-artwork/05.webp",
+      "output": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/previews/flow-enhancement/05-enhanced.png",
+      "generatedPath": "C:\\Users\\Lenovo\\.codex\\generated_images\\01a1772d-d365-7a90-af38-406dd918aef4\\exec-512dfa29-a5d3-42a5-a9c9-6fb65957a9db.png"
+    },
+    {
+      "id": "07",
+      "name": "Section study",
+      "prompt": "Create a conservative AI-enhanced PREVIEW of the supplied existing image. This is a clarity/restoration pass, not a redesign or new composition. Preserve the exact original viewpoint, complete framing, aspect ratio and all subject positions. Improve soft/blurry edges, visible compression and distracting coarse noise; keep a natural photographic or drawn appearance as appropriate. Do not invent new design features, delete parts, change geometry, add text or labels, add objects, crop, stylise, colourise, add exaggerated texture, sharpen with halos or make it glossy. Preserve subtle existing imperfections. Deliver the highest available native resolution and clean fine detail. No added watermarks or borders. This is an architectural section drawing/collage, NOT a photograph or a new proposed building. Preserve the exact side-view ribbon roof curves, section poche/line weights, ground line, existing human silhouettes, tree positions, faint terrain/clouds/birds, original greyscale palette and small section-location diagram at lower right. Keep all diagram geometry and section relationships identical. Improve line crispness and remove compression noise while retaining delicate grey background hierarchy; do not turn the drawing into a render or add architectural detail.",
+      "source": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/public/images/portfolio/flow/complete-artwork/07.webp",
+      "output": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/previews/flow-enhancement/07-enhanced.png",
+      "generatedPath": "C:\\Users\\Lenovo\\.codex\\generated_images\\01a1772d-d365-7a90-af38-406dd918aef4\\exec-678d46c6-b79d-4ad8-8606-5933d945a6f0.png"
+    },
+    {
+      "id": "08",
+      "name": "Top-view physical model",
+      "prompt": "Create a conservative AI-enhanced PREVIEW of the supplied existing image. This is a clarity/restoration pass, not a redesign or new composition. Preserve the exact original viewpoint, complete framing, aspect ratio and all subject positions. Improve soft/blurry edges, visible compression and distracting coarse noise; keep a natural photographic or drawn appearance as appropriate. Do not invent new design features, delete parts, change geometry, add text or labels, add objects, crop, stylise, colourise, add exaggerated texture, sharpen with halos or make it glossy. Preserve subtle existing imperfections. Deliver the highest available native resolution and clean fine detail. No added watermarks or borders. This is a top-down photograph of the same handmade white paper ribbon model. Keep the exact top-down camera, complete fan-shaped arrangement, same number of ribbons, spaces, bends, tapered and squared ends, minor paper irregularities and small visible fixing marks. Preserve natural soft shadows and white background. Reduce blur and coarse noise so the existing paper edges are clearer; do not remodel the object, change its plan geometry, add new ribbons or make it a perfect CAD render.",
+      "source": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/public/images/portfolio/flow/complete-artwork/08.webp",
+      "output": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/previews/flow-enhancement/08-enhanced.png",
+      "generatedPath": "C:\\Users\\Lenovo\\.codex\\generated_images\\01a1772d-d365-7a90-af38-406dd918aef4\\exec-598e03ed-4668-41cd-afc8-404d171a07f8.png"
+    },
+    {
+      "id": "10",
+      "name": "Isometric drawing",
+      "prompt": "Create a conservative AI-enhanced PREVIEW of the supplied existing image. This is a clarity/restoration pass, not a redesign or new composition. Preserve the exact original viewpoint, complete framing, aspect ratio and all subject positions. Improve soft/blurry edges, visible compression and distracting coarse noise; keep a natural photographic or drawn appearance as appropriate. Do not invent new design features, delete parts, change geometry, add text or labels, add objects, crop, stylise, colourise, add exaggerated texture, sharpen with halos or make it glossy. Preserve subtle existing imperfections. Deliver the highest available native resolution and clean fine detail. No added watermarks or borders. This is the original monochrome architectural isometric drawing. Preserve the exact asymmetric fan geometry, every ribbon and opening, curved edges, line positions, hand-drawn angular notches, contour lines, trees and all existing human silhouettes and their positions. Keep it a restrained white-and-grey line drawing with light shadows and stippled planting. Improve crispness of the existing lines and tonal readability without adding features, changing curves, regularising shapes, rotating the viewpoint, inventing details or making it photorealistic.",
+      "source": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/public/images/portfolio/flow/complete-artwork/10.webp",
+      "output": "C:/Users/Lenovo/Documents/Codex/2026-10-02/referenced-chatgpt-conversation-this-is-an/outputs/portfolio/previews/flow-enhancement/10-enhanced.png",
+      "generatedPath": "C:\\Users\\Lenovo\\.codex\\generated_images\\01a1772d-d365-7a90-af38-406dd918aef4\\exec-48f1753a-d843-4c55-a69f-376fad4e6373.png"
+    }
+  ],
+  "publishedPaths": [
+    "/images/portfolio/flow/enhanced-artwork/02.webp",
+    "/images/portfolio/flow/enhanced-artwork/03.webp",
+    "/images/portfolio/flow/enhanced-artwork/04.webp",
+    "/images/portfolio/flow/enhanced-artwork/05.webp",
+    "/images/portfolio/flow/enhanced-artwork/07.webp",
+    "/images/portfolio/flow/enhanced-artwork/08.webp",
+    "/images/portfolio/flow/enhanced-artwork/10.webp"
+  ]
+}

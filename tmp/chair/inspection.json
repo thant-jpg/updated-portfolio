@@ -1,0 +1,816 @@
+[
+  {
+    "page": 1,
+    "text": "BUTTERFLY EFFECT\nWith small shifts in parameters, the chair transforms\u2014'Butterfly Effect' turns\nsubtle changes into a striking statement.\nZaw Ye Htet 1008262 Thant Thiri Wai 1008020\nNguyen Tri Viet Phong 1008264 Wong Yong Kit 1008087",
+    "images": [
+      {
+        "name": "Image18",
+        "x0": -1163.39,
+        "top": -235.01999999999998,
+        "x1": -279.3800000000001,
+        "bottom": 680.21,
+        "width": 884.01,
+        "height": 915.23,
+        "srcsize": [
+          2455,
+          2542
+        ]
+      },
+      {
+        "name": "Image19",
+        "x0": 661.37,
+        "top": -1.898890000000165,
+        "x1": 1439.8,
+        "bottom": 1079.26111,
+        "width": 778.43,
+        "height": 1081.16,
+        "srcsize": [
+          2477,
+          3415
+        ]
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "text": "Fig 1.2 Fig 1.3\nOur goal was to create\na visually striking centerpiece\nthat challenges the traditional\nchair design while maintaining\nthe balance between artistic\nexpression and user experience.\nTherefore, we believe that it is a\ngood design move to take\ninspirations from the nature, such\nas the constructive and\nFig 1.1 destructive wave interference,\nand intricate patterns or scale of\nanimals.\nINSPIRATIONS\nBy merging biomorphic design with\nThe primary inspiration for this project stemmed from nature and\nadvanced machinery, this piece\nits intricate patterns. Given the freedom we had regarding the\nreinterprets seating as both a functional\ndesign choices, extensive research was conducted on naturally\nobject and a sculptural centerpiece,\noccurring patterns. Naturally occurring patterns such as ripples\nseamlessly blending art and utility. And\nand butterfly wings served as foundation for our design\nachieving such features in our design is the top\nexplorations.\npriority.\nWe wanted intricate and organic pattern for the seating to fully\nutilize the capabilities of the CNC milling machine. The precision\nand versatility of the machine allowed us to create complex\nFig 1.4\npatterns that are hard to achieve by hand.\n1",
+    "images": [
+      {
+        "name": "Image22",
+        "x0": 657.59,
+        "top": 74.16999999999996,
+        "x1": 1040.5,
+        "bottom": 318.66999999999996,
+        "width": 382.90999999999997,
+        "height": 244.5,
+        "srcsize": [
+          585,
+          375
+        ]
+      },
+      {
+        "name": "Image23",
+        "x0": 0.0,
+        "top": 74.16999999999996,
+        "x1": 649.88,
+        "bottom": 699.53,
+        "width": 649.88,
+        "height": 625.36,
+        "srcsize": [
+          617,
+          610
+        ]
+      },
+      {
+        "name": "Image26",
+        "x0": 1374.11,
+        "top": 365.6650000000001,
+        "x1": 1435.8899999999999,
+        "bottom": 1069.335,
+        "width": 61.77999999999997,
+        "height": 703.67,
+        "srcsize": [
+          218,
+          2480
+        ]
+      },
+      {
+        "name": "Image27",
+        "x0": 951.89,
+        "top": 365.6650000000001,
+        "x1": 1480.71,
+        "bottom": 1069.335,
+        "width": 528.82,
+        "height": 703.67,
+        "srcsize": [
+          1864,
+          2480
+        ]
+      },
+      {
+        "name": "Image33",
+        "x0": 988.78,
+        "top": 72.29999999999995,
+        "x1": 1223.49,
+        "bottom": 313.90999999999997,
+        "width": 234.71000000000004,
+        "height": 241.61,
+        "srcsize": [
+          150,
+          154
+        ]
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "text": "Fig 2.2 Fig 2.3\nFig 2.4\nWe initially explored a simpler design featuring a conventional seat and frame,\nprioritizing function. While this approach focuses on functionality, we ultimately\nFig 2.1\ndecided to pursue a more artistic approach after consultations in order to push\nthe boundaries of fabrication.\nTHE JOURNEY\n2",
+    "images": [
+      {
+        "name": "Image37",
+        "x0": 716.68,
+        "top": 70.81000000000006,
+        "x1": 1044.04,
+        "bottom": 552.2,
+        "width": 327.36,
+        "height": 481.39,
+        "srcsize": [
+          864,
+          1256
+        ]
+      },
+      {
+        "name": "Image39",
+        "x0": 1060.21,
+        "top": 69.84000000000003,
+        "x1": 1387.98,
+        "bottom": 550.96,
+        "width": 327.77,
+        "height": 481.12,
+        "srcsize": [
+          909,
+          1308
+        ]
+      },
+      {
+        "name": "Image41",
+        "x0": 73.973,
+        "top": 70.79999999999995,
+        "x1": 693.543,
+        "bottom": 930.77,
+        "width": 619.57,
+        "height": 859.97,
+        "srcsize": [
+          947,
+          1346
+        ]
+      },
+      {
+        "name": "Image43",
+        "x0": 720.0,
+        "top": 616.45,
+        "x1": 927.3,
+        "bottom": 795.29,
+        "width": 207.29999999999995,
+        "height": 178.83999999999997,
+        "srcsize": [
+          575,
+          496
+        ]
+      },
+      {
+        "name": "Image45",
+        "x0": 927.3,
+        "top": 616.45,
+        "x1": 1164.07,
+        "bottom": 795.29,
+        "width": 236.76999999999998,
+        "height": 178.83999999999997,
+        "srcsize": [
+          657,
+          496
+        ]
+      },
+      {
+        "name": "Image46",
+        "x0": 1151.16,
+        "top": 616.45,
+        "x1": 1387.93,
+        "bottom": 795.29,
+        "width": 236.76999999999998,
+        "height": 178.83999999999997,
+        "srcsize": [
+          657,
+          496
+        ]
+      }
+    ]
+  },
+  {
+    "page": 4,
+    "text": "ITERATIONS:\nTOPOGRAPHY\nA= 15.5 , F = 0.8, A = 15.5 , F = 0.667 ,\nU= 30, V = 30 U = 38, V = 30\nFor the topography of the seat, a\ngrasshopper script was used instead of\nshaping the forms manually to achieve\nparametric wave patterns in the form\nA = Amplitude,\nof insect scales or imprints. The idea of\nF = Frequency,\nhaving undulated landscape for the\nU = U count,\nseat is to introduce the tactile\nV = V count\nA = 15.5, F = 0.653 , A = 15.5, F =1 , experience of the wood made from a\nU = 41, V = 43 U =35, V = 34 routing machine. In that manner, the\nuser can experience the unique\nwaveform pattern not just visually, but\nalso physically.\nAmong the different topography, the\nbutterfly shape was chosen due to its\nunique appearance and radial\nsymmetry.\nA = 15.5, F = 0.5,\nA = 15.5 , F = 0.428 ,\nA = 15.5 , F = 0.475, A = 15.5, F = 0.622,\nU = 38, V = 29\nU = 32, V = 28\nU = 39, V = 30 U = 35, V = 31\nFig 3.2\nFig 3.1\nThe right image here showcases the undulated the surface will be. MD\ngrasshopper script used in the slider adjusts the location of the\nparametric topography iterations. The starting point for wave\nbasic algorithm of this script is all about propagation. Multiple MD sliders\ngenerating sinusoidal wave with can be used to add multiple\ndifferent frequency, amplitude, and the sources for wave. The frequency\noriginal point of propagation. ranges from 0 (which gives flat\nsurface) to 1 and it is the core\nThe U and V counts indicates the parameter that can give\nnumber of points in a given surface interesting topography. The\nwhich means the higher these values, amplitude controls the amplitude\nthe more detailed and of sinusoidal wave function, which\ngoes by A sin (B x), where A =\nFig 2.3\namplitude, B = frequency.\nFig 3.3\n3",
+    "images": [
+      {
+        "name": "Image50",
+        "x0": 443.58,
+        "top": 437.44000000000005,
+        "x1": 651.51,
+        "bottom": 642.88,
+        "width": 207.93,
+        "height": 205.43999999999994,
+        "srcsize": [
+          577,
+          570
+        ]
+      },
+      {
+        "name": "Image51",
+        "x0": 235.66,
+        "top": 437.28,
+        "x1": 443.59000000000003,
+        "bottom": 642.72,
+        "width": 207.93000000000004,
+        "height": 205.44000000000005,
+        "srcsize": [
+          577,
+          570
+        ]
+      },
+      {
+        "name": "Image52",
+        "x0": 27.729,
+        "top": 437.5799999999999,
+        "x1": 235.659,
+        "bottom": 643.02,
+        "width": 207.93,
+        "height": 205.44000000000005,
+        "srcsize": [
+          577,
+          570
+        ]
+      },
+      {
+        "name": "Image53",
+        "x0": 27.729,
+        "top": 232.1099999999999,
+        "x1": 235.659,
+        "bottom": 437.54999999999995,
+        "width": 207.93,
+        "height": 205.44000000000005,
+        "srcsize": [
+          577,
+          570
+        ]
+      },
+      {
+        "name": "Image54",
+        "x0": 235.66,
+        "top": 26.670000000000073,
+        "x1": 443.59000000000003,
+        "bottom": 232.11,
+        "width": 207.93000000000004,
+        "height": 205.43999999999994,
+        "srcsize": [
+          577,
+          570
+        ]
+      },
+      {
+        "name": "Image55",
+        "x0": 27.729,
+        "top": 26.670000000000073,
+        "x1": 235.659,
+        "bottom": 232.11,
+        "width": 207.93,
+        "height": 205.43999999999994,
+        "srcsize": [
+          577,
+          570
+        ]
+      },
+      {
+        "name": "Image56",
+        "x0": 235.66,
+        "top": 232.1099999999999,
+        "x1": 443.59000000000003,
+        "bottom": 437.54999999999995,
+        "width": 207.93000000000004,
+        "height": 205.44000000000005,
+        "srcsize": [
+          577,
+          570
+        ]
+      },
+      {
+        "name": "Image57",
+        "x0": 671.46,
+        "top": 232.52999999999997,
+        "x1": 1088.8200000000002,
+        "bottom": 646.1800000000001,
+        "width": 417.3600000000001,
+        "height": 413.65000000000003,
+        "srcsize": [
+          1536,
+          1536
+        ]
+      },
+      {
+        "name": "Image58",
+        "x0": 670.59,
+        "top": 662.567,
+        "x1": 1408.17,
+        "bottom": 1020.617,
+        "width": 737.58,
+        "height": 358.05,
+        "srcsize": [
+          1197,
+          581
+        ]
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "text": "Fig 4.2 Fig 4.3 Fig 4.4\nITERATIONS: SEATING\nSHAPE\nFig 4.5\nAfter testing out several iterations, we determined that the shape which flows along\nthe contours of the seat best complements the intricate pattern. This design choice\nnot only aligns with the organic form we aimed to create but also enhances the\ntactile experience for the user.\nAs the contours of the surface encourage users to interact with the chair in a more\nintuitive and dynamic way, the shape of the seating encourage the user to\nFig 4.1\ninteract with the edges as well. By choosing this shape, the fluidity of the contours\nextends to the shape, making the piece look more organic.\nThis choice of this shape, therefore, best embodied the overall intent of the design.\n4",
+    "images": [
+      {
+        "name": "Image61",
+        "x0": 72.998,
+        "top": 332.85,
+        "x1": 575.998,
+        "bottom": 847.61,
+        "width": 503.00000000000006,
+        "height": 514.76,
+        "srcsize": [
+          1289,
+          1439
+        ]
+      },
+      {
+        "name": "Image63",
+        "x0": 895.2400000000001,
+        "top": 80.86000000000001,
+        "x1": 1113.64,
+        "bottom": 299.26,
+        "width": 218.39999999999998,
+        "height": 218.39999999999998,
+        "srcsize": [
+          606,
+          606
+        ]
+      },
+      {
+        "name": "Image65",
+        "x0": 1133.83,
+        "top": 80.86000000000001,
+        "x1": 1352.23,
+        "bottom": 299.26,
+        "width": 218.4000000000001,
+        "height": 218.39999999999998,
+        "srcsize": [
+          606,
+          606
+        ]
+      },
+      {
+        "name": "Image67",
+        "x0": 656.64,
+        "top": 80.86000000000001,
+        "x1": 875.04,
+        "bottom": 299.26,
+        "width": 218.39999999999998,
+        "height": 218.39999999999998,
+        "srcsize": [
+          606,
+          606
+        ]
+      },
+      {
+        "name": "Image68",
+        "x0": 656.64,
+        "top": 312.54999999999995,
+        "x1": 1352.24,
+        "bottom": 687.21,
+        "width": 695.6,
+        "height": 374.66,
+        "srcsize": [
+          1536,
+          827
+        ]
+      }
+    ]
+  },
+  {
+    "page": 6,
+    "text": "Fig 5.1\nFig 5.2\nITERATIONS: For the legs, we opted for a clean and minimal design to create a balanced contrast with the intricate, sculptural seat. The seat itself\nis rich in texture and complexity, so keeping the base visually simple prevents the overall design from feeling overwhelming. The\nSTOOL LEGS\niterative design process involved exploring possible aesthetics while focusing on stability, visual balance and how the legs interact\nwith the seating. The final design was chosen for its well-balanced composition minimal yet bold geometric structure. This striking\nframework complements the organic seating design with a clean and contemporary aesthetic.\nThe chosen design has four legs that are tapered, reinforced by a square-shaped connection at the bottom. The contrast between\nthe sleek, structured legs and the fluid, sculptural seat enhances the overall composition of the chair.\n5",
+    "images": [
+      {
+        "name": "Image71",
+        "x0": 79.09000000000003,
+        "top": 38.36999999999989,
+        "x1": 370.92,
+        "bottom": 247.11,
+        "width": 291.83,
+        "height": 208.74000000000012,
+        "srcsize": [
+          810,
+          579
+        ]
+      },
+      {
+        "name": "Image72",
+        "x0": 392.67,
+        "top": 38.36999999999989,
+        "x1": 684.5,
+        "bottom": 247.11,
+        "width": 291.83,
+        "height": 208.74000000000012,
+        "srcsize": [
+          810,
+          579
+        ]
+      },
+      {
+        "name": "Image73",
+        "x0": 79.09000000000003,
+        "top": 490.3499999999999,
+        "x1": 370.92,
+        "bottom": 699.0899999999999,
+        "width": 291.83,
+        "height": 208.74000000000007,
+        "srcsize": [
+          810,
+          579
+        ]
+      },
+      {
+        "name": "Image74",
+        "x0": 79.09000000000003,
+        "top": 264.36,
+        "x1": 370.92,
+        "bottom": 473.1,
+        "width": 291.83,
+        "height": 208.74,
+        "srcsize": [
+          810,
+          579
+        ]
+      },
+      {
+        "name": "Image75",
+        "x0": 392.67,
+        "top": 264.36,
+        "x1": 684.5,
+        "bottom": 473.1,
+        "width": 291.83,
+        "height": 208.74,
+        "srcsize": [
+          810,
+          579
+        ]
+      },
+      {
+        "name": "Image76",
+        "x0": 392.67,
+        "top": 490.3499999999999,
+        "x1": 684.5,
+        "bottom": 699.0899999999999,
+        "width": 291.83,
+        "height": 208.74000000000007,
+        "srcsize": [
+          810,
+          579
+        ]
+      },
+      {
+        "name": "Image77",
+        "x0": 995.5900000000001,
+        "top": 36.40000000000009,
+        "x1": 1378.88,
+        "bottom": 697.51,
+        "width": 383.28999999999996,
+        "height": 661.1099999999999,
+        "srcsize": [
+          876,
+          1536
+        ]
+      }
+    ]
+  },
+  {
+    "page": 7,
+    "text": "TECHINAL\nDRAWINGS\nThe drawings highlight the dimensions of the\ndesign. In addition, there's also an exploded view\nof the 3D model for clarity.\nFig 6.3 ( unit in mm)\nFig 6.1 Fig 6.2 ( unit in mm) Fig 6.4 ( unit in mm)\n6",
+    "images": [
+      {
+        "name": "Image80",
+        "x0": -154.26,
+        "top": 32.440000000000055,
+        "x1": 800.52,
+        "bottom": 981.06,
+        "width": 954.78,
+        "height": 948.6199999999999,
+        "srcsize": [
+          2652,
+          2635
+        ]
+      },
+      {
+        "name": "Image81",
+        "x0": 656.66,
+        "top": 341.448,
+        "x1": 1029.45,
+        "bottom": 1035.098,
+        "width": 372.7900000000001,
+        "height": 693.65,
+        "srcsize": [
+          1035,
+          1926
+        ]
+      },
+      {
+        "name": "Image82",
+        "x0": 1032.03,
+        "top": 676.9449999999999,
+        "x1": 1369.9299999999998,
+        "bottom": 1031.745,
+        "width": 337.89999999999986,
+        "height": 354.8,
+        "srcsize": [
+          938,
+          985
+        ]
+      },
+      {
+        "name": "Image83",
+        "x0": 1029.64,
+        "top": 382.80999999999995,
+        "x1": 1346.88,
+        "bottom": 760.71,
+        "width": 317.24,
+        "height": 377.90000000000003,
+        "srcsize": [
+          881,
+          1049
+        ]
+      }
+    ]
+  },
+  {
+    "page": 8,
+    "text": "Fig 7.1 Fig 7.2 Fig 7.3 Fig 7.4 Fig 7.5\nPROCESS\nDOCUMENTATION\nOur design was first modeled in Rhino to refine the\nstructure and dimensions before fabrication.\nWe then marked and measured the required lengths\nfor each metal piece before proceeding with cutting.\nOnce cut, an automated machine was used to bend Fig 7.7 Fig 7.8\nFig 7.6 Fig 7.6 Fig 7.6\nthe pieces to a precise 90-degree angle, after which\nwe manually adjusted them to an 80-degree angle for\nthe final form.\nSimultaneously, we began crafting the seating using a\nCNC milling machine to achieve the intricate, organic\npattern with high precision.\nFor the metal sheet, we incorporated a design similar\nto the chair seating.\nAs a finishing touch, the rebars were spray-painted\nblack for a consistent and polished finish, while the\nwooden seat was coated with a clear lacquer to\nenhance its natural texture\n7",
+    "images": [
+      {
+        "name": "Image86",
+        "x0": 591.85,
+        "top": 25.700000000000045,
+        "x1": 842.6,
+        "bottom": 323.01,
+        "width": 250.75,
+        "height": 297.30999999999995,
+        "srcsize": [
+          696,
+          825
+        ]
+      },
+      {
+        "name": "Image87",
+        "x0": 1158.45,
+        "top": 25.829999999999927,
+        "x1": 1410.8400000000001,
+        "bottom": 322.88,
+        "width": 252.3900000000001,
+        "height": 297.05000000000007,
+        "srcsize": [
+          701,
+          1055
+        ]
+      },
+      {
+        "name": "Image88",
+        "x0": 874.82,
+        "top": 25.980000000000018,
+        "x1": 1126.33,
+        "bottom": 323.51,
+        "width": 251.50999999999988,
+        "height": 297.53,
+        "srcsize": [
+          698,
+          826
+        ]
+      },
+      {
+        "name": "Image89",
+        "x0": 29.154,
+        "top": 25.200000000000045,
+        "x1": 278.384,
+        "bottom": 320.98,
+        "width": 249.23000000000002,
+        "height": 295.78,
+        "srcsize": [
+          692,
+          821
+        ]
+      },
+      {
+        "name": "Image90",
+        "x0": 310.5,
+        "top": 26.469938964999983,
+        "x1": 559.73,
+        "bottom": 322.25,
+        "width": 249.23000000000002,
+        "height": 295.780061035,
+        "srcsize": [
+          692,
+          821
+        ]
+      },
+      {
+        "name": "Image91",
+        "x0": 591.85,
+        "top": 360.3900000000001,
+        "x1": 842.71,
+        "bottom": 662.54,
+        "width": 250.86,
+        "height": 302.1499999999999,
+        "srcsize": [
+          696,
+          839
+        ]
+      },
+      {
+        "name": "Image92",
+        "x0": 1160.14,
+        "top": 360.39,
+        "x1": 1410.8500000000001,
+        "bottom": 660.64,
+        "width": 250.71000000000004,
+        "height": 300.25,
+        "srcsize": [
+          696,
+          834
+        ]
+      },
+      {
+        "name": "Image93",
+        "x0": 875.4699999999999,
+        "top": 360.56999999999994,
+        "x1": 1126.33,
+        "bottom": 662.54,
+        "width": 250.86,
+        "height": 301.9700000000001,
+        "srcsize": [
+          703,
+          578
+        ]
+      }
+    ]
+  },
+  {
+    "page": 9,
+    "text": "OBJECT\nPRESENTATION\nFig 8.2\nFig 8.3 Fig 8.5\nFig 8.1 Fig 8.4 Fig 8.6 8",
+    "images": [
+      {
+        "name": "Image96",
+        "x0": 21.94,
+        "top": 199.005,
+        "x1": 568.74,
+        "bottom": 1069.335,
+        "width": 546.8,
+        "height": 870.33,
+        "srcsize": [
+          2072,
+          2417
+        ]
+      },
+      {
+        "name": "Image98",
+        "x0": 1002.3,
+        "top": 674.2349999999999,
+        "x1": 1403.76,
+        "bottom": 1069.335,
+        "width": 401.46000000000004,
+        "height": 395.1,
+        "srcsize": [
+          1115,
+          1097
+        ]
+      },
+      {
+        "name": "Image99",
+        "x0": 589.8,
+        "top": 674.2349999999999,
+        "x1": 984.9,
+        "bottom": 1069.335,
+        "width": 395.1,
+        "height": 395.1,
+        "srcsize": [
+          1097,
+          1097
+        ]
+      },
+      {
+        "name": "Image100",
+        "x0": 590.01,
+        "top": 263.01,
+        "x1": 987.37,
+        "bottom": 658.11,
+        "width": 397.36,
+        "height": 395.1,
+        "srcsize": [
+          1103,
+          1097
+        ]
+      },
+      {
+        "name": "Image101",
+        "x0": -1222.64,
+        "top": 470.94000000000005,
+        "x1": -695.0900000000001,
+        "bottom": 853.58,
+        "width": 527.55,
+        "height": 382.64,
+        "srcsize": [
+          1465,
+          1062
+        ]
+      },
+      {
+        "name": "Image102",
+        "x0": 2174.85,
+        "top": -125.80999999999995,
+        "x1": 2984.85,
+        "bottom": 954.19,
+        "width": 810.0,
+        "height": 1080.0,
+        "srcsize": [
+          3296,
+          2472
+        ]
+      },
+      {
+        "name": "Image103",
+        "x0": 1002.3,
+        "top": 30.25999999999999,
+        "x1": 1403.76,
+        "bottom": 657.99,
+        "width": 401.46000000000004,
+        "height": 627.73,
+        "srcsize": [
+          1743,
+          1115
+        ]
+      },
+      {
+        "name": "Image104",
+        "x0": 589.8,
+        "top": 30.25,
+        "x1": 986.55,
+        "bottom": 253.54999999999995,
+        "width": 396.75,
+        "height": 223.29999999999995,
+        "srcsize": [
+          1102,
+          620
+        ]
+      }
+    ]
+  },
+  {
+    "page": 10,
+    "text": "USERS' FEEDBACKS\nUncle Goh \u2013 The Fablab\n\"Wah, this chair damn solid, ah! The curves all so smooth, like\nmade by some atas designer. Sit down also shiok, just nice,\nnot too hard, not too soft. Last time, where got like this one?\nYou young people really got skill, ah\u2014steady lah!\u201d\nLana \u2013 An Aspiring Architect\n\"The Butterfly chair is an intricate and well-crafted piece of\nfurniture. The seat is smoothly sanded, glossy and stands as a\nwork of art even without being in use. The attention to detail with\ncareful welding, nailing and painting the rebars matte black gave\nan avant-garde aesthetic to the project. Good job guys!\"\nAryan \u2013 The Raccoon Lover\n\u201cThe chair has a very psychedelic-looking surface to it, so it\ndefinitely catches people\u2019s eyes when they enter the room. It\u2019s\nquite compact and it blends well with most environments. I\nwould definitely purchase this chair if it were in the market, I\nbelieve it makes any interior decor quite interesting.\u201d",
+    "images": [
+      {
+        "name": "Image107",
+        "x0": 1998.22,
+        "top": 25.019999999999982,
+        "x1": 2506.02,
+        "bottom": 702.09,
+        "width": 507.79999999999995,
+        "height": 677.07,
+        "srcsize": [
+          1880,
+          1410
+        ]
+      },
+      {
+        "name": "Image116",
+        "x0": 78.226,
+        "top": 97.29999999999995,
+        "x1": 349.946,
+        "bottom": 461.4,
+        "width": 271.72,
+        "height": 364.1,
+        "srcsize": [
+          1011,
+          754
+        ]
+      },
+      {
+        "name": "Image119",
+        "x0": 96.912,
+        "top": 753.617,
+        "x1": 341.012,
+        "bottom": 997.717,
+        "width": 244.1,
+        "height": 244.09999999999997,
+        "srcsize": [
+          678,
+          678
+        ]
+      },
+      {
+        "name": "Image120",
+        "x0": 85.228,
+        "top": 429.19000000000005,
+        "x1": 346.178,
+        "bottom": 687.94,
+        "width": 260.95,
+        "height": 258.74999999999994,
+        "srcsize": [
+          724,
+          718
+        ]
+      }
+    ]
+  }
+]

@@ -142,9 +142,16 @@ export const draftProjects=originalProjects.filter(project=>!['virtual-singapore
 const projectDates={
  'easyconvo':'2026-09','virtual-singapore':'2026-08','stacked-streets':'2026-03',
  'previously':'2025-09','ribbon':'2025-06','a-bridge':'2025-05',
- 'the-wandering-archive':'2025-02','flow':'2025-01','spatial':'2024-11'
+ 'the-wandering-archive':'2025-02','flow':'2025-01','spatial':'2024-11',
+ 'ascent':'2025-03','venture':'2025-02','pause':'2025-09'
 };
-export const projects=[...portfolioProjects,...originalProjects.filter(project=>['virtual-singapore','easyconvo'].includes(project.slug))]
- .map(project=>({...project,...(projectCopy[project.slug]?{summary:projectCopy[project.slug].summary,...(projectCopy[project.slug].presentationImage?{image:projectCopy[project.slug].presentationImage,presentationImage:projectCopy[project.slug].presentationImage}:{})}:{}),date:projectDates[project.slug],...(project.slug==='previously'?{role:'Architectural internship',note:'Internship work, September 2025',summary:'A collection of internship work from September 2025, including architectural drafting, 3D modelling, visualisation and detail drawings.'}:{})}))
- .sort((a,b)=>b.date.localeCompare(a.date))
- .map((project,index)=>({...project,number:String(index+1).padStart(2,'0')}));
+const orderedProjects=[...portfolioProjects,...originalProjects.filter(project=>['virtual-singapore','easyconvo'].includes(project.slug))]
+ .map(project=>({...project,...(projectCopy[project.slug]?{summary:projectCopy[project.slug].summary,...(projectCopy[project.slug].presentationImage?{image:projectCopy[project.slug].presentationImage,presentationImage:projectCopy[project.slug].presentationImage}:{})}:{}),date:projectDates[project.slug]??project.date??null,...(project.slug==='previously'?{role:'Architectural internship',note:'Internship work, September 2025',summary:'A collection of internship work from September 2025, including architectural drafting, 3D modelling, visualisation and detail drawings.'}:{})}))
+ .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+// Curated exception to chronology: keep The Wandering Archive directly after Pause.
+const archiveIndex=orderedProjects.findIndex(project=>project.slug==='the-wandering-archive');
+if(archiveIndex!==-1&&orderedProjects.some(project=>project.slug==='pause')){
+ const [archive]=orderedProjects.splice(archiveIndex,1);
+ orderedProjects.splice(orderedProjects.findIndex(project=>project.slug==='pause')+1,0,archive);
+}
+export const projects=orderedProjects.map((project,index)=>({...project,number:String(index+1).padStart(2,'0')}));

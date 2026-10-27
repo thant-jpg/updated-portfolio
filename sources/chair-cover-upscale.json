@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "original": "/images/portfolio/butterfly-effect/cover.webp",
+  "output": "/images/portfolio/butterfly-effect/cover-upscaled.webp",
+  "dimensions": [
+    901,
+    1745
+  ],
+  "prompt": "Faithfully upscale the existing grass chair cover; preserve chair geometry, carved waves, framing, colours, lawn and daylight; recover natural wood and grass detail without redesign or artificial HDR."
+}

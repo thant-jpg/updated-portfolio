@@ -1,0 +1,149 @@
+{
+  "datePolicy": "Undated, as requested",
+  "artworks": [
+    {
+      "src": "/images/portfolio/art-studies/artwork/profile-drawing.jpg",
+      "width": 894,
+      "height": 1280,
+      "caption": "Profile drawing",
+      "sectionKey": "portraits-figures",
+      "sourceAttachment": "codex-clipboard-032a3c81-c33c-4313-9b28-ef3c5e946417.jpg",
+      "sha256": "c02ae450002c0d7e841f1619a6e1cfcff2f8f6ae4c8fdcef1e65ff62bf2d7e96"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/doorway-sketch.jpg",
+      "width": 1280,
+      "height": 894,
+      "caption": "Doorway sketch",
+      "sectionKey": "cityscapes",
+      "sourceAttachment": "codex-clipboard-8780d14c-b807-4eb2-81df-aa31d8f70c5c.jpg",
+      "sha256": "8e91eb26d01b6b647d1b083371e1dfa45fc5cbd397e4a325b623c7476b5aca9b"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/portrait-colour-accents.jpg",
+      "width": 1280,
+      "height": 853,
+      "caption": "Portrait with colour accents",
+      "sectionKey": "portraits-figures",
+      "sourceAttachment": "codex-clipboard-07c1ac91-45ca-4a28-9c4e-d69fb886b565.jpg",
+      "sha256": "798a43f8677ff950247b3d0d4d449f061437da4af346a3dc79d5f2b4bb1c9b48"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/figure-drapery-study.jpg",
+      "width": 1024,
+      "height": 1280,
+      "caption": "Figure and drapery study",
+      "sectionKey": "portraits-figures",
+      "sourceAttachment": "codex-clipboard-023c0fa3-3e8b-4a9b-89b4-a186bd04d47d.jpg",
+      "sha256": "d9997419c90ec8c2dded8ac6a5edbece52a11f7e000861362d5bdead9252d814"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/figure-drapery-colour.jpg",
+      "width": 1024,
+      "height": 1280,
+      "caption": "Figure and drapery — colour variation",
+      "sectionKey": "portraits-figures",
+      "sourceAttachment": "codex-clipboard-976f6ef5-bb67-44bc-9ae4-52f733cfbc21.jpg",
+      "sha256": "765db6abfabb53f5bc56ed7cea233f4c7d1608ef9365add9724c2acc43ba0d0b"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/evening-skyline.jpg",
+      "width": 1219,
+      "height": 1280,
+      "caption": "Evening skyline",
+      "sectionKey": "cityscapes",
+      "sourceAttachment": "codex-clipboard-707ef911-7111-4bab-b8bf-5873e95edc2f.jpg",
+      "sha256": "b2ca39b25ff81cba3f37320e1beb40fe87b131a80325fb4fa728b8dacacd9c58"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/eye-hand-study.jpg",
+      "width": 894,
+      "height": 1280,
+      "caption": "Eye and hand study",
+      "sectionKey": "sketchbook",
+      "sourceAttachment": "codex-clipboard-5f7249ed-26b8-45d7-98f0-f3c285391c16.jpg",
+      "sha256": "bce9bb0b9397466e2a77361474904b1af6ff17405fae51cd1ddedfe85ed3fb60"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/portrait-ornament-study.jpg",
+      "width": 894,
+      "height": 1280,
+      "caption": "Portrait and ornament study",
+      "sectionKey": "sketchbook",
+      "sourceAttachment": "codex-clipboard-e95b503e-6e86-4dfb-bd29-27b1d2d07bfc.jpg",
+      "sha256": "1edd5e79898fc9a023b6fe007347578462d8ea7683bd29a5d0c27b891d98be34"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/bust-shading-study.jpg",
+      "width": 883,
+      "height": 1280,
+      "caption": "Bust shading study",
+      "sectionKey": "portraits-figures",
+      "sourceAttachment": "codex-clipboard-e42543f7-ca90-44b9-9dad-75cfd12f4461.jpg",
+      "sha256": "cb5f583b6ef9f11a03f423bb0de431a852d8ed42a1ecbd06db6d5b8c914cda7d"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/blue-yellow-character.jpg",
+      "width": 905,
+      "height": 1280,
+      "caption": "Blue and yellow character study",
+      "sectionKey": "light-colour",
+      "sourceAttachment": "codex-clipboard-119586ce-47fb-47ee-ac86-f7b8e786e7ff.jpg",
+      "sha256": "fee6ce60fb04dc90858b9ff2fe45fc14684c510c4b85af37354c19ec242cc47f"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/potted-plant-drawing.jpg",
+      "width": 1058,
+      "height": 1280,
+      "caption": "Potted plant drawing",
+      "sectionKey": "still-life",
+      "sourceAttachment": "codex-clipboard-a73338e1-0aaf-4b2f-b968-4debb754a450.jpg",
+      "sha256": "552838d4ed3137a9f052143a67ddf1b03b0a0a8bd78a5cd37328a6e58428ebb6"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/corridor-perspective.jpg",
+      "width": 894,
+      "height": 1280,
+      "caption": "Corridor perspective sketch",
+      "sectionKey": "cityscapes",
+      "sourceAttachment": "codex-clipboard-665beaf0-ebb7-43c7-96f5-bb410210e013.jpg",
+      "sha256": "2613b9793d4744b0d1cca6a640b6c43c98458eecc97b7c2d4df50c7ec0551258"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/portrait-with-fish.jpg",
+      "width": 894,
+      "height": 1280,
+      "caption": "Portrait with fish",
+      "sectionKey": "sketchbook",
+      "sourceAttachment": "codex-clipboard-05348f60-fe66-4011-8d5b-ffdea9e8835a.jpg",
+      "sha256": "b90fabdf80830e3c484ea8789f29865405a076f390354557b201c83ac4e3855d"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/rabbit-character.jpg",
+      "width": 894,
+      "height": 1280,
+      "caption": "Rabbit character sketch",
+      "sectionKey": "sketchbook",
+      "sourceAttachment": "codex-clipboard-b19dc86b-46ca-41b1-827f-083b7f34af06.jpg",
+      "sha256": "2bfa92c09a880b6fb25e3488da8fbb240a3c2ac620f284f0448a54a385c76a73"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/bus-stop-perspective.jpg",
+      "width": 1280,
+      "height": 894,
+      "caption": "Bus stop perspective sketch",
+      "sectionKey": "cityscapes",
+      "sourceAttachment": "codex-clipboard-2198bbee-f8fd-4e78-b3fc-1c814c00ae19.jpg",
+      "sha256": "1879747f82ff5f5ee7ee6e14d41b54d68485a485db5582c32a1e3410c7cd86d3"
+    },
+    {
+      "src": "/images/portfolio/art-studies/artwork/portrait-gesture-study.jpg",
+      "width": 1280,
+      "height": 894,
+      "caption": "Portrait gesture study",
+      "sectionKey": "portraits-figures",
+      "sourceAttachment": "codex-clipboard-75628dce-f27f-425d-b71a-b32db33737f3.jpg",
+      "sha256": "b1bbb4e91c9caa37035e076c1a89852758a04eeab7c7ddb06931a2a0e7118a77"
+    }
+  ]
+}
