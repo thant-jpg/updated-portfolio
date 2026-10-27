@@ -1,3 +1,5 @@
+import { initWorkspaceTabs } from './workspace-tabs.js';
+initWorkspaceTabs();
 import { initFooterPlayground } from './footer-playground.js';
 import { initDocumentRulers } from './document-rulers.js';
 import { initImageViewer } from './image-viewer.js';
@@ -11,17 +13,6 @@ for(const panel of document.querySelectorAll('.project-layers')){
  const compact=matchMedia('(max-width:1100px)');
  details.open=!compact.matches;
  compact.addEventListener('change',event=>{details.open=!event.matches;});
-}
-
-// A real layout-view control; the artwork, captions and viewer stay available.
-for(const button of document.querySelectorAll('.guides-toggle')){
- const documentView=button.closest('.project-document');
- button.addEventListener('click',()=>{
-  const show=button.getAttribute('aria-pressed')!=='true';
-  button.setAttribute('aria-pressed',String(show));
-  button.textContent=show?'Guides on':'Guides off';
-  documentView.classList.toggle('guides-hidden',!show);
- });
 }
 
 // Text-only theme switch; default to the system until the visitor chooses.

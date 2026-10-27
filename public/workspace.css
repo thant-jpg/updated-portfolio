@@ -354,3 +354,82 @@ html.image-viewer-open{overflow:hidden;scrollbar-gutter:stable}
 @media(min-width:801px){
  .workspace-sidebar{position:fixed;top:var(--workspace-topbar);max-height:calc(100dvh - var(--workspace-topbar));min-height:0;overflow-y:auto;overscroll-behavior:contain}
 }
+
+/* Persistent application chrome and linked workspace tabs. */
+.workspace{padding-top:var(--workspace-topbar)}
+.workspace .workspace-header{position:fixed;inset:0 0 auto;z-index:30}
+.document-bar{position:sticky;top:var(--workspace-topbar);z-index:20;background:var(--paper);gap:0}
+.document-tabs{display:flex;align-items:stretch;gap:0;margin:0;padding:0;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
+.document-tabs .document-tab{flex:none;border-top-color:transparent;background:var(--workspace-panel);color:var(--muted);text-decoration:none;white-space:nowrap;padding:0 24px;min-width:112px;justify-content:center;font-weight:400}
+.document-tabs .document-tab[aria-current]{border-top-color:var(--accent);background:var(--paper);color:var(--ink)}
+.document-tabs a:hover{color:var(--accent);background:var(--workspace-hover);font-weight:400;text-decoration:none}
+.document-tabs a:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+.document-tabs .project-document-tab{max-width:320px;overflow:hidden;text-overflow:ellipsis}
+.workspace .project-layers{top:calc(var(--workspace-topbar) + 64px)}
+.workspace [id]{scroll-margin-top:calc(var(--workspace-topbar) + 64px)}
+@media(max-width:800px){
+ .workspace-sidebar{display:none}
+ .document-tabs .document-tab{padding-inline:16px}
+}
+@media(max-width:520px){
+ .document-tabs .document-tab{padding-inline:12px;gap:8px}
+ .document-bar-actions{padding-inline:10px}
+ .document-bar-actions .theme-toggle{font-size:10px;white-space:nowrap}
+ .document-tabs .document-tab-dot{margin-left:0}
+}
+
+/* Keep footer artwork in the content column and navigation on its own surface. */
+.workspace main{padding-bottom:0}
+.workspace main>.play-footer{margin:0;padding:0;border-inline:0}
+.document-tabs .document-tab-dot{margin-left:0}
+.document-tabs .document-tab[aria-current]{font-weight:500}
+@media(min-width:801px){
+ .workspace-sidebar{bottom:0;background:var(--paper);border-right:1px solid var(--line)}
+}
+@media(max-width:800px){
+ .document-tabs .document-tab{min-width:96px;padding:0 16px}
+}
+@media(max-width:520px){
+ .document-tabs .document-tab{min-width:80px;padding:0 12px}
+}
+
+/* Document tabs follow the supplied InDesign reference. */
+.document-tabs{--tab-accent:var(--accent)}
+.document-tabs .document-tab{min-width:150px;justify-content:flex-start;gap:12px;padding-inline:20px;font-size:12px;line-height:16px}
+.document-tabs .document-tab[aria-current]{border-top-color:var(--tab-accent);font-weight:400}
+.document-tabs .document-tab-icon{color:var(--tab-accent);font-size:14px;line-height:16px;flex:none}
+.document-tabs .document-tab-dot{background:var(--tab-accent);margin-left:8px}
+.document-tab-extension{color:var(--muted)}
+.document-tabs a:hover{color:var(--ink)}
+.document-tabs a:focus-visible{outline-color:var(--tab-accent)}
+@media(max-width:520px){.document-tabs .document-tab{min-width:140px;padding-inline:16px}}
+
+/* Project rulers meet the workspace edges, directly below the tabs. */
+.workspace.project-workspace .document-content{max-width:none;padding:0}
+.project-workspace .project-document{position:relative}
+.project-workspace .project-document-toolbar{position:absolute;top:32px;right:24px;z-index:2;margin:0;justify-content:flex-end}
+.project-workspace .document-pasteboard{border:0;--ruler-inset:24px}
+.project-workspace .document-pasteboard .page-ruler-top{top:0;left:32px;right:0;height:24px;border-bottom:1px solid var(--line)}
+.project-workspace .document-pasteboard .page-ruler-side{top:24px;bottom:0;left:0;width:32px}
+.project-workspace .document-pasteboard:before{content:'';position:absolute;top:0;left:0;width:32px;height:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);pointer-events:none}
+.project-workspace .document-pasteboard{padding-top:56px}
+.project-workspace .document-end-nav{margin:32px 24px}
+@media(max-width:700px){
+ .project-workspace .document-pasteboard{padding-top:24px}
+ .project-workspace .document-pasteboard:before{display:none}
+ .project-workspace .project-document-toolbar{position:static;padding:12px 16px}
+}
+
+/* Open documents can be reordered and closed independently of sidebar navigation. */
+.workspace-tab{position:relative;display:flex;flex:none;border-right:1px solid var(--line);border-top:2px solid transparent;background:var(--workspace-panel)}
+.workspace-tab.is-active{border-top-color:var(--accent);background:var(--paper)}
+.document-tabs .workspace-tab .document-tab{border:0;min-width:0;padding:0 12px 0 20px;gap:10px;background:transparent;max-width:280px}
+.workspace-tab .document-tab-label{overflow:hidden;text-overflow:ellipsis}
+.tab-close{align-self:center;display:grid;place-items:center;flex:none;width:28px;height:28px;margin-right:8px;padding:0;border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:18px;line-height:1}
+.tab-close:hover{background:var(--workspace-hover);color:var(--accent)}
+.tab-close:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.workspace-tab.is-dragging{opacity:.45}
+.workspace-tab.drag-target{box-shadow:inset 3px 0 var(--accent)}
+.workspace-tab[draggable=true]{cursor:grab}
+.document-tabs .workspace-tab:first-child:last-child .document-tab,.workspace-tab[data-path="/"] .document-tab{padding-right:20px}
+@media(min-width:801px){.workspace-sidebar-foot{display:flex;align-items:center;gap:8px}.workspace-sidebar-foot .workspace-status-dot{flex:none;margin:0}.workspace-sidebar-foot .sr-only{position:static;width:auto;height:auto;overflow:visible;clip:auto;clip-path:none;margin:0}}
