@@ -69,3 +69,32 @@ export function initImageViewer() {
     opener?.focus({preventScroll: true});
   });
 }
+// Fit editor frames to the rendered artwork rather than its layout cell.
+const edgeFrames = [...document.querySelectorAll('.reflow-art > a:has(.image-edge-frame)')];
+function fitImageEdgeFrame(link) {
+  const img = link.querySelector('img');
+  if (!img?.naturalWidth) return;
+  const box = link.getBoundingClientRect();
+  const rect = img.getBoundingClientRect();
+  if (!box.width || !box.height) return;
+  const style = getComputedStyle(img);
+  let width = rect.width, height = rect.height;
+  if (style.objectFit === 'contain' || style.objectFit === 'scale-down') {
+    const scale = Math.min(rect.width / img.naturalWidth, rect.height / img.naturalHeight, style.objectFit === 'scale-down' ? 1 : Infinity);
+    width = img.naturalWidth * scale;
+    height = img.naturalHeight * scale;
+  }
+  const position = style.objectPosition.split(' ');
+  const fraction = value => value?.endsWith('%') ? parseFloat(value) / 100 : 0.5;
+  const left = Math.max(0, rect.left - box.left + (rect.width - width) * fraction(position[0]));
+  const top = Math.max(0, rect.top - box.top + (rect.height - height) * fraction(position[1]));
+  const right = Math.max(0, box.width - left - width);
+  const bottom = Math.max(0, box.height - top - height);
+  link.style.setProperty('--image-edge-inset', `${top}px ${right}px ${bottom}px ${left}px`);
+}
+const edgeFrameObserver = new ResizeObserver(entries => entries.forEach(entry => fitImageEdgeFrame(entry.target)));
+edgeFrames.forEach(link => {
+  edgeFrameObserver.observe(link);
+  link.querySelector('img').addEventListener('load', () => fitImageEdgeFrame(link));
+  fitImageEdgeFrame(link);
+});

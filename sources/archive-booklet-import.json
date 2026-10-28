@@ -1,0 +1,181 @@
+[
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/studio-timeline.svg",
+    "width": 1455,
+    "height": 1135,
+    "caption": "Collective studio timeline — my 2078 proposal highlighted",
+    "sectionKey": "studio",
+    "bookletPage": 2
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/city-narrative.webp",
+    "width": 1999,
+    "height": 1990,
+    "caption": "Life in the vertical cities — personal narrative collage",
+    "sectionKey": "narrative",
+    "bookletPage": 11,
+    "provenance": "Original collage by Thant Thiri Wai"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/nomadic-life.webp",
+    "width": 731,
+    "height": 729,
+    "caption": "Mongolian nomadic life — online reference image",
+    "sectionKey": "community",
+    "bookletPage": 14,
+    "provenance": "online reference"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/mongolia.webp",
+    "width": 1200,
+    "height": 1200,
+    "caption": "Mongolia — community context map",
+    "sectionKey": "community",
+    "bookletPage": 17,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/quartz-discs.webp",
+    "width": 1600,
+    "height": 794,
+    "caption": "Quartz glass storage — online research reference",
+    "sectionKey": "quartz",
+    "bookletPage": 15,
+    "provenance": "online reference"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/quartz-reading.webp",
+    "width": 400,
+    "height": 248,
+    "caption": "Encoded quartz sample — online research reference",
+    "sectionKey": "quartz",
+    "bookletPage": 15,
+    "provenance": "online reference"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/quartz-process.webp",
+    "width": 1920,
+    "height": 1347,
+    "caption": "Writing and reading quartz — online research reference",
+    "sectionKey": "quartz",
+    "bookletPage": 15,
+    "provenance": "online reference"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/openweather.webp",
+    "width": 3000,
+    "height": 3000,
+    "caption": "OpenWeather research — collecting and representing weather data",
+    "sectionKey": "weather-research",
+    "bookletPage": 16,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/blender-top.webp",
+    "width": 783,
+    "height": 1548,
+    "caption": "Cave terrain study — Blender",
+    "sectionKey": "blender-site",
+    "bookletPage": 19,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/blender-axon.webp",
+    "width": 2195,
+    "height": 2000,
+    "caption": "Cave geometry study — Blender",
+    "sectionKey": "blender-site",
+    "bookletPage": 19,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/unreal-landscape.webp",
+    "width": 2876,
+    "height": 1927,
+    "caption": "Landscape before inserting the library — Unreal Engine",
+    "sectionKey": "unreal-site",
+    "bookletPage": 20,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/unreal-terrain.webp",
+    "width": 3000,
+    "height": 1283,
+    "caption": "Terrain and vegetation study — Unreal Engine",
+    "sectionKey": "unreal-site",
+    "bookletPage": 21,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/unreal-aerial.webp",
+    "width": 3000,
+    "height": 1627,
+    "caption": "Aerial site study — Unreal Engine",
+    "sectionKey": "unreal-site",
+    "bookletPage": 21,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/unreal-cave.webp",
+    "width": 3000,
+    "height": 1502,
+    "caption": "Cave interior before inserting the library — Unreal Engine",
+    "sectionKey": "unreal-site",
+    "bookletPage": 24,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/cave-model.webp",
+    "width": 2933,
+    "height": 2919,
+    "caption": "Physical cave model — openings and enclosure",
+    "sectionKey": "site-model",
+    "bookletPage": 27,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/cave-model-interior.webp",
+    "width": 1991,
+    "height": 3000,
+    "caption": "Physical cave model — interior study",
+    "sectionKey": "site-model",
+    "bookletPage": 28,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/librarian-diagram.webp",
+    "width": 3000,
+    "height": 1829,
+    "caption": "Librarian user diagram",
+    "sectionKey": "users",
+    "bookletPage": 31,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/visitor-diagram.webp",
+    "width": 3000,
+    "height": 1829,
+    "caption": "Visitor user diagram",
+    "sectionKey": "users",
+    "bookletPage": 32,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/physical-model-original.webp",
+    "width": 2375,
+    "height": 2369,
+    "caption": "Physical library model — original photograph",
+    "sectionKey": "physical-model",
+    "bookletPage": 55,
+    "provenance": "user supplied booklet"
+  },
+  {
+    "src": "/images/portfolio/the-wandering-archive/booklet/physical-model-front.webp",
+    "width": 2221,
+    "height": 2221,
+    "caption": "Physical library model — front view",
+    "sectionKey": "physical-model",
+    "bookletPage": 56,
+    "provenance": "user supplied booklet"
+  }
+]

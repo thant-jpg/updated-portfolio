@@ -1,0 +1,20 @@
+{
+  "edits": "Higher resolution render edits; casual visitors, sparse exhibition pieces, connecting stairs in the timber interior. Original renders retained.",
+  "outputs": {
+    "01": {
+      "src": "/images/portfolio/venture/artwork/01-meditation-exhibition.webp",
+      "width": 1421,
+      "height": 1107
+    },
+    "04": {
+      "src": "/images/portfolio/venture/artwork/04-meditation-exhibition.webp",
+      "width": 1436,
+      "height": 1095
+    },
+    "06": {
+      "src": "/images/portfolio/venture/artwork/06-meditation-exhibition.webp",
+      "width": 1433,
+      "height": 1098
+    }
+  }
+}

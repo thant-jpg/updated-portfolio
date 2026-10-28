@@ -43,16 +43,16 @@ const originalProjects=[
     "role": "Product & 3D designer",
     "sections": [
       [
-        "A city as a social interface",
-        "People can explore a 3D Singapore and meet others through shared activities."
+        "Meeting through a shared activity",
+        "The app gives people a 3D Singapore to explore together, with games and shared activities as ways to meet."
       ],
       [
-        "From app flow to shared space",
-        "I developed the concept and app flow, and connected the screens to the 3D world."
+        "Connecting the app and the 3D world",
+        "I worked on the concept and app flow, including how the screens connect to the 3D world."
       ],
       [
-        "Environment & self-expression",
-        "I designed 3D environments and customisable characters, including clothing and hairstyles."
+        "Designing the places and characters",
+        "My work also included the 3D environments and characters, with clothing and hairstyle options that people could customise."
       ]
     ]
   },
@@ -69,16 +69,16 @@ const originalProjects=[
     "role": "Product designer",
     "sections": [
       [
-        "Designing for early literacy",
-        "I designed student and teacher experiences for a phonics learning platform."
+        "Designing for students and teachers",
+        "I worked on both sides of the app: the activities children use to learn phonics and the tools teachers use to support them."
       ],
       [
-        "Testing and improving the experience",
-        "I conducted user testing and used feedback to refine learning activities and teacher dashboards."
+        "Learning from user testing",
+        "I tested the app with users and used their feedback to adjust the learning activities and teacher dashboards."
       ],
       [
-        "From flow to prototype",
-        "I developed app flows and Figma prototypes suited to young learners."
+        "Working through the app flow",
+        "I developed the app flows and built Figma prototypes, keeping young learners in mind as I worked through the screens."
       ]
     ]
   },
@@ -146,7 +146,7 @@ const projectDates={
  'ascent':'2025-03','venture':'2025-02','pause':'2025-09'
 };
 const orderedProjects=[...portfolioProjects,...originalProjects.filter(project=>['virtual-singapore','easyconvo'].includes(project.slug))]
- .map(project=>({...project,...(projectCopy[project.slug]?{summary:projectCopy[project.slug].summary,...(projectCopy[project.slug].presentationImage?{image:projectCopy[project.slug].presentationImage,presentationImage:projectCopy[project.slug].presentationImage}:{})}:{}),date:projectDates[project.slug]??project.date??null,...(project.slug==='previously'?{role:'Architectural internship',note:'Internship work, September 2025',summary:'A collection of internship work from September 2025, including architectural drafting, 3D modelling, visualisation and detail drawings.'}:{})}))
+ .map(project=>({...project,...(projectCopy[project.slug]?{summary:projectCopy[project.slug].summary,...(projectCopy[project.slug].presentationImage?{image:projectCopy[project.slug].presentationImage,presentationImage:projectCopy[project.slug].presentationImage}:{})}:{}),date:projectDates[project.slug]??project.date??null,...(project.slug==='previously'?{role:'Architectural internship',note:'Internship work, September 2025'}:{})}))
  .sort((a,b)=>(b.date||'').localeCompare(a.date||''));
 // Curated exception to chronology: keep The Wandering Archive directly after Pause.
 const archiveIndex=orderedProjects.findIndex(project=>project.slug==='the-wandering-archive');

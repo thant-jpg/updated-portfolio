@@ -1,0 +1,30 @@
+{
+  "01": {
+    "src": "/images/portfolio/ascent/artwork/01-selected-experimental.webp",
+    "width": 1275,
+    "height": 1233,
+    "caption": "Muted botanical exterior study \u2014 AI assisted render",
+    "aiEnhanced": true
+  },
+  "07": {
+    "src": "/images/portfolio/ascent/artwork/07-selected-interior.webp",
+    "width": 1712,
+    "height": 919,
+    "caption": "Living and dining across the level change \u2014 AI assisted render",
+    "aiEnhanced": true
+  },
+  "12": {
+    "src": "/images/portfolio/ascent/artwork/12-selected-winter.webp",
+    "width": 1275,
+    "height": 1234,
+    "caption": "Winter blue hour and warm interior light \u2014 AI assisted render",
+    "aiEnhanced": true
+  },
+  "09": {
+    "src": "/images/portfolio/ascent/artwork/09-selected-flowering.webp",
+    "width": 1274,
+    "height": 1234,
+    "caption": "Flowering roof terraces in morning light \u2014 AI assisted render",
+    "aiEnhanced": true
+  }
+}

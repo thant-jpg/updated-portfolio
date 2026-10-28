@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import {portfolioArtwork} from '../portfolio-artwork.mjs';
+import {portfolioSections} from '../portfolio-sections.mjs';
+const slug='stacked-streets',a=portfolioArtwork[slug],p=slug+':';
+for(const im of a.images){
+ if(im.caption==='Public streets and private homes — circulation diagram')im.sectionKey=27;
+ if(im.caption==='Massing and aggregation'||im.caption==='Building axonometric')im.sectionKey=25;
+ if(['Ground floor plan','Typical block plan','Roof plan','Longitudinal section'].includes(im.caption))im.sectionKey='drawings';
+}
+a.sectionOrder=['masterplan','masterplan-reading','masterplan-water','masterplan-connections','intentions','site',24,25,27,26,29,'drawings','building-model','unit-model'];
+const within={25:['Massing and aggregation','Building axonometric'],27:['Public streets and private homes — circulation diagram','Active streets','Residential levels','Building cross-section'],'drawings':['Ground floor plan','Typical block plan','Roof plan','Longitudinal section']};
+a.images.sort((x,y)=>{const kx=x.sectionKey??x.sourcePage,ky=y.sectionKey??y.sourcePage;const ix=a.sectionOrder.indexOf(kx),iy=a.sectionOrder.indexOf(ky);if(ix!==iy)return ix-iy;return within[kx]?within[kx].indexOf(x.caption)-within[kx].indexOf(y.caption):0;});
+portfolioSections[p+25]={heading:'Developing the building form',body:'I arranged the homes as a repeated system, then opened up shared levels between them. The aggregation study shows how the units build up, while the axonometric brings the streets, voids and residential floors together. This establishes the overall form before looking at how people move through it.'};
+portfolioSections[p+27]={heading:'Separating public streets from private homes',body:'Within this form, public sky streets alternate with quieter residential levels. Shops, workshops and shared spaces welcome visitors, while homes retain their own communal areas. Separate public and residential lifts allow visitors to move between the streets without passing through the housing floors. The diagrams and cross-section show how these two routes sit together.'};
+portfolioSections[p+26].body='With the public and private levels established, I developed three unit types for the different users. The 50 m² studio accommodates singles, freelancers and solo creators. A 135 m² home and workshop supports multigenerational households combining family life and making. The 100 m² shophouse brings a business and home together. The distribution diagram shows the mix, followed by each unit’s model and plan.';
+portfolioSections[p+29]={heading:'Life along the sky streets',body:'The sky streets give these households a connection to the wider neighbourhood. I arranged public programmes around how long people might stay: bakeries and hawker stalls lower down for short visits, workshops in the middle for making and learning, and restaurants and gardens above for longer stays. These views explore the shared street as a place to spend time, rather than only a route through the building.'};
+portfolioSections[p+'drawings']={heading:'Reading the building in plan and section',body:'The ground and typical block plans show how the public routes meet the homes and connect back to the surrounding neighbourhood. The roof plan and longitudinal section complete the sequence, showing the arrangement across the building and the relationship between its levels.'};
+for(const [file,name,value]of [['portfolio-artwork.mjs','portfolioArtwork',portfolioArtwork],['portfolio-sections.mjs','portfolioSections',portfolioSections]])fs.writeFileSync(file,'// Portfolio content from supplied project material.\nexport const '+name+'='+JSON.stringify(value,null,2)+';\n');

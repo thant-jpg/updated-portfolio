@@ -1,9 +1,78 @@
-// Individual artwork, with native website copy and captions.
+// Portfolio content from supplied project material.
 export const portfolioArtwork={
   "stacked-streets": {
     "heading": "A neighbourhood in section",
     "body": "Homes and public sky streets alternate through the building. Shops, workshops, shared facilities and gardens support different rhythms of living and working.",
     "images": [
+      {
+        "src": "/images/portfolio/stacked-streets/review/masterplan-selected.webp",
+        "caption": "Bukit Dermaga masterplan — collective studio work",
+        "sectionKey": "masterplan",
+        "width": 961,
+        "height": 1249,
+        "credit": "Core Studio 03 section collective, Spring 2026"
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/analysis-11.webp",
+        "width": 1700,
+        "height": 1020,
+        "caption": "Tree cover — collective studio analysis",
+        "sectionKey": "masterplan-reading",
+        "credit": "Core Studio 03 section collective",
+        "sourcePdfPage": 11
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/analysis-12.webp",
+        "width": 1700,
+        "height": 1020,
+        "caption": "Walking access — collective studio analysis",
+        "sectionKey": "masterplan-reading",
+        "credit": "Core Studio 03 section collective",
+        "sourcePdfPage": 12
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/analysis-13.webp",
+        "width": 1700,
+        "height": 1020,
+        "caption": "Activity and population — collective studio analysis",
+        "sectionKey": "masterplan-reading",
+        "credit": "Core Studio 03 section collective",
+        "sourcePdfPage": 13
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/analysis-14.webp",
+        "width": 1700,
+        "height": 1020,
+        "caption": "Ground and water transformation — collective studio study",
+        "sectionKey": "masterplan-water",
+        "credit": "Core Studio 03 section collective",
+        "sourcePdfPage": 14
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/analysis-15.webp",
+        "width": 1700,
+        "height": 1020,
+        "caption": "Pedestrian and road connections — collective studio study",
+        "sectionKey": "masterplan-connections",
+        "credit": "Core Studio 03 section collective",
+        "sourcePdfPage": 15
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/analysis-17.webp",
+        "width": 1700,
+        "height": 1020,
+        "caption": "Ecological strategy — collective studio study",
+        "sectionKey": "masterplan-connections",
+        "credit": "Core Studio 03 section collective",
+        "sourcePdfPage": 17
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/site.webp",
+        "caption": "Riverfront site and surrounding context",
+        "sectionKey": "site",
+        "width": 845,
+        "height": 706
+      },
       {
         "sourcePage": 24,
         "caption": "Building render",
@@ -13,35 +82,54 @@ export const portfolioArtwork={
         "height": 1556
       },
       {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/25-01.webp",
-        "width": 838,
-        "height": 609,
-        "caption": "Public streets and private homes",
-        "sourcePage": 25,
-        "separatedArtwork": true
-      },
-      {
         "src": "/images/portfolio/stacked-streets/separated-artwork/25-02.webp",
         "width": 1724,
         "height": 398,
         "caption": "Massing and aggregation",
         "sourcePage": 25,
+        "separatedArtwork": true,
+        "sectionKey": 25
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/separated-artwork/28-01.webp",
+        "width": 2388,
+        "height": 1746,
+        "caption": "Building axonometric",
+        "sourcePage": 28,
+        "separatedArtwork": true,
+        "sectionKey": 25
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/vertical-circulation.webp",
+        "width": 580,
+        "height": 404,
+        "caption": "Public streets and private homes — circulation diagram",
+        "sourcePage": 25,
+        "separatedArtwork": true,
+        "sectionKey": 27
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/separated-artwork/27-02.webp",
+        "width": 894,
+        "height": 427,
+        "caption": "Active streets",
+        "sourcePage": 27,
         "separatedArtwork": true
       },
       {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/25-03.webp",
-        "width": 714,
-        "height": 1031,
-        "caption": "Ground floor plan",
-        "sourcePage": 25,
+        "src": "/images/portfolio/stacked-streets/separated-artwork/27-03.webp",
+        "width": 894,
+        "height": 431,
+        "caption": "Residential levels",
+        "sourcePage": 27,
         "separatedArtwork": true
       },
       {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/25-04.webp",
-        "width": 802,
-        "height": 1148,
-        "caption": "Typical block plan",
-        "sourcePage": 25,
+        "src": "/images/portfolio/stacked-streets/separated-artwork/27-04.webp",
+        "width": 1732,
+        "height": 1776,
+        "caption": "Building cross-section",
+        "sourcePage": 27,
         "separatedArtwork": true
       },
       {
@@ -101,62 +189,6 @@ export const portfolioArtwork={
         "separatedArtwork": true
       },
       {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/27-01.webp",
-        "width": 788,
-        "height": 538,
-        "caption": "Residential and public lifts",
-        "sourcePage": 27,
-        "separatedArtwork": true
-      },
-      {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/27-02.webp",
-        "width": 894,
-        "height": 427,
-        "caption": "Active streets",
-        "sourcePage": 27,
-        "separatedArtwork": true
-      },
-      {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/27-03.webp",
-        "width": 894,
-        "height": 431,
-        "caption": "Residential levels",
-        "sourcePage": 27,
-        "separatedArtwork": true
-      },
-      {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/27-04.webp",
-        "width": 1732,
-        "height": 1776,
-        "caption": "Building cross-section",
-        "sourcePage": 27,
-        "separatedArtwork": true
-      },
-      {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/28-01.webp",
-        "width": 2388,
-        "height": 1746,
-        "caption": "Building axonometric",
-        "sourcePage": 28,
-        "separatedArtwork": true
-      },
-      {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/29-01.webp",
-        "width": 803,
-        "height": 1149,
-        "caption": "Roof plan",
-        "sourcePage": 29,
-        "separatedArtwork": true
-      },
-      {
-        "src": "/images/portfolio/stacked-streets/separated-artwork/29-02.webp",
-        "width": 1771,
-        "height": 982,
-        "caption": "Longitudinal section",
-        "sourcePage": 29,
-        "separatedArtwork": true
-      },
-      {
         "src": "/images/portfolio/stacked-streets/separated-artwork/29-03.webp",
         "width": 878,
         "height": 618,
@@ -171,212 +203,457 @@ export const portfolioArtwork={
         "caption": "Public sky street",
         "sourcePage": 29,
         "separatedArtwork": true
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/separated-artwork/25-03.webp",
+        "width": 714,
+        "height": 1031,
+        "caption": "Ground floor plan",
+        "sourcePage": 25,
+        "separatedArtwork": true,
+        "sectionKey": "drawings"
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/separated-artwork/25-04.webp",
+        "width": 802,
+        "height": 1148,
+        "caption": "Typical block plan",
+        "sourcePage": 25,
+        "separatedArtwork": true,
+        "sectionKey": "drawings"
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/separated-artwork/29-01.webp",
+        "width": 803,
+        "height": 1149,
+        "caption": "Roof plan",
+        "sourcePage": 29,
+        "separatedArtwork": true,
+        "sectionKey": "drawings"
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/separated-artwork/29-02.webp",
+        "width": 1771,
+        "height": 982,
+        "caption": "Longitudinal section",
+        "sourcePage": 29,
+        "separatedArtwork": true,
+        "sectionKey": "drawings"
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/tower-studio.webp",
+        "caption": "Physical building model",
+        "sectionKey": "building-model",
+        "width": 1086,
+        "height": 1448,
+        "aiEnhanced": true,
+        "grain": true
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/street-detail-studio.webp",
+        "caption": "Shared street and planted façade — model detail",
+        "sectionKey": "building-model",
+        "width": 941,
+        "height": 1672,
+        "aiEnhanced": true,
+        "grain": true
+      },
+      {
+        "src": "/images/portfolio/stacked-streets/review/unit-studio.webp",
+        "caption": "Physical unit model",
+        "sectionKey": "unit-model",
+        "width": 941,
+        "height": 1672,
+        "aiEnhanced": true,
+        "grain": true
       }
+    ],
+    "sectionOrder": [
+      "masterplan",
+      "masterplan-reading",
+      "masterplan-water",
+      "masterplan-connections",
+      "intentions",
+      "site",
+      24,
+      25,
+      27,
+      26,
+      29,
+      "drawings",
+      "building-model",
+      "unit-model"
     ]
   },
   "the-wandering-archive": {
-    "heading": "Mobility, shelter and shared knowledge",
-    "body": "The project explores a library system for a nomadic community adapting to cave dwellings, combining mobile structures with the permanence of the landscape.",
+    "heading": "What knowledge should endure?",
+    "body": "In a world of shifting climates and scarce resources, the library carries knowledge on quartz shards. With limited storage, not everything can be preserved. I began with a question: what knowledge is truly essential, and how can a library help a community decide what must endure?",
     "images": [
       {
         "sourcePage": 16,
-        "caption": "Conceptual collage",
+        "caption": "The Wandering Archive — conceptual collage",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/01.webp",
         "width": 2200,
-        "height": 2182
+        "height": 2182,
+        "sectionKey": "16"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/studio-timeline.svg",
+        "width": 1455,
+        "height": 1135,
+        "caption": "Collective studio timeline — my 2078 proposal highlighted",
+        "sectionKey": "studio",
+        "bookletPage": 2
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/city-narrative.webp",
+        "width": 1999,
+        "height": 1990,
+        "caption": "Life in the vertical cities — personal narrative collage",
+        "sectionKey": "narrative",
+        "bookletPage": 11,
+        "provenance": "Original collage by Thant Thiri Wai"
       },
       {
         "sourcePage": 17,
-        "caption": "Environment render",
-        "completeSheet": false,
-        "src": "/images/portfolio/the-wandering-archive/complete-artwork/02.webp",
-        "width": 2200,
-        "height": 1293
-      },
-      {
-        "sourcePage": 17,
-        "caption": "Interior render",
-        "completeSheet": false,
-        "src": "/images/portfolio/the-wandering-archive/complete-artwork/03.webp",
-        "width": 2200,
-        "height": 1771
-      },
-      {
-        "sourcePage": 17,
-        "caption": "Landscape render",
-        "completeSheet": false,
-        "src": "/images/portfolio/the-wandering-archive/complete-artwork/04.webp",
-        "width": 2200,
-        "height": 1884
-      },
-      {
-        "sourcePage": 17,
-        "caption": "Timeline diagram",
+        "caption": "My nomadic community narrative — project timeline",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/05.webp",
         "width": 2200,
-        "height": 823
+        "height": 823,
+        "sectionKey": "personal-timeline"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/nomadic-life.webp",
+        "width": 731,
+        "height": 729,
+        "caption": "Mongolian nomadic life — online reference image",
+        "sectionKey": "community",
+        "bookletPage": 14,
+        "provenance": "online reference"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/mongolia.webp",
+        "width": 1200,
+        "height": 1200,
+        "caption": "Mongolia — community context map",
+        "sectionKey": "community",
+        "bookletPage": 17,
+        "provenance": "user supplied booklet"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/quartz-discs.webp",
+        "width": 1600,
+        "height": 794,
+        "caption": "Quartz glass storage — online research reference",
+        "sectionKey": "quartz",
+        "bookletPage": 15,
+        "provenance": "online reference"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/openweather.webp",
+        "width": 3000,
+        "height": 3000,
+        "caption": "OpenWeather research — collecting and representing weather data",
+        "sectionKey": "weather-research",
+        "bookletPage": 16,
+        "provenance": "user supplied booklet"
       },
       {
         "sourcePage": 18,
-        "caption": "Concept diagram",
+        "caption": "Collecting, selecting and archiving climate data",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/06.webp",
         "width": 2200,
-        "height": 1292
+        "height": 1292,
+        "sectionKey": "data-flow"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/librarian-diagram.webp",
+        "width": 3000,
+        "height": 1829,
+        "caption": "Librarian — archivist",
+        "sectionKey": "users",
+        "bookletPage": 31,
+        "provenance": "user supplied booklet"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/visitor-diagram.webp",
+        "width": 3000,
+        "height": 1829,
+        "caption": "Librarian — data technician",
+        "sectionKey": "users",
+        "bookletPage": 32,
+        "provenance": "user supplied booklet"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/visitor-researcher-diagram.webp",
+        "width": 4866,
+        "height": 2966,
+        "caption": "Visitor — researcher",
+        "sectionKey": "users",
+        "bookletPage": 33
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/blender-top.webp",
+        "width": 783,
+        "height": 1548,
+        "caption": "Cave terrain study — Blender",
+        "sectionKey": "blender-site",
+        "bookletPage": 19,
+        "provenance": "user supplied booklet"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/blender-axon.webp",
+        "width": 2195,
+        "height": 2000,
+        "caption": "Cave geometry study — Blender",
+        "sectionKey": "blender-site",
+        "bookletPage": 19,
+        "provenance": "user supplied booklet"
+      },
+      {
+        "sourcePage": 17,
+        "caption": "Modelled cave environment",
+        "completeSheet": false,
+        "src": "/images/portfolio/the-wandering-archive/complete-artwork/02.webp",
+        "width": 2200,
+        "height": 1293,
+        "sectionKey": "unreal-site"
+      },
+      {
+        "sourcePage": 17,
+        "caption": "Light at the cave entrance",
+        "completeSheet": false,
+        "src": "/images/portfolio/the-wandering-archive/complete-artwork/03.webp",
+        "width": 2200,
+        "height": 1771,
+        "sectionKey": "unreal-site"
+      },
+      {
+        "sourcePage": 17,
+        "caption": "Cave within the landscape",
+        "completeSheet": false,
+        "src": "/images/portfolio/the-wandering-archive/complete-artwork/04.webp",
+        "width": 2200,
+        "height": 1884,
+        "sectionKey": "unreal-site"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/cave-model.webp",
+        "width": 2933,
+        "height": 2919,
+        "caption": "Physical cave model — openings and enclosure",
+        "sectionKey": "site-model",
+        "bookletPage": 27,
+        "provenance": "user supplied booklet"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/cave-model-interior.webp",
+        "width": 1991,
+        "height": 3000,
+        "caption": "Physical cave model — interior study",
+        "sectionKey": "site-model",
+        "bookletPage": 28,
+        "provenance": "user supplied booklet"
       },
       {
         "sourcePage": 18,
-        "caption": "Site model",
+        "caption": "Selected cave site — 42 m cube",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/07.webp",
         "width": 2200,
-        "height": 2185
+        "height": 2185,
+        "sectionKey": "selected-site"
       },
       {
         "sourcePage": 18,
-        "caption": "Community diagram",
+        "caption": "Public programmes: reading, discussion and archive",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/08.webp",
         "width": 2200,
-        "height": 1939
+        "height": 1939,
+        "sectionKey": "programmes"
       },
       {
         "sourcePage": 18,
-        "caption": "Community diagram",
+        "caption": "Processing programmes: selection and engraving",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/09.webp",
         "width": 2200,
-        "height": 1802
+        "height": 1802,
+        "sectionKey": "programmes"
       },
       {
         "sourcePage": 18,
-        "caption": "Community diagram",
+        "caption": "Data collection and quality control programmes",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/10.webp",
         "width": 2200,
-        "height": 1865
+        "height": 1865,
+        "sectionKey": "programmes"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/solar-radiation.svg",
+        "width": 1450,
+        "height": 1191,
+        "caption": "Solar incident radiation analysis — sunlight and shaded areas",
+        "bookletPage": 36,
+        "sectionKey": "19"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/flat-surface-analysis.webp",
+        "width": 1162,
+        "height": 1165,
+        "caption": "Flat surface analysis — identifying possible platform locations",
+        "bookletPage": 37,
+        "sectionKey": "19"
       },
       {
         "sourcePage": 19,
-        "caption": "Surface study",
+        "caption": "Environmental analysis within the cave",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/11.webp",
         "width": 2200,
-        "height": 2172
+        "height": 2172,
+        "sectionKey": "massing"
       },
       {
         "sourcePage": 19,
-        "caption": "Surface study",
+        "caption": "Programme volumes shaped around the rock",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/12.webp",
         "width": 2200,
-        "height": 2015
+        "height": 2015,
+        "sectionKey": "massing"
       },
       {
         "sourcePage": 19,
-        "caption": "Surface study",
+        "caption": "Tensile canopies and connecting routes",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/13.webp",
         "width": 2191,
-        "height": 2200
+        "height": 2200,
+        "sectionKey": "massing"
       },
       {
         "sourcePage": 19,
-        "caption": "Spatial model studies",
+        "caption": "Massing and canopy studies",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/14.webp",
         "width": 2200,
-        "height": 1003
+        "height": 1003,
+        "sectionKey": "massing"
       },
       {
         "sourcePage": 20,
-        "caption": "Model development",
+        "caption": "Programme organisation — labelled axonometric",
         "completeSheet": false,
-        "src": "/images/portfolio/the-wandering-archive/complete-artwork/15.webp",
-        "width": 2200,
-        "height": 960
+        "src": "/images/portfolio/the-wandering-archive/booklet/labelled-programmes.svg",
+        "width": 1330,
+        "height": 1300,
+        "sectionKey": "20"
       },
       {
         "sourcePage": 20,
-        "caption": "Model development",
+        "caption": "Mesh bridges connecting the programme volumes",
         "completeSheet": false,
-        "src": "/images/portfolio/the-wandering-archive/complete-artwork/16.webp",
-        "width": 2200,
-        "height": 865
+        "src": "/images/portfolio/the-wandering-archive/booklet/mesh-bridges.svg",
+        "width": 1140,
+        "height": 910,
+        "sectionKey": "20"
       },
       {
         "sourcePage": 20,
-        "caption": "Model section",
+        "caption": "Spatial organisation in section",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/17.webp",
         "width": 1906,
-        "height": 2200
+        "height": 2200,
+        "sectionKey": "20"
       },
       {
         "sourcePage": 20,
-        "caption": "Model section",
+        "caption": "Connections between programme levels",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/18.webp",
         "width": 1708,
-        "height": 2200
+        "height": 2200,
+        "sectionKey": "20"
       },
       {
         "sourcePage": 21,
-        "caption": "Architectural section",
+        "caption": "Architectural section through the cave",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/19.webp",
         "width": 2200,
-        "height": 2149
+        "height": 2149,
+        "sectionKey": "21"
       },
       {
         "sourcePage": 21,
-        "caption": "Section cut",
+        "caption": "Plan of the archive within the cave",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/20.webp",
         "width": 2200,
-        "height": 2182
+        "height": 2182,
+        "sectionKey": "21"
       },
       {
         "sourcePage": 21,
-        "caption": "Aerial render",
+        "caption": "Library and canopies viewed from above",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/21.webp",
         "width": 2198,
-        "height": 2200
+        "height": 2200,
+        "sectionKey": "21"
       },
       {
         "sourcePage": 22,
-        "caption": "Interior render",
+        "caption": "Reading and interpreting the archive",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/22.webp",
         "width": 2200,
-        "height": 1481
+        "height": 1481,
+        "sectionKey": "22"
       },
       {
         "sourcePage": 22,
-        "caption": "Interior render",
+        "caption": "Inside the quartz archive",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/23.webp",
         "width": 2200,
-        "height": 2194
+        "height": 2194,
+        "sectionKey": "22"
       },
       {
         "sourcePage": 22,
-        "caption": "Interior render",
+        "caption": "Quartz shard display",
         "completeSheet": false,
         "src": "/images/portfolio/the-wandering-archive/complete-artwork/24.webp",
         "width": 2200,
-        "height": 2194
+        "height": 2194,
+        "sectionKey": "22"
       },
       {
         "sourcePage": 23,
-        "caption": "Environment render",
+        "caption": "The archive within the cave landscape",
         "completeSheet": false,
-        "src": "/images/portfolio/the-wandering-archive/complete-artwork/25.webp",
-        "width": 2200,
-        "height": 1128
+        "src": "/images/portfolio/the-wandering-archive/cover-expanded.webp",
+        "width": 1448,
+        "height": 1086,
+        "sectionKey": "23"
+      },
+      {
+        "src": "/images/portfolio/the-wandering-archive/booklet/physical-model-studio.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "Physical library model",
+        "sectionKey": "physical-model",
+        "bookletPage": 55,
+        "provenance": "user supplied booklet",
+        "aiEnhanced": true
       }
     ]
   },
@@ -449,6 +726,33 @@ export const portfolioArtwork={
         "separatedArtwork": true
       },
       {
+        "src": "/images/portfolio/a-bridge/fabrication/bending-metal-joints.webp",
+        "width": 1622,
+        "height": 638,
+        "caption": "Bending the metal joints",
+        "sourceDocument": "Zaw_Ye_Htet_1008262_Thant_Thiri_Wai_1008020_Lanyue_Zhang_1009858.pdf",
+        "sourcePage": 22,
+        "sectionKey": "fabrication"
+      },
+      {
+        "src": "/images/portfolio/a-bridge/fabrication/machine-bending.webp",
+        "width": 1622,
+        "height": 638,
+        "caption": "Machine bending the joint plates",
+        "sourceDocument": "Zaw_Ye_Htet_1008262_Thant_Thiri_Wai_1008020_Lanyue_Zhang_1009858.pdf",
+        "sourcePage": 22,
+        "sectionKey": "fabrication"
+      },
+      {
+        "src": "/images/portfolio/a-bridge/fabrication/timber-assembly.webp",
+        "width": 1629,
+        "height": 638,
+        "caption": "Assembling the timber members",
+        "sourceDocument": "Zaw_Ye_Htet_1008262_Thant_Thiri_Wai_1008020_Lanyue_Zhang_1009858.pdf",
+        "sourcePage": 23,
+        "sectionKey": "fabrication"
+      },
+      {
         "src": "/images/portfolio/a-bridge/separated-artwork/33-01.webp",
         "width": 934,
         "height": 671,
@@ -479,6 +783,15 @@ export const portfolioArtwork={
         "caption": "Completed bridge",
         "sourcePage": 33,
         "separatedArtwork": true
+      },
+      {
+        "src": "/images/portfolio/a-bridge/fabrication/bridge-deck-view.webp",
+        "width": 765,
+        "height": 727,
+        "caption": "Finished bridge from deck level",
+        "sourceDocument": "Zaw_Ye_Htet_1008262_Thant_Thiri_Wai_1008020_Lanyue_Zhang_1009858.pdf",
+        "sourcePage": 25,
+        "sectionKey": 33
       }
     ]
   },
@@ -527,25 +840,25 @@ export const portfolioArtwork={
         "height": 1539
       },
       {
-        "src": "/images/portfolio/spatial/separated-artwork/07-01.webp",
-        "width": 513,
-        "height": 476,
+        "src": "/images/portfolio/spatial/separated-artwork/07-01-clean-centered.png",
+        "width": 1254,
+        "height": 1254,
         "caption": "Object model",
         "sourcePage": 7,
         "separatedArtwork": true
       },
       {
-        "src": "/images/portfolio/spatial/separated-artwork/07-02.webp",
-        "width": 624,
-        "height": 522,
+        "src": "/images/portfolio/spatial/separated-artwork/07-02-clean-centered.png",
+        "width": 1254,
+        "height": 1254,
         "caption": "Exploded object model",
         "sourcePage": 7,
         "separatedArtwork": true
       },
       {
-        "src": "/images/portfolio/spatial/separated-artwork/07-03.webp",
-        "width": 1905,
-        "height": 1846,
+        "src": "/images/portfolio/spatial/separated-artwork/07-03-clean-centered.png",
+        "width": 1254,
+        "height": 1254,
         "caption": "Exploded axonometric drawing",
         "sourcePage": 7,
         "separatedArtwork": true
@@ -700,6 +1013,20 @@ export const portfolioArtwork={
         "height": 1556
       },
       {
+        "src": "/images/portfolio/ribbon/selected-renders/ribbon-line-study.webp",
+        "caption": "Staircase in the park — line study",
+        "width": 3840,
+        "height": 2880,
+        "sourcePage": 12
+      },
+      {
+        "src": "/images/portfolio/ribbon/selected-renders/ribbon-rain.webp",
+        "width": 1491,
+        "height": 1055,
+        "caption": "Ribbon in the rain — AI assisted render",
+        "sourcePage": 12
+      },
+      {
         "sourcePage": 13,
         "caption": "Aerial render",
         "completeSheet": false,
@@ -709,11 +1036,11 @@ export const portfolioArtwork={
       },
       {
         "sourcePage": 13,
-        "caption": "Grasshopper definition",
+        "caption": "Spiral definition and generated boundary curves",
         "completeSheet": false,
-        "src": "/images/portfolio/ribbon/complete-artwork/03.webp",
-        "width": 2200,
-        "height": 1002
+        "src": "/images/portfolio/ribbon/selected-renders/spiral-white-background.png",
+        "width": 1858,
+        "height": 846
       },
       {
         "sourcePage": 13,
@@ -724,52 +1051,25 @@ export const portfolioArtwork={
         "height": 1561
       },
       {
-        "sourcePage": 14,
-        "caption": "Grasshopper definition",
-        "completeSheet": false,
-        "src": "/images/portfolio/ribbon/complete-artwork/05.webp",
+        "src": "/images/portfolio/ribbon/code-panels/balustrade.svg",
         "width": 2200,
-        "height": 950
+        "height": 1000,
+        "caption": "Balustrade definition and lofted surfaces",
+        "sourcePage": 14
       },
       {
-        "sourcePage": 14,
-        "caption": "Geometry iteration",
-        "completeSheet": false,
-        "src": "/images/portfolio/ribbon/complete-artwork/06.webp",
+        "src": "/images/portfolio/ribbon/code-panels/handrail.svg",
         "width": 2200,
-        "height": 2104
+        "height": 1000,
+        "caption": "Handrail definition and generated rails",
+        "sourcePage": 14
       },
       {
-        "sourcePage": 14,
-        "caption": "Grasshopper definition",
-        "completeSheet": false,
-        "src": "/images/portfolio/ribbon/complete-artwork/07.webp",
+        "src": "/images/portfolio/ribbon/code-panels/supports.svg",
         "width": 2200,
-        "height": 670
-      },
-      {
-        "sourcePage": 14,
-        "caption": "Geometry iteration",
-        "completeSheet": false,
-        "src": "/images/portfolio/ribbon/complete-artwork/08.webp",
-        "width": 2200,
-        "height": 2107
-      },
-      {
-        "sourcePage": 14,
-        "caption": "Grasshopper definition",
-        "completeSheet": false,
-        "src": "/images/portfolio/ribbon/complete-artwork/09.webp",
-        "width": 2200,
-        "height": 814
-      },
-      {
-        "sourcePage": 14,
-        "caption": "Geometry iteration",
-        "completeSheet": false,
-        "src": "/images/portfolio/ribbon/complete-artwork/10.webp",
-        "width": 2200,
-        "height": 1993
+        "height": 1000,
+        "caption": "Support definition and central members",
+        "sourcePage": 14
       },
       {
         "sourcePage": 15,
@@ -914,18 +1214,49 @@ export const portfolioArtwork={
       {
         "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
         "sourcePage": 8,
-        "caption": "AI concept render",
-        "src": "/images/portfolio/ascent/artwork/01.webp",
-        "width": 575,
-        "height": 448
+        "caption": "Muted botanical exterior study — AI assisted render",
+        "src": "/images/portfolio/ascent/artwork/01-selected-experimental.webp",
+        "width": 1275,
+        "height": 1233,
+        "aiEnhanced": true
+      },
+      {
+        "src": "/images/portfolio/ascent/artwork/09-selected-flowering.webp",
+        "width": 1274,
+        "height": 1234,
+        "caption": "Flowering roof terraces in morning light — AI assisted render",
+        "aiEnhanced": true,
+        "sourcePage": 8
+      },
+      {
+        "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+        "sourcePage": 11,
+        "caption": "Isometric digital model",
+        "src": "/images/portfolio/ascent/artwork/10.webp",
+        "width": 430,
+        "height": 417,
+        "sectionKey": 8
+      },
+      {
+        "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
+        "sourcePage": 11,
+        "caption": "Floor plan",
+        "src": "/images/portfolio/ascent/artwork/11-upscaled.webp",
+        "width": 1219,
+        "height": 1290,
+        "featuredDrawing": true,
+        "aiEnhanced": true,
+        "sectionKey": "sun"
       },
       {
         "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
         "sourcePage": 9,
         "caption": "Section through the rising terrain",
-        "src": "/images/portfolio/ascent/artwork/02.webp",
-        "width": 510,
-        "height": 457
+        "src": "/images/portfolio/ascent/artwork/02-upscaled.webp",
+        "width": 1325,
+        "height": 1187,
+        "featuredDrawing": true,
+        "aiEnhanced": true
       },
       {
         "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
@@ -962,10 +1293,11 @@ export const portfolioArtwork={
       {
         "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
         "sourcePage": 10,
-        "caption": "Interior AI render",
-        "src": "/images/portfolio/ascent/artwork/07.webp",
-        "width": 934,
-        "height": 1148
+        "caption": "Living and dining across the level change — AI assisted render",
+        "src": "/images/portfolio/ascent/artwork/07-selected-interior.webp",
+        "width": 1712,
+        "height": 919,
+        "aiEnhanced": true
       },
       {
         "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
@@ -977,73 +1309,35 @@ export const portfolioArtwork={
       },
       {
         "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
-        "sourcePage": 10,
-        "caption": "AI aerial study",
-        "src": "/images/portfolio/ascent/artwork/09.webp",
-        "width": 320,
-        "height": 299
-      },
-      {
-        "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
         "sourcePage": 11,
-        "caption": "Isometric digital model",
-        "src": "/images/portfolio/ascent/artwork/10.webp",
-        "width": 430,
-        "height": 417
-      },
-      {
-        "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
-        "sourcePage": 11,
-        "caption": "Floor plan",
-        "src": "/images/portfolio/ascent/artwork/11.webp",
-        "width": 554,
-        "height": 586
-      },
-      {
-        "sourceDocument": "Portfolio Thant Thiri Wai (1).pdf",
-        "sourcePage": 11,
-        "caption": "AI evening render",
-        "src": "/images/portfolio/ascent/artwork/12.webp",
-        "width": 575,
-        "height": 576
+        "caption": "Winter blue hour and warm interior light — AI assisted render",
+        "src": "/images/portfolio/ascent/artwork/12-selected-winter.webp",
+        "width": 1275,
+        "height": 1234,
+        "aiEnhanced": true
       }
     ]
   },
   "venture": {
-    "heading": "From light into solitude",
-    "body": "I extended and subtracted a rectangular form from a cliff to shape a sequence of spaces. An exposed entrance leads into a dim corridor, a bright living area, a dark meditation space and finally an outlook at the cliff edge.",
+    "heading": "Meditation and exhibition within a cliff",
+    "body": "A sequence of exhibition and meditation spaces explores a gradual movement from light into darkness and back to the landscape.",
     "images": [
       {
         "sourceDocument": "Portfolio 2.pdf",
         "sourcePage": 8,
-        "caption": "Interior AI render",
-        "src": "/images/portfolio/venture/artwork/01.webp",
-        "width": 512,
-        "height": 399
+        "caption": "Exhibition space and stepped circulation — AI assisted render",
+        "src": "/images/portfolio/venture/artwork/01-meditation-exhibition.webp",
+        "width": 1421,
+        "height": 1107,
+        "aiEnhanced": true
       },
       {
         "sourceDocument": "Portfolio 2.pdf",
         "sourcePage": 9,
         "caption": "Form and subtraction studies",
-        "src": "/images/portfolio/venture/artwork/02.webp",
-        "width": 1059,
-        "height": 1872
-      },
-      {
-        "sourceDocument": "Portfolio 2.pdf",
-        "sourcePage": 9,
-        "caption": "Isometric section",
-        "src": "/images/portfolio/venture/artwork/03.webp",
-        "width": 709,
-        "height": 709
-      },
-      {
-        "sourceDocument": "Portfolio 2.pdf",
-        "sourcePage": 10,
-        "caption": "Interior AI light study",
-        "src": "/images/portfolio/venture/artwork/04.webp",
-        "width": 524,
-        "height": 400
+        "src": "/images/portfolio/venture/artwork/02-borderless.png",
+        "width": 943,
+        "height": 1667
       },
       {
         "sourceDocument": "Portfolio 2.pdf",
@@ -1051,15 +1345,35 @@ export const portfolioArtwork={
         "caption": "Exploded spatial model",
         "src": "/images/portfolio/venture/artwork/05.webp",
         "width": 386,
-        "height": 807
+        "height": 807,
+        "sectionKey": 9
+      },
+      {
+        "sourceDocument": "Portfolio 2.pdf",
+        "sourcePage": 10,
+        "caption": "Quiet gallery and meditation route — AI assisted render",
+        "src": "/images/portfolio/venture/artwork/04-meditation-exhibition.webp",
+        "width": 1436,
+        "height": 1095,
+        "aiEnhanced": true
       },
       {
         "sourceDocument": "Portfolio 2.pdf",
         "sourcePage": 11,
-        "caption": "Interior AI outlook study",
-        "src": "/images/portfolio/venture/artwork/06.webp",
-        "width": 454,
-        "height": 348
+        "caption": "Daylit exhibition space with connecting stairs — AI assisted render",
+        "src": "/images/portfolio/venture/artwork/06-meditation-exhibition.webp",
+        "width": 1433,
+        "height": 1098,
+        "aiEnhanced": true
+      },
+      {
+        "sourceDocument": "Portfolio 2.pdf",
+        "sourcePage": 9,
+        "caption": "Isometric section",
+        "src": "/images/portfolio/venture/artwork/03.webp",
+        "width": 709,
+        "height": 709,
+        "sectionKey": 11
       }
     ]
   },
@@ -1248,6 +1562,36 @@ export const portfolioArtwork={
         "retainedCover": true
       },
       {
+        "src": "/images/portfolio/butterfly-effect/chair-story/inspiration-ripples.webp",
+        "width": 617,
+        "height": 610,
+        "caption": "Ripples and wave interference",
+        "sectionKey": "inspiration",
+        "sourcePage": 2,
+        "sourceDocument": "chair.pdf",
+        "sourceImage": "Image23"
+      },
+      {
+        "src": "/images/portfolio/butterfly-effect/chair-story/inspiration-wave-diagram.webp",
+        "width": 585,
+        "height": 375,
+        "caption": "Butterfly shaped wave pattern",
+        "sectionKey": "inspiration",
+        "sourcePage": 2,
+        "sourceDocument": "chair.pdf",
+        "sourceImage": "Image22"
+      },
+      {
+        "src": "/images/portfolio/butterfly-effect/chair-story/inspiration-butterfly.webp",
+        "width": 1864,
+        "height": 2480,
+        "caption": "Patterns and texture in a butterfly wing",
+        "sectionKey": "inspiration",
+        "sourcePage": 2,
+        "sourceDocument": "chair.pdf",
+        "sourceImage": "Image27"
+      },
+      {
         "src": "/images/portfolio/butterfly-effect/chair-story/wave-studies.webp",
         "width": 1154,
         "height": 1140,
@@ -1377,9 +1721,9 @@ export const portfolioArtwork={
     "body": "",
     "images": [
       {
-        "src": "/images/portfolio/art-studies/artwork/waterfront-skyline.png",
-        "width": 2208,
-        "height": 1398,
+        "src": "/images/portfolio/art-studies/artwork/waterfront-skyline-scanned.png",
+        "width": 1577,
+        "height": 997,
         "caption": "Waterfront skyline painting",
         "sectionKey": "cityscapes",
         "sourceAttachment": "codex-clipboard-6bcc8865-6688-4473-8572-81ca86cd9aba.png"
@@ -1494,9 +1838,9 @@ export const portfolioArtwork={
         "sourceAttachment": "codex-clipboard-05348f60-fe66-4011-8d5b-ffdea9e8835a.jpg"
       },
       {
-        "src": "/images/portfolio/art-studies/artwork/rabbit-character.jpg",
-        "width": 894,
-        "height": 1280,
+        "src": "/images/portfolio/art-studies/artwork/rabbit-character-centered.png",
+        "width": 1048,
+        "height": 1501,
         "caption": "Rabbit character sketch",
         "sectionKey": "sketchbook",
         "sourceAttachment": "codex-clipboard-b19dc86b-46ca-41b1-827f-083b7f34af06.jpg"

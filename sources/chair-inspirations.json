@@ -1,0 +1,32 @@
+[
+  {
+    "src": "/images/portfolio/butterfly-effect/chair-story/inspiration-ripples.webp",
+    "width": 617,
+    "height": 610,
+    "caption": "Ripples and wave interference",
+    "sectionKey": "inspiration",
+    "sourcePage": 2,
+    "sourceDocument": "chair.pdf",
+    "sourceImage": "Image23"
+  },
+  {
+    "src": "/images/portfolio/butterfly-effect/chair-story/inspiration-wave-diagram.webp",
+    "width": 585,
+    "height": 375,
+    "caption": "Butterfly shaped wave pattern",
+    "sectionKey": "inspiration",
+    "sourcePage": 2,
+    "sourceDocument": "chair.pdf",
+    "sourceImage": "Image22"
+  },
+  {
+    "src": "/images/portfolio/butterfly-effect/chair-story/inspiration-butterfly.webp",
+    "width": 1864,
+    "height": 2480,
+    "caption": "Patterns and texture in a butterfly wing",
+    "sectionKey": "inspiration",
+    "sourcePage": 2,
+    "sourceDocument": "chair.pdf",
+    "sourceImage": "Image27"
+  }
+]

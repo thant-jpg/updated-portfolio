@@ -211,6 +211,7 @@ export const portfolioProjects=[
     "category": "Architecture",
     "number": "04",
     "image": "/images/portfolio/spatial/thumbnail.webp",
+    "cardImage": "/images/portfolio/spatial/card-shadow-extended.png",
     "accent": "blue",
     "sections": [],
     "sourcePages": [
@@ -313,6 +314,7 @@ export const portfolioProjects=[
     "category": "Architecture",
     "number": "06",
     "image": "/images/portfolio/ribbon/thumbnail.webp",
+    "cardImage": "/images/portfolio/ribbon/complete-artwork/01.webp",
     "accent": "blue",
     "sections": [],
     "sourcePages": [
@@ -447,6 +449,7 @@ export const portfolioProjects=[
     "role": "Architecture student",
     "category": "Architecture",
     "image": "/images/portfolio/ascent/thumbnail.webp",
+    "cardImage": "/images/portfolio/ascent/artwork/01-selected-experimental.webp",
     "accent": "blue",
     "sections": [],
     "nativeArtwork": true
@@ -461,6 +464,7 @@ export const portfolioProjects=[
     "role": "Architecture student",
     "category": "Architecture",
     "image": "/images/portfolio/venture/thumbnail.webp",
+    "cardImage": "/images/portfolio/venture/artwork/01-meditation-exhibition.webp",
     "accent": "blue",
     "sections": [],
     "nativeArtwork": true
@@ -506,7 +510,8 @@ export const portfolioProjects=[
     "nativeArtwork": true,
     "sections": [],
     "accent": "blue",
-    "image": "/images/portfolio/butterfly-effect/cover-upscaled.webp"
+    "image": "/images/portfolio/butterfly-effect/cover-upscaled.webp",
+    "cardImage": "/images/portfolio/butterfly-effect/card-grass-extended.png"
   },
   {
     "slug": "art-studies",
@@ -520,6 +525,7 @@ export const portfolioProjects=[
     "nativeArtwork": true,
     "sections": [],
     "accent": "blue",
-    "image": "/images/portfolio/art-studies/thumbnail.webp"
+    "image": "/images/portfolio/art-studies/thumbnail.webp",
+    "cardImage": "/images/portfolio/art-studies/artwork/evening-skyline.jpg"
   }
 ];

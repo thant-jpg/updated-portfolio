@@ -8,7 +8,7 @@ export const projectNotes={
  'a-bridge':['Group project','4.7 m full scale','Three day build','Laser cut metal joints','Folded connections'],
  'weave':['Museum design','Woven routes','Circular galleries','Circulation study'],
  'ascent':['Housing study','Rising landscape','Home + terrain'],
- 'venture':['Spatial design','Cliff setting','Sensory journey','Light studies'],
+ 'venture':['Meditation + exhibition','Cliff setting','Art + stillness','Light studies'],
  'flow':['Landscape visitor centre','25 × 25 cm paper model','Flowing ribbon roofs','Walkable landscape','Material explorations'],
  'butterfly-effect':['Group project','Wave interference','Grasshopper studies','CNC milled wood','Welded metal frame'],
  'spatial':['Rhino modelling','My building + my room','Everyday objects','Spaces that tell stories'],

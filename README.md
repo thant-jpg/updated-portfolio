@@ -6,6 +6,8 @@ A responsive, dependency-free portfolio with real, statically generated URLs. Pl
 
 Run `npm run dev` in this directory, then visit http://127.0.0.1:4173. Saving source, content, CSS, JavaScript, or public asset changes automatically rebuilds the site and refreshes the browser.
 
+`npm start` also enables live reload. Keep the server running while editing; it rebuilds and refreshes after successful changes without restarting Node. Use `node server.mjs --no-live-reload` for a static preview. Changes to the server itself require a restart.
+
 ## Edit your content
 
 Edit `content.mjs`: profile name, location, intro, email, résumé path, and all project titles, summaries and case-study sections. Unknown contact details and résumé are intentionally left empty. Project descriptions are draft scaffolding, with no invented research results, dates or impact metrics.

@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {portfolioArtwork} from '../portfolio-artwork.mjs';
+const folder='public/images/portfolio/the-wandering-archive/booklet';
+const diagram=fs.readFileSync('tmp/archive-import/analysis-36-0.png').toString('base64');
+const legend=fs.readFileSync('tmp/archive-import/analysis-36-1.png').toString('base64');
+fs.writeFileSync(`${folder}/solar-radiation.svg`,`<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1191" viewBox="0 0 1450 1191"><rect width="1450" height="1191" fill="black"/><image width="1161" height="1191" href="data:image/png;base64,${diagram}"/><image x="1190" y="180" width="172" height="677" href="data:image/png;base64,${legend}"/></svg>`);
+const a=portfolioArtwork['the-wandering-archive'];
+const key='/images/portfolio/the-wandering-archive/booklet/';
+const records=[{src:key+'solar-radiation.svg',width:1450,height:1191,caption:'Solar incident radiation analysis — sunlight and shaded areas',bookletPage:36,sectionKey:'19'},{src:key+'flat-surface-analysis.webp',width:1162,height:1165,caption:'Flat surface analysis — identifying possible platform locations',bookletPage:37,sectionKey:'19'}];
+a.images=a.images.filter(i=>!records.some(r=>r.src===i.src));
+const at=a.images.findIndex(i=>i.sectionKey==='19');a.images.splice(at,0,...records);
+fs.writeFileSync('portfolio-artwork.mjs','// Individual artwork, with native website copy and captions.\nexport const portfolioArtwork='+JSON.stringify(portfolioArtwork,null,2)+';\n');
